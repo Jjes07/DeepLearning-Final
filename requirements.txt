@@ -1,5 +1,5 @@
 # Instalar PyTorch primero, según el hardware (ver README):
-#   Windows + CUDA:  pip install torch --index-url https://download.pytorch.org/whl/cu124
+#   Windows + CUDA:  pip install torch --index-url https://download.pytorch.org/whl/cu126
 #   Mac (MPS):       pip install torch
 numpy
 scipy
@@ -9,6 +9,7 @@ pandas
 scikit-image
 pyyaml
 tqdm
+psutil
 jupyter
 ipykernel
 # Las versiones exactas se fijarán con `pip freeze > requirements-lock.txt`

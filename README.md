@@ -9,17 +9,16 @@ Integrantes: Juan José Escobar, Emmanuel Hernández, Mateo Lopera.
 
 ```
 DeepLearning-Final/
-├── EritroFase.ipynb          # Notebook principal: se entrega con todas sus salidas
+├── EritroFase.ipynb          # Notebook principal y autocontenido: todo el código está aquí; se entrega con sus salidas
 ├── README.md
 ├── requirements.txt
-├── configs/                  # Configuraciones (YAML) de cada experimento
 ├── data/
 │   ├── raw/RBCs_Holograms/   # Dataset de Castañeda et al. (2024). NO se versiona
 │   │   ├── Holograms/{Training,Validation}/
 │   │   └── Phase/{Training,Validation}/
 │   └── selection/            # Lista de imágenes elegidas, partición y máscaras de referencia
-├── src/eritrofase/           # Código reutilizable (datos, modelos, pérdidas, métricas, figuras)
-├── reference_code/INR/       # Copia sin modificar del código guía del profesor
+├── docs/references/          # Artículos de referencia (PDF)
+├── reference_code/INR/       # Copia sin modificar del código guía (el notebook la incorpora en la sección 4.4)
 └── results/
     ├── figures/              # Figuras por etapa (E1_..., E2_..., ...)
     ├── tables/               # Tablas de métricas (CSV)
