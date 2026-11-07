@@ -1,0 +1,15 @@
+# Instalar PyTorch primero, según el hardware (ver README):
+#   Windows + CUDA:  pip install torch --index-url https://download.pytorch.org/whl/cu124
+#   Mac (MPS):       pip install torch
+numpy
+scipy
+matplotlib
+pillow
+pandas
+scikit-image
+pyyaml
+tqdm
+jupyter
+ipykernel
+# Las versiones exactas se fijarán con `pip freeze > requirements-lock.txt`
+# una vez que el entorno esté funcionando en la máquina de entrenamiento.
