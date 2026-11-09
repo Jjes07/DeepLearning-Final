@@ -1,0 +1,4 @@
+ID,Hipótesis,Resultado,Sección
+H6.1,"Zernike (guía), medido localmente, preserva la célula: |Δh| mediana < 5 %",Se cumple,6.4
+H6.2,SIREN (guía) absorbe parte de la célula: Δh mediana < −10 %,Se cumple,6.4
+H6.3,SIREN (guía) deja menos fondo lento que Zernike (guía),Se cumple,6.4

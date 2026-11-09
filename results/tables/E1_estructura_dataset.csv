@@ -1,0 +1,10 @@
+Aspecto,Valor
+"Recortes distintos (adq, X, Y)",12288
+Variantes por recorte,{3: 12288}
+Variantes presentes,"['A', 'B', 'base']"
+Adquisiciones (fecha y hora),192
+Adquisiciones por día,"{'2021-01-28': 5, '2021-01-29': 187}"
+Valores de X,"[1, 2, 3, 4]"
+Valores de Y,1 a 16
+"Campos (adq, X)",768
+Hologramas y fases tienen los mismos recortes,True

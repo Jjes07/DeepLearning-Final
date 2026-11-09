@@ -1,0 +1,10 @@
+ID,Hipótesis,Resultado,Sección
+H1.1,"PNG de 8 bits, un canal, 256×256",Se cumple,3.2
+H1.2,-A/-B son volteos exactos; 12.288 recortes distintos,Se cumple,3.3
+H1.3,16 recortes forman un mosaico continuo de 1024×1024 (≥ 95 % de los campos),Se rechaza,3.3
+H1.4,La partición original comparte recortes,Se cumple,3.3
+H1.5,Escala 0–255 normalizada por campo,Reformulada: los datos son consistentes con gris = fase envuelta escalada; el criterio original no aplica,3.4
+H1.6,La fase no está envuelta dentro de las células,Se rechaza,3.8
+H1.7,Fondo lento mayor que el ruido (razón > 2 en la mayoría),Se rechaza,3.9
+H1.8,Variabilidad de calidad del fondo suficiente,Se cumple,3.5
+H1.9,Los 4 campos son la misma escena rotada,Se cumple,3.3

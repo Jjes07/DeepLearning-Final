@@ -1,0 +1,8 @@
+ID,Hipótesis,Resultado,Sección
+H2.1,"SPINR recupera la fase sintética (RMS ≤ 0,3 rad)",Se rechaza,4.5
+H2.2,unwrap_phase la recupera y es ≥ 100 veces más rápido,Se cumple,4.5
+H2.3,El RMS final de main.py no mide la separación del fondo,Se rechaza,4.5
+H2.4,SPINR y unwrap_phase coinciden en imágenes reales,Se rechaza,4.6
+H2.5,"SIREN de baja frecuencia: σ_B ≤ 1,1 σ_ruido y |Δh_C| < 5 %",Se rechaza,4.6
+H2.6,"Zernike robusto: σ_B ≤ 1,1 σ_ruido y |Δh_C| < 5 %",Se rechaza,4.6
+H2.7,"extract_sample_phase: Dice ≥ 0,8",Se rechaza,4.6
