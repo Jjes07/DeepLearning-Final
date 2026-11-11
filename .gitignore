@@ -9,6 +9,7 @@ experimentos/cache_dev.npz
 experimentos/cache_dev.pkl
 experimentos/*.pt
 experimentos/*.pth
+experimentos/pesos/
 
 # Python / Jupyter
 __pycache__/
@@ -25,3 +26,6 @@ desktop.ini
 
 # Caché de resultados costosos (se regenera con RECALCULAR = True)
 results/cache/
+
+# Logs de ejecución
+experimentos/*.log

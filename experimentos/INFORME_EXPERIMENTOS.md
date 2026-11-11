@@ -155,6 +155,72 @@ Curvas guardadas en `experimentos/curvas/`: 5 archivo(s).
 - Solo se dispone de 5 imágenes de validación; la varianza de las métricas es alta.
 - No se tocó el conjunto de prueba ni el de generalización.
 
-## Conclusión
+## Conclusión ronda 1
 La configuración `A_cand_signo0.8_ref0.1_rec0.7_semilla2024` supera a Zernike en validación: mediana M1 = 5.98 niveles (< 6,39) y mediana |Δh| = 4.14 % (≤ 5 %).
 Con 3 semillas, la media de M1 es 6.18 ± 0.18 y la de |Δh| es 4.16 ± 0.56 %.
+
+## Ronda 2: esquemas C y D
+
+### Objetivo
+Evaluar si un modelo amortizado (C) o una descomposición fondo + célula (D) pueden aprender de las 12 imágenes de entrenamiento y superar al esquema A ajustado por imagen.
+
+### Salvaguardas aplicadas
+Tras el fallo por desbordamiento de VRAM en el primer intento de D con `batch_size = 96`, se implementaron:
+- `torch.cuda.set_per_process_memory_fraction(0.75, 0)` al inicio de cada entrenamiento.
+- Lotes máximos: 16 para C, 8 para D.
+- Precisión mixta (`torch.autocast` + `GradScaler`) en D.
+- Checkpoint del mejor modelo copiado a CPU (`detach().cpu().clone()`).
+- Métricas de validación cada 10 épocas.
+- Liberación explícita de memoria entre configuraciones.
+- Prueba de humo de D: 2 épocas, memoria máxima 1.07 GB (< 7 GB).
+
+### Resultados del barrido (semilla 42)
+
+| descripción | esquema | M1 | |Δh| (%) | t_train (s) |
+|-------------|---------|-----:|----------:|------------:|
+| C_fmax3_rec07_signo08_ref01 | C | 19.52 | 0.76 | 40.2 |
+| C_fmax5_rec07_signo08_ref01 | C | 19.73 | 1.44 | 39.1 |
+| C_fmax8_rec07_signo08_ref01 | C | 20.32 | 0.46 | 38.6 |
+| D_fmax5_lc0.01_ltv0 | D | 36.88 | 0.05 | 253.2 |
+| D_fmax5_lc0.05_ltv0 | D | 29.35 | 0.06 | 474.0 |
+| D_fmax5_lc0.1_ltv0 | D | 26.18 | 0.04 | 727.1 |
+| D_fmax8_lc0.01_ltv0 | D | 36.47 | 0.02 | 731.0 |
+| D_fmax8_lc0.05_ltv0 | D | 29.24 | 0.03 | 595.3 |
+| D_fmax8_lc0.1_ltv0 | D | 26.02 | 0.03 | 1169.4 |
+| D_fmax5_lc0.001_suav0.01 | D | 40.45 | 0.07 | 247.2 |
+| D_fmax5_lc0.01_suav0.01 | D | 36.82 | 0.07 | 242.6 |
+| D_fmax5_lc0.001_suav0.001 | D | 40.42 | 0.06 | 260.7 |
+| D_fmax5_lc0.01_suav0.001 | D | 37.29 | 0.08 | 258.7 |
+
+Ninguna configuración cumple el objetivo. Todos los valores de |Δh| están muy por debajo de 5 %, lo que indica que los modelos apenas corrigen la imagen; al mismo tiempo M1 es muy alto, es decir, el residuo conserva mucha energía de baja frecuencia.
+
+### Comparación final
+
+| método | M1 | |Δh| (%) | cumple |
+|--------|-----:|----------:|:-------|
+| SIREN ω0=1 (guía) | 3.47 | 12.85 | No |
+| Zernike (guía) | 6.39 | 2.55 | Sí |
+| A (ronda 1, media ± std) | 6.18 ± 0.18 | 4.16 ± 0.56 | Sí |
+| C (mejor: fmax3) | 19.52 | 0.76 | No |
+| D (mejor: fmax8_lc0.1) | 26.02 | 0.03 | No |
+
+### Diagnóstico
+- **C:** el encoder amortizado predice coeficientes de `BaseSuave`, pero la base es demasiado rígida para representar el fondo real. El modelo converge a una corrección muy débil (|Δh| ≈ 1 %) que deja el fondo sin corregir (M1 ≈ 20).
+- **D:** la rama de célula se anula (c ≈ 0) porque `λ_c` penaliza cualquier activación. La rama de fondo, una `BaseSuave` sobre features de U-Net, solo puede representar un fondo muy suave. Aumentar `λ_c` reduce levemente M1 pero no lo suficiente. Agregar suavidad explícita sobre `b` empeoró M1 (40 vs 26–37), confirmando que la rigidez es el cuello de botella.
+
+### Recursos y tiempos
+- Parámetros entrenables de C (`base_channels=32`, `f_max=5`): ~0.5 M.
+- Parámetros entrenables de D (`base_channels=32`): ~0.7 M.
+- Tiempo de entrenamiento de D más lento: ~19.5 min (300 épocas, f_max=8, lc=0.1).
+- Tiempo de inferencia de D: ~0.01–1.9 s por imagen (depende de la carga de GPU).
+
+### Curvas de entrenamiento
+Guardadas en `experimentos/curvas/`. Las curvas muestran convergencia estable de la pérdida, pero sin correlación con la mejora de M1, lo que indica que la pérdida de descomposición no guía al modelo hacia una corrección útil del fondo.
+
+### Recomendación final
+Ni C ni D superan al esquema A (SIREN por imagen) ni a Zernike en esta ronda. El problema principal es la rigidez de `BaseSuave` como representación del fondo. Para continuar se recomienda:
+1. Reemplazar `BaseSuave` por una red implícita o SIREN amortizada con más capacidad.
+2. En D, permitir que la rama de fondo sea más flexible (por ejemplo, una red implícita por imagen con `ĉ` fija o una CNN decodificadora).
+3. Revisar la pérdida de descomposición para evitar el colapso `c → 0`, posiblemente con un término de reconstrucción sobre `u − b` antes de incluir `c`.
+
+No se seleccionaron finalistas porque ninguna configuración alcanzó M1 < 6.4 niveles con |Δh| ≤ 5 %.
