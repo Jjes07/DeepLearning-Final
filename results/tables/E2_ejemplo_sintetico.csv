@@ -2,8 +2,8 @@ Métrica,Valor
 RMS desenvolvimiento SPINR vs. verdad (rad),2.1527
 RMS desenvolvimiento unwrap_phase vs. verdad (rad),0.0
 RMS final de main.py: compensada vs. verdad (rad),3.8741
-Tiempo SPINR (s),8.76
-Tiempo unwrap_phase (s),0.0033
-SPINR / unwrap_phase (veces más lento),2653.0
+Tiempo SPINR (s),8.45
+Tiempo unwrap_phase (s),0.0045
+SPINR / unwrap_phase (veces más lento),1860.0
 Saltos > π que deja SPINR,0.0
 Saltos > π que deja unwrap_phase,0.0

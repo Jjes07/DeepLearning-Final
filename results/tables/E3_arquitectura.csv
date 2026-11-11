@@ -1,0 +1,25 @@
+bloque,capa,salida,parámetros
+codificador.convs.0,Conv2d,"(1, 16, 128, 128)",448
+codificador.convs.1,GroupNorm,"(1, 16, 128, 128)",32
+codificador.convs.2,GELU,"(1, 16, 128, 128)",0
+codificador.convs.3,Conv2d,"(1, 32, 64, 64)",4640
+codificador.convs.4,GroupNorm,"(1, 32, 64, 64)",64
+codificador.convs.5,GELU,"(1, 32, 64, 64)",0
+codificador.convs.6,Conv2d,"(1, 64, 32, 32)",18496
+codificador.convs.7,GroupNorm,"(1, 64, 32, 32)",128
+codificador.convs.8,GELU,"(1, 64, 32, 32)",0
+codificador.convs.9,Conv2d,"(1, 64, 16, 16)",36928
+codificador.convs.10,GroupNorm,"(1, 64, 16, 16)",128
+codificador.convs.11,GELU,"(1, 64, 16, 16)",0
+codificador.convs.12,Conv2d,"(1, 64, 8, 8)",36928
+codificador.convs.13,GroupNorm,"(1, 64, 8, 8)",128
+codificador.convs.14,GELU,"(1, 64, 8, 8)",0
+codificador.convs.15,Conv2d,"(1, 64, 4, 4)",36928
+codificador.convs.16,GroupNorm,"(1, 64, 4, 4)",128
+codificador.convs.17,GELU,"(1, 64, 4, 4)",0
+codificador.lineal,Linear,"(1, 64)",65600
+film,Linear,"(1, 768)",49920
+decodificador.lineales.0,Linear,"(65536, 128)",384
+decodificador.lineales.1,Linear,"(1, 65536, 128)",16512
+decodificador.lineales.2,Linear,"(1, 65536, 128)",16512
+decodificador.salida,Linear,"(1, 65536, 1)",129

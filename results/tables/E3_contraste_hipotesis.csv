@@ -1,0 +1,7 @@
+ID,Hipótesis,Resultado,Sección
+H3.1,C cumple el criterio de 6.5 en validación,Se rechaza,8.4
+H3.2,A (SIREN por imagen + física) no absorbe: |Δh| ≤ 5 % en validación,Se rechaza,8.4
+H3.3,"C no sobreajusta: pérdida de validación final ≤ 1,05 × su mínimo",Se rechaza,"8.3, 8.4"
+H3.4,Ajuste de A / inferencia de C ≥ 100,Se cumple,8.4
+H3.5,"Sin recorte, |Δh| aumenta más de 1 punto porcentual",Se cumple,8.5
+H3.6,"C en generalización: |Δh| ≤ 5 % y RMS lento ≤ 1,5 × el de prueba",Se rechaza,10

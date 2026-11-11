@@ -1,0 +1,4 @@
+variante,términos,tiempo (min),RMS lento (niveles eq.),Δh mediana (%),|Δh| mediana (%)
+completo,"recorte, vecindad, signo, suavidad",2.09722781833334,5.689217440962466,-3.212309281547291,3.212309281547291
+sin vecindad,"recorte, signo, suavidad",1.7214346049998615,5.888095204077555,-4.0643466535847175,4.0643466535847175
+sin recorte ni vecindad (Charbonnier completa),"signo, suavidad",1.7197737100000572,10.610747269773375,-7.387052735562892,7.387052735562892

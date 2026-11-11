@@ -1,0 +1,13 @@
+ID,Hipótesis,Resultado,Sección
+H4.1,"Más datos reducen la brecha: RMS lento de C en validación ≤ 1,3 × en entrenamiento",Se cumple,8.5
+H4.2,La exclusión por vecindad reduce la absorción en más de 1 punto porcentual,Se rechaza,8.6
+H4.3,C cumple el criterio de 6.5 en validación,Se cumple,8.5
+H4.4,A (con exclusión y calentamiento) no absorbe: |Δh| ≤ 5 % en validación,Se cumple,8.5
+H4.5,"C no sobreajusta: pérdida de validación final ≤ 1,05 × su mínimo",Se cumple,"8.4, 8.5"
+H4.6,"C en generalización: |Δh| ≤ 5 % y RMS lento ≤ 1,5 × el de prueba",Se rechaza,10
+H5.1,La variación entre semillas es < 1 nivel y < 1 punto porcentual,Se cumple,8.7
+H5.2,λ_s × 10 reduce |Δh| más allá de la variación entre semillas,Se cumple,8.7
+H5.3,15.000 pasos no mejoran el RMS lento más allá de esa variación,Se cumple,8.7
+H5.4,κ = 2 reduce |Δh| más allá de esa variación,Se cumple,8.7
+H5.5,La vecindad d = 12 reduce |Δh| más allá de esa variación,Se cumple,8.7
+H5.6,C + ajuste fino alcanza el RMS lento de A con |Δh| ≤ 5 %,Se cumple,8.7
