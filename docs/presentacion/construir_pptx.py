@@ -26,7 +26,7 @@ GRIS = RGBColor(0x6B, 0x72, 0x80)
 CLARO = RGBColor(0xEE, 0xF5, 0xFB)
 BLANCO = RGBColor(0xFF, 0xFF, 0xFF)
 FUENTE = "Calibri"
-TOTAL = 16
+TOTAL = 18
 
 prs = Presentation()
 prs.slide_width = Inches(13.333)
@@ -282,7 +282,7 @@ caja(s, 0.6, 1.7, 6.0, 5.0, [
 imagen(s, FIG / "E1" / "preprocesamiento_ejemplos.png", 6.9, 2.0, 5.9, 4.4)
 
 # ---------------------------------------------------------------- 6. Fundamentos
-s = nueva(6, "Fundamentos: representación implícita y pérdida física", "Emmanuel Hernández",
+s = nueva(6, "Fundamentos: representación implícita y pérdida física", "Juan José Escobar",
           "Una SIREN representa el fondo como función continua de las coordenadas; con frecuencia inicial uno, el "
           "resultado es un fondo de baja frecuencia. Las características de Fourier son la alternativa de la "
           "literatura. La física entra por la pérdida: el primer término recorta el 30 % de los residuos más "
@@ -367,13 +367,13 @@ texto(s, 0.6, 6.45, 12.1, 0.4, ["Validación: medias ± desviaciones de las medi
 s = nueva(9, "Entrenamiento, equipo y tiempos", "Emmanuel Hernández",
           "Cada imagen se ajusta por separado, desde sus propios pesos iniciales, con Adam a tasa 10⁻³ "
           "durante mil iteraciones fijas y sin parada temprana. Probamos tres semillas, 42, 2024 y 12345; la "
-          "semilla se fijó con la regla de la sección 8.2 antes de mirar la prueba. El equipo fue una RTX 3060 de 12 "
+          "semilla elegida es 2024, con la regla de validación fijada antes de mirar la prueba (menor M1 mediano en validación, 5,98 niveles). El equipo fue una RTX 3060 de 12 "
           "gigabytes con PyTorch 2.14 y CUDA 12.6. Un ajuste completo cuesta unos siete segundos por imagen, y la "
           "inferencia, tres milésimas de segundo. Son mediciones de validación y no una comparación con otras "
           "arquitecturas.")
 caja(s, 0.6, 1.7, 12.1, 2.6, [
     "Un ajuste independiente por imagen; pérdida de la diapositiva 6; Adam con tasa 10⁻³ y 1 000 iteraciones.",
-    "Semillas 42, 2024 y 12345; la semilla se fijó con la regla de validación antes de mirar la prueba.",
+    "Semillas 42, 2024 y 12345; se eligió la 2024 con la regla de validación, fijada antes de mirar la prueba.",
     "Equipo: GPU NVIDIA RTX 3060 (12 GB), PyTorch 2.14.0 con CUDA 12.6, Python 3.12.",
     "Tiempo medio por imagen (validación): ajuste 7,47 s; inferencia 0,003 s.",
 ], size=16, espacio=8)
@@ -399,29 +399,38 @@ caja(s, 0.6, 5.2, 12.1, 1.7, [
     "Criterio 2, fondo: A no supera a Zernike, la mejor línea base admisible (7,10 frente a 6,49 niveles).",
 ], size=16, espacio=8)
 
-# ---------------------------------------------------------------- 11. Perfiles y mapas
-s = nueva(11, "Perfiles y ejemplos visuales en prueba", "Emmanuel Hernández",
-          "Estas figuras muestran lo que mide la tabla. Cada perfil atraviesa la célula en la misma posición antes "
-          "y después de la corrección. El pistón no quita la pendiente del fondo. La SIREN absorbe la célula, y "
-          "se aprecia en el perfil. A reduce el fondo lento, pero no tanto como la SIREN, y su cambio de altura "
-          "queda por encima del de Zernike. Los perfiles son relativos en niveles equivalentes, porque no existe "
-          "un fondo verdadero contra el que medir el error absoluto.")
-caja(s, 0.6, 1.7, 4.6, 5.1, [
-    "Cada perfil atraviesa la célula en la misma posición antes y después de la corrección.",
-    "El pistón no corrige la pendiente del fondo.",
-    "La SIREN reduce el fondo, pero absorbe la célula.",
-    "A reduce el fondo lento con un cambio de altura de 4,81 % en mediana.",
-    "No hay fondo verdadero: los perfiles son relativos, en niveles equivalentes.",
-], size=16, espacio=10)
-imagen(s, FIG / "E5" / "mapas_prueba.png", 5.5, 1.65, 3.5, 5.25)
-imagen(s, FIG / "E5" / "perfiles_prueba.png", 9.2, 1.65, 3.5, 5.25)
+# ---------------------------------------------------------------- 11. Ejemplos de corrección en prueba
+s = nueva(11, "Ejemplos de corrección en prueba", "Emmanuel Hernández",
+          "Cada fila es una de las cinco imágenes de prueba. Las columnas son la entrada, el fondo que estima la red, "
+          "la imagen corregida y la misma imagen en negro, donde se ve la célula sin fondo. El fondo estimado es suave, "
+          "porque la red tiene baja frecuencia. Estas figuras muestran qué hace el modelo; el resumen numérico está en "
+          "la diapositiva 10.")
+imagen(s, FIG / "E5" / "mapas_prueba.png", 0.6, 1.6, 5.3, 5.3)
+caja(s, 6.1, 1.7, 6.6, 5.0, [
+    "Columnas: entrada, fondo estimado, imagen corregida y visualización en negro.",
+    "El fondo estimado es suave: la baja frecuencia de la red limita sus variaciones.",
+    "Cinco imágenes de prueba, una por fila.",
+], size=18, espacio=14)
+
+# ---------------------------------------------------------------- 12. Perfiles transversales en prueba
+s = nueva(12, "Perfiles transversales en prueba", "Emmanuel Hernández",
+          "Cada panel es un corte horizontal de una imagen de prueba. La curva azul es la fase preprocesada y la "
+          "naranja la corregida; la zona sombreada es la célula. En la mayoría de los cortes el perfil corregido "
+          "conserva la forma de la célula y baja su nivel. El cambio de altura en mediana es 4,81 por ciento. No hay "
+          "fondo verdadero, así que los perfiles son relativos, en niveles equivalentes.")
+imagen(s, FIG / "E5" / "perfiles_prueba.png", 0.6, 1.6, 5.3, 5.3)
+caja(s, 6.1, 1.7, 6.6, 5.0, [
+    "Azul: fase preprocesada. Naranja: fase corregida. Zona sombreada: célula.",
+    "En la mayoría de los cortes el perfil corregido conserva la forma de la célula y baja su nivel.",
+    "Cambio de altura en mediana: 4,81 %. No hay fondo verdadero: los perfiles son relativos.",
+], size=18, espacio=14)
 
 # ---------------------------------------------------------------- 12. Consistencia por imagen
-s = nueva(12, "Consistencia por imagen en prueba", "Mateo Lopera",
+s = nueva(13, "Consistencia por imagen en prueba", "Mateo Lopera",
           "Las cinco imágenes de prueba muestran que el resultado no es uniforme. En RMS, A supera a Zernike solo en "
           "la quinta imagen, con 4,71 frente a 5,65 niveles. En preservación, la supera solo en la tercera, con 2,88 "
           "frente a 4,81 por ciento. Ninguna imagen mejora las dos métricas a la vez, así que el criterio conjunto "
-          "de la sección 6.5 se cumple en cero de cinco. Con cinco imágenes no podemos afirmar que A sea peor en "
+          "de la diapositiva 10 se cumple en cero de cinco. Con cinco imágenes no podemos afirmar que A sea peor en "
           "general; lo que sí podemos afirmar es que no demostró ser mejor.")
 tabla(s, 0.6, 1.7, 12.1, [
     ["Imagen (hora · archivo)", "RMS A", "RMS Zernike", "|Δh| A (%)", "|Δh| Zernike (%)"],
@@ -437,44 +446,48 @@ caja(s, 0.6, 4.95, 12.1, 1.9, [
 ], size=17, espacio=10)
 texto(s, 0.6, 6.5, 12.1, 0.4, ["Imágenes del 29/01/2021; RMS en niveles equivalentes."], size=12, color=GRIS)
 
-# ---------------------------------------------------------------- 13. Generalización
-s = nueva(13, "Generalización a otro día de adquisición", "Mateo Lopera",
-          "Aplicamos el mismo procedimiento, sin cambiar arquitectura, pérdida, iteraciones ni semilla, a ocho "
-          "imágenes de tres adquisiciones del 28 de enero. La preservación se mantiene: la mediana de |Δh| es 2,07 "
-          "por ciento, dentro del umbral. El fondo residual sube a 11,79 niveles, con una dispersión muy alta. No "
-          "podemos separar el efecto del día de adquisición del de la calidad de la imagen, y con tres adquisiciones "
-          "la conclusión es limitada.")
+# ---------------------------------------------------------------- 14. Generalización a otro día
+s = nueva(14, "Generalización a otro día de adquisición", "Mateo Lopera",
+          "Aplicamos el mismo procedimiento, sin cambiar arquitectura, pérdida, iteraciones ni semilla, a ocho imágenes "
+          "de tres adquisiciones del 28 de enero. La tabla compara los cinco métodos en los dos días. La preservación "
+          "de A se mantiene dentro del umbral, con una mediana de 2,07 por ciento. Su fondo residual sube de 7,10 a "
+          "11,79 niveles, con una dispersión de 7,26 niveles. Zernike sigue por delante de A en fondo en los dos días. "
+          "Con tres adquisiciones no podemos separar el efecto del día de la calidad de la imagen, y la conclusión es "
+          "limitada.")
 tabla(s, 0.6, 1.7, 12.1, [
-    ["Conjunto", "RMS mediana (desv.)", "|Δh| mediana (desv., %)"],
-    ["Prueba (29/01/2021, 5 imágenes)", "7,10 (1,80)", "4,81 (1,83)"],
-    ["Otro día (28/01/2021, 8 imágenes)", "11,79 (7,26)", "2,07 (2,58)"],
-], anchos=[4.6, 3.6, 3.9], size=16, alto_fila=0.52)
-caja(s, 0.6, 3.7, 6.0, 3.1, [
-    "Preservación dentro del umbral: |Δh| mediana de 2,07 %.",
-    "Fondo residual mayor: 11,79 niveles frente a 7,10 en prueba.",
-    "Dispersión alta: desviación de 7,26 niveles con tres adquisiciones.",
-], size=17, espacio=12)
-imagen(s, FIG / "G10" / "ejemplo_otro_dia.png", 6.8, 3.75, 5.9, 2.7)
-texto(s, 6.8, 6.5, 5.9, 0.4, ["Ejemplo de corrección en el otro día de adquisición."], size=12, color=GRIS)
+    ["Método", "M1 prueba", "M1 otro día", "|Δh| prueba (%)", "|Δh| otro día (%)"],
+    ["Pistón", "18,18", "20,53", "0,00", "0,00"],
+    ["Polinomio grado 3", "10,37", "9,29", "1,19", "2,01"],
+    ["Zernike (guía)", "6,49", "5,98", "2,94", "4,60"],
+    ["SIREN ω₀ = 1 (guía)", "4,22", "3,78", "12,27", "12,52"],
+    ["A (propuesto)", "7,10", "11,79", "4,81", "2,07"],
+], anchos=[3.4, 1.8, 1.9, 2.5, 2.5], size=14, alto_fila=0.4, resaltar={5})
+caja(s, 0.6, 4.6, 6.2, 2.4, [
+    "A no supera a Zernike en M1 en ningún día (7,10 frente a 6,49; 11,79 frente a 5,98).",
+    "En |Δh| se invierte: peor que Zernike en prueba (4,81 frente a 2,94 %), mejor en otro día (2,07 frente a 4,60 %).",
+    "Ocho imágenes, tres adquisiciones y dispersión de 7,26 niveles: la conclusión es limitada.",
+], size=15, espacio=8)
+imagen(s, FIG / "G10" / "ejemplo_otro_dia.png", 6.9, 4.7, 5.8, 1.6)
+texto(s, 6.9, 6.4, 5.8, 0.4, ["Ejemplo de corrección en el otro día de adquisición."], size=12, color=GRIS)
 
-# ---------------------------------------------------------------- 14. Compromiso fondo–célula
-s = nueva(14, "El compromiso entre fondo y célula", "Mateo Lopera",
-          "Esta figura resume la validación. El eje horizontal es el cambio de altura de la célula; a la izquierda "
-          "se preserva mejor. El eje vertical es el fondo residual; abajo está mejor. El pistón preserva, pero deja "
-          "el fondo. La SIREN quita el fondo y absorbe la célula. Entre ambos aparece el compromiso que motiva el "
-          "modelo. En validación, A supera levemente a Zernike en fondo, 6,18 frente a 6,39 niveles, pero cede "
-          "preservación: 4,16 frente a 2,55 por ciento. Ese es el compromiso que el modelo no resolvió.")
+# ---------------------------------------------------------------- 15. Compromiso fondo–célula en prueba
+s = nueva(15, "El compromiso entre fondo y célula en prueba", "Mateo Lopera",
+          "Esta figura muestra el conjunto de prueba, con A incluido. El eje horizontal es el cambio de altura de la "
+          "célula: a la izquierda se preserva mejor. El eje vertical es el fondo residual: abajo está mejor. En fondo, A "
+          "queda entre Zernike y el polinomio de grado tres. En preservación, queda por detrás de Zernike y del "
+          "polinomio, así que Zernike lo supera en ambas métricas. En validación, A tenía una ligera ventaja de fondo "
+          "sobre Zernike, y en prueba esa ventaja no se repitió.")
 caja(s, 0.6, 1.7, 4.6, 5.1, [
     "Horizontal, |Δh|: a la izquierda, mejor preservación de la célula.",
-    "Vertical, RMS del fondo: abajo, mejor fondo residual.",
+    "Vertical, M1: abajo, mejor fondo residual.",
     "Pistón: preserva, pero deja el fondo.",
     "SIREN: quita el fondo, pero absorbe la célula (12 %).",
-    "En validación, A supera a Zernike en fondo (6,18 frente a 6,39) y cede en preservación (4,16 % frente a 2,55 %).",
+    "A queda entre Zernike y el polinomio en fondo, pero Zernike lo supera en ambas métricas.",
 ], size=15, espacio=10)
-imagen(s, FIG / "LB" / "compromiso_fondo_celula_validacion.png", 5.4, 1.65, 7.4, 5.2)
+imagen(s, FIG / "E5" / "compromiso_fondo_celula_prueba.png", 5.4, 1.65, 7.4, 5.2)
 
 # ---------------------------------------------------------------- 15. Conclusiones
-s = nueva(15, "Conclusiones: el criterio de éxito no se cumplió", "Mateo Lopera",
+s = nueva(16, "Conclusiones: el criterio de éxito no se cumplió", "Mateo Lopera",
           "Concluimos que el modelo no superó a la mejor línea base admisible en prueba. A preserva la célula y "
           "supera al pistón y al polinomio de grado tres, pero no a Zernike. El compromiso fondo–célula explica "
           "buena parte: quien quita más fondo también puede absorber célula, como la SIREN, y E preserva mejor pero "
@@ -484,7 +497,7 @@ s = nueva(15, "Conclusiones: el criterio de éxito no se cumplió", "Mateo Loper
 caja(s, 0.6, 1.7, 5.9, 4.1, [
     "Partición sin fuga y caracterización del dataset: 47,5 % de recortes compartidos en la original.",
     "A preserva la célula en prueba: |Δh| 4,81 %, dentro del umbral.",
-    "A supera al pistón y al polinomio de grado 3, pero no a Zernike (7,10 frente a 6,49 niveles).",
+    "En fondo, A supera al pistón y al polinomio de grado 3, pero no a Zernike (7,10 frente a 6,49 niveles).",
 ], size=17, espacio=12)
 rectangulo(s, 6.9, 1.7, 5.8, 4.1, relleno=CLARO)
 texto(s, 7.15, 1.85, 5.3, 0.55, ["Por qué no se cumplió"], size=17, color=ACENTO, bold=True)
@@ -497,30 +510,38 @@ texto(s, 0.6, 6.05, 12.1, 0.8, [
     "Lo aprendido: el criterio fijado antes de entrenar impidió declarar un éxito que los datos no sostienen."],
     size=16, color=ACENTO, bold=True)
 
-# ---------------------------------------------------------------- 16. Limitaciones y referencias
-s = nueva(16, "Limitaciones, trabajo futuro y referencias", "Mateo Lopera",
-          "Cerramos con las limitaciones. No hay fondo verdadero, así que las máscaras y anillos son referencias "
+# ---------------------------------------------------------------- 17. Limitaciones y trabajo futuro
+s = nueva(17, "Limitaciones y trabajo futuro", "Mateo Lopera",
+          "Cerramos con las limitaciones. No hay fondo verdadero, así que las máscaras y los anillos son referencias "
           "aproximadas. Son pocas adquisiciones, y las líneas base del código guía no tuvieron la misma búsqueda de "
           "hiperparámetros. Como trabajo futuro, proponemos más adquisiciones y diversidad, contrastar con referencias "
           "físicas y estudiar la sensibilidad a máscaras, resolución y ruido. Gracias; quedamos atentos a preguntas.")
-caja(s, 0.6, 1.7, 6.0, 3.3, [
+caja(s, 0.6, 1.7, 6.0, 4.6, [
     "No hay fondo verdadero: máscaras y anillos son referencias aproximadas.",
     "Pocas adquisiciones: cinco imágenes de validación y cinco de prueba.",
     "Las líneas base del código guía no tuvieron búsqueda equivalente de hiperparámetros.",
     "La diferencia del otro día mezcla día de adquisición y calidad de imagen.",
-], size=15, espacio=8)
-caja(s, 6.9, 1.7, 5.8, 3.3, [
+], size=17, espacio=12)
+caja(s, 6.9, 1.7, 5.8, 4.6, [
     "Ampliar adquisiciones y su diversidad, con una imagen por adquisición.",
     "Contrastar con referencias físicas independientes.",
     "Estudiar la sensibilidad a máscaras, resolución y ruido.",
-], size=15, espacio=8)
-texto(s, 0.6, 5.15, 12.1, 0.42, ["Referencias"], size=13, color=ACENTO, bold=True)
-texto(s, 0.6, 5.5, 12.1, 1.45, [
-    "[1] Castañeda, R., Trujillo, C., Doblas, A. (2024). A human erythrocytes hologram dataset for learning-based model training. Data in Brief, 54, 110424.",
-    "[2] Xu, D., Cao, L., Sun, H. (2025). Adaptive aberration-corrected quantitative phase microscopy via physics-informed deep learning. Advanced Photonics, 7(6), 066013.",
-    "[3] Sitzmann, V., et al. (2020). Implicit Neural Representations with Periodic Activation Functions. arXiv:2006.09661.",
-    "[4] Tancik, M., et al. (2020). Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains. arXiv:2006.10739.",
-], size=11, color=GRIS)
+], size=17, espacio=12)
+
+# ---------------------------------------------------------------- 18. Referencias
+s = nueva(18, "Referencias", "Mateo Lopera",
+          "Estas son todas las referencias del informe, en orden de citación. El código guía del curso implementa las "
+          "líneas base Zernike y SIREN.")
+texto(s, 0.6, 1.7, 12.1, 5.2, [
+    "[1] Castañeda, R., Trujillo, C. y Doblas, A. (2024). A human erythrocytes hologram dataset for learning-based model training. Data in Brief, 54, 110424.",
+    "[2] Herráez, M. A., Burton, D. R., Lalor, M. J. y Gdeisat, M. A. (2002). Fast two-dimensional phase-unwrapping algorithm based on sorting by reliability following a noncontinuous path. Applied Optics, 41(35), 7437–7444.",
+    "[3] Sitzmann, V., Martel, J. N. P., Bergman, A. W., Lindell, D. B. y Wetzstein, G. (2020). Implicit neural representations with periodic activation functions. arXiv:2006.09661.",
+    "[4] Tancik, M., et al. (2020). Fourier features let networks learn high frequency functions in low dimensional domains. arXiv:2006.10739.",
+    "[5] Tang, J., et al. (2023). Phase aberration compensation via a self-supervised sparse constraint network in digital holographic microscopy. Optics and Lasers in Engineering, 168, 107671.",
+    "[6] Huang, Z. y Cao, L. (2023). Phase aberration separation for holographic microscopy by alternating direction sparse optimization. Optics Express, 31(8), 12520–12533.",
+    "[7] Xu, D., Cao, L. y Sun, H. (2025). Adaptive aberration-corrected quantitative phase microscopy via physics-informed deep learning. Advanced Photonics, 7(6), 066013.",
+    "[8] Código guía del curso (compensate_background, compensate_background_zernike), incorporado en el notebook EritroFase.",
+], size=14, color=TEXTO)
 
 # ---------------------------------------------------------------- Metadatos
 cp = prs.core_properties

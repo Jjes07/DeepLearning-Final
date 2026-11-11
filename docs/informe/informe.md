@@ -17,7 +17,7 @@ En la microscopía holográfica digital, la fase de cada célula se mide respect
 
 **Fuga en la partición original.** Los conjuntos `Training` y `Validation` comparten 5.837 recortes (47,5 %), de modo que evaluar con ellos mediría desempeño sobre escenas ya vistas. Por eso la partición se hizo **por adquisición**. De 40 candidatas del filtro automático se curaron 22 imágenes del 29/01/2021, que se dividieron de forma estratificada por el nivel de fondo (semilla 42) en 12 de entrenamiento, 5 de validación y 5 de prueba. Las 8 imágenes de generalización provienen de tres adquisiciones del 28/01/2021 (otro día) y se eligieron por defectos visibles. No hay adquisiciones compartidas entre conjuntos. Una prueba de contenido (rotación, volteo y desplazamiento, todas contra todas) dio una similitud máxima de 0,9845 entre conjuntos distintos, frente a 1,0000 del control positivo.
 
-**Preprocesamiento.** Se interpreta el gris como fase envuelta escalada linealmente, $\varphi = 2\pi g/255 - \pi$. Los datos son consistentes con esta hipótesis, pero el dataset no trae calibración, así que la escala absoluta en radianes no está verificada. Cada imagen se desenvuelve con el algoritmo de Herráez et al. [2], se invierte el signo (en la reconstrucción las células quedan por debajo del fondo) y se expresa en niveles de gris equivalentes, $u = -\tfrac{255}{2\pi}\,\mathcal U(2\pi g/255 - \pi)$. El desenvolvimiento es reversible: la fase envuelta se recupera exactamente en las 30 imágenes de desarrollo y generalización. Quedan como máximo dos saltos residuales por imagen en entrenamiento, ninguno en validación y prueba, y hasta 13 pares de píxeles en generalización.
+**Preprocesamiento.** Se interpreta el gris como fase envuelta escalada linealmente, $\varphi = 2\pi g/255 - \pi$. Los datos son consistentes con esta hipótesis, pero el dataset no trae calibración, así que la escala absoluta en radianes no está verificada. Cada imagen se desenvuelve con el algoritmo de Herráez et al. [2], que aquí se denota *desenvolver*; después se invierte el signo (en la reconstrucción las células quedan por debajo del fondo) y se expresa en niveles de gris equivalentes: u = −(255 / 2π) · desenvolver(φ). El desenvolvimiento es reversible: la fase envuelta se recupera exactamente en las 30 imágenes de desarrollo y generalización. Quedan como máximo dos saltos residuales por imagen en entrenamiento, ninguno en validación y prueba, y hasta 13 pares de píxeles en generalización.
 
 **Límites de los datos.** Son 5 imágenes de validación y 5 de prueba, con 12 células evaluables en validación. Las máscaras de referencia son umbrales aproximados, y no existe una verdad de fondo.
 
@@ -37,24 +37,23 @@ En la microscopía holográfica digital, la fase de cada célula se mide respect
 
 ## 4. Resultados
 
-**Tabla 1.** Medianas en el conjunto de prueba (5 imágenes) frente a las líneas base, y de A en generalización. M1 en niveles equivalentes (ideal 0; piso por ruido ≈ 0,5). $\Delta h$ es el cambio relativo de la altura local de la célula (ideal 0).
+**Tabla 1.** Medianas frente a las líneas base: prueba (5 imágenes, 29/01/2021) y otro día (8 imágenes, 28/01/2021). M1 en niveles equivalentes (ideal 0; piso por ruido ≈ 0,5). $\lvert\Delta h\rvert$ es el cambio absoluto de la altura local de la célula (ideal 0). Dice y el criterio de 5 % solo en prueba.
 
-| Método | M1 | $\Delta h$ (%) | $\lvert\Delta h\rvert$ (%) | Dice | $\lvert\Delta h\rvert \le 5\,\%$ |
-|---|---:|---:|---:|---:|:---:|
-| Pistón | 18,18 | 0,00 | 0,00 | 0,971 | Sí |
-| Polinomio grado 3 | 10,37 | −0,83 | 1,19 | 0,967 | Sí |
-| Zernike (guía) | **6,49** | −2,94 | 2,94 | 0,970 | Sí |
-| SIREN $\omega_0=1$ (guía) | 4,22 | −12,27 | 12,27 | 0,943 | No |
-| **A (propuesto)** | 7,10 | −4,81 | 4,81 | 0,970 | Sí |
-| A, otro día (8 imágenes) | 11,79 | −2,07 | 2,07 | 0,941 | — |
+| Método | M1 prueba | M1 otro día | $\lvert\Delta h\rvert$ prueba (%) | $\lvert\Delta h\rvert$ otro día (%) | Dice | $\lvert\Delta h\rvert \le 5\,\%$ |
+|---|---:|---:|---:|---:|---:|:---:|
+| Pistón | 18,18 | 20,53 | 0,00 | 0,00 | 0,971 | Sí |
+| Polinomio grado 3 | 10,37 | 9,29 | 1,19 | 2,01 | 0,967 | Sí |
+| Zernike (guía) | **6,49** | 5,98 | 2,94 | 4,60 | 0,970 | Sí |
+| SIREN $\omega_0=1$ (guía) | 4,22 | 3,78 | 12,27 | 12,52 | 0,943 | No |
+| **A (propuesto)** | 7,10 | 11,79 | 4,81 | 2,07 | 0,970 | Sí |
 
 **Criterio de éxito** (fijado antes de entrenar). (1) Preservación: $|\Delta h|$ mediana $\le 5\,\%$. Se cumple con 4,81 %. (2) Fondo: M1 no mayor que el de la mejor línea base admisible, que es Zernike con 6,49. **No se cumple**: A obtiene 7,10. (3) Consistencia: A supera a Zernike en ambas métricas a la vez en **0 de 5** imágenes de prueba. El modelo **no cumplió el criterio de éxito en prueba**, y la hipótesis correspondiente se rechaza.
 
-**Compromiso fondo-célula.** En validación, A dejó un fondo algo menor que Zernike (6,18 ± 0,18 frente a 6,39 niveles, diferencia comparable a la dispersión entre semillas), a costa de más altura perdida (4,16 ± 0,56 % frente a 2,55 %; Figura 1). En prueba desapareció la ventaja de fondo (7,10 frente a 6,49) y el cambio de altura se acercó al límite de 5 %. Este patrón es coherente con un sobreajuste de la selección sobre las mismas 5 imágenes de validación, que se usaron para escoger entre 59 configuraciones. La SIREN del código guía muestra el mismo compromiso de forma extrema: deja el fondo más plano (4,22 niveles) pero absorbe 12,27 % de la altura celular.
+**Compromiso fondo-célula.** En prueba (Figura 1, con A incluido), A deja un fondo de 7,10 niveles, entre Zernike (6,49) y el polinomio de grado 3 (10,37), pero con un cambio de altura de 4,81 %, mayor que el de Zernike (2,94 %) y el del polinomio (1,19 %): Zernike lo supera en ambas métricas. En validación, A había dejado un fondo algo menor que Zernike (6,18 ± 0,18 frente a 6,39 niveles), a costa de más altura perdida (4,16 ± 0,56 % frente a 2,55 %). Esa ventaja no se repitió en prueba, coherente con un sobreajuste de la selección sobre las mismas 5 imágenes de validación, que se usaron para escoger entre 59 configuraciones. La SIREN del código guía muestra el compromiso de forma extrema: deja el fondo más plano (4,22 niveles) pero absorbe 12,27 % de la altura celular.
 
-![Figura 1. Compromiso entre fondo lento (M1, escala logarítmica) y preservación de la célula ($|\Delta h|$) en validación. Puntos pequeños: imágenes; marcadores grandes: medianas; línea discontinua: umbral de 5 %.](../../results/figures/LB/compromiso_fondo_celula_validacion.png){w=8.2cm}
+![Figura 1. Compromiso entre fondo lento (M1, escala logarítmica) y preservación de la célula ($|\Delta h|$) en prueba, con A incluido. Puntos pequeños: imágenes; marcadores grandes: medianas; línea discontinua: umbral de 5 %.](../../results/figures/E5/compromiso_fondo_celula_prueba.png){w=7.4cm}
 
-**Generalización.** En el otro día la mediana de M1 sube a 11,79 niveles y la de $|\Delta h|$ baja a 2,07 %. El conjunto mezcla día de adquisición, calidad y selección (8 imágenes de 3 escenas), y Zernike no se evaluó allí. Por eso la diferencia no se atribuye al modelo.
+**Generalización.** En el otro día (8 imágenes de 3 adquisiciones del 28/01/2021), la mediana de M1 de A sube a 11,79 niveles y la de $\lvert\Delta h\rvert$ baja a 2,07 %. A no supera a Zernike en M1 en ningún conjunto (7,10 frente a 6,49 en prueba; 11,79 frente a 5,98 en otro día). En $\lvert\Delta h\rvert$ la comparación se invierte: en prueba A es peor que Zernike (4,81 frente a 2,94 %) y en otro día es mejor (2,07 frente a 4,60 %). El orden de los métodos cambia también: A y el polinomio intercambian lugar en M1. Con 8 imágenes, 3 escenas y una dispersión de 7,26 niveles en A, no es posible separar el efecto del día de adquisición del de la calidad de la imagen, ni atribuir la diferencia al modelo.
 
 ## 5. Conclusiones
 
