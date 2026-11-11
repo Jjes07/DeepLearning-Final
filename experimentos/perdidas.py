@@ -103,3 +103,40 @@ def perdida_fisica(r, b, pesos, usar_signo=True, usar_suav=True, usar_ref=True, 
         + pesos.get("ref", 0.0) * terminos["ref"]
     )
     return total, terminos
+
+
+def perdida_E(u, b, w, pesos, kappa=1.0):
+    """
+    Pérdida sin etiquetas para el esquema E.
+    u, b, w: tensores (B, 1, H, W) en escala normalizada por imagen.
+    pesos: dict con 'fondo', 'signo', 'area', 'tv_w'.
+    kappa: umbral del término de signo (~1 desviación del ruido normalizada).
+    """
+    r = u - b
+    # Ajuste en la región que la red considera fondo.
+    loss_fondo = ((w * charbonnier(r)).flatten(1).sum(1) / (w.flatten(1).sum(1) + 1e-8)).mean()
+
+    # Signo S3: el fondo nunca debe quedar por encima de la imagen.
+    loss_signo = torch.relu(-r - kappa).pow(2).mean()
+
+    # Prior de área inferior: al menos ~60 % de píxeles deben ser fondo.
+    mean_w = w.mean(dim=(1, 2, 3))
+    loss_area = torch.relu(0.6 - mean_w).pow(2).mean()
+
+    # Suavidad espacial opcional de w para regiones compactas.
+    loss_tv_w = tv2d(w)
+
+    terminos = {
+        "fondo": loss_fondo,
+        "signo": loss_signo,
+        "area": loss_area,
+        "tv_w": loss_tv_w,
+    }
+
+    total = (
+        pesos.get("fondo", 1.0) * terminos["fondo"]
+        + pesos.get("signo", 0.0) * terminos["signo"]
+        + pesos.get("area", 0.0) * terminos["area"]
+        + pesos.get("tv_w", 0.0) * terminos["tv_w"]
+    )
+    return total, terminos

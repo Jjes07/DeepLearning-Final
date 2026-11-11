@@ -13,8 +13,11 @@ import torch.nn.functional as F
 
 from data import cargar, fijar_semillas, normalizar_por_imagen
 from metricas import metricas_archivo
-from modelos import BaseSuave, EncoderAmortizado, ImplicitFourierMLP, ModeloDescomposicion, SirenBackgroundNetwork, build_coordinate_grid
-from perdidas import perdida_descomposicion, perdida_fisica
+from modelos import (
+    BaseSuave, EncoderAmortizado, EncoderCoordConv, ImplicitFourierMLP,
+    ModeloDescomposicion, ModeloE, SirenBackgroundNetwork, build_coordinate_grid,
+)
+from perdidas import perdida_descomposicion, perdida_E, perdida_fisica
 
 
 def _device():
@@ -474,3 +477,103 @@ def guardar_resultado(resultados, config, metricas_val, tiempos, esquema):
     else:
         df.to_csv(csv_path, index=False)
     return row["id"]
+
+
+def _ruido_sin_mascara(un):
+    """Desviación robusta de diferencias entre vecinos, en escala normalizada."""
+    dx = np.diff(un, axis=1).ravel()
+    dy = np.diff(un, axis=0).ravel()
+    dif = np.concatenate((dx, dy))
+    return float(np.median(np.abs(dif - np.median(dif))) / (0.67448975 * np.sqrt(2)))
+
+
+def entrenar_E(imagenes_train, imagenes_val, config, ctx):
+    """Entrena E; la validación y el checkpoint no utilizan máscaras."""
+    fijar_semillas(config["semilla"])
+    device = _device()
+    H, W = ctx["preprocesadas"][imagenes_train[0]].shape
+    modelo = ModeloE(H, W, f_max=config["f_max"], grado_poli=3,
+                     base_channels=config["base_channels"]).to(device)
+    def preparar(nombres):
+        xs, ks, medias, stds = [], [], [], []
+        for nombre in nombres:
+            un, media, std = normalizar_por_imagen(ctx["preprocesadas"][nombre])
+            xs.append(un)
+            ks.append(_ruido_sin_mascara(un))
+            medias.append(media)
+            stds.append(std)
+        return (torch.tensor(np.stack(xs), dtype=torch.float32, device=device).unsqueeze(1),
+                torch.tensor(ks, dtype=torch.float32, device=device).view(-1, 1, 1, 1),
+                medias, stds)
+    train, kt, _, _ = preparar(imagenes_train)
+    val, kv, medias, stds = preparar(imagenes_val)
+    opt = torch.optim.Adam(modelo.parameters(), lr=config.get("lr", 1e-3))
+    scheduler = torch.optim.lr_scheduler.StepLR(opt, step_size=100, gamma=0.5)
+    amp = device.type == "cuda"
+    scaler = torch.amp.GradScaler("cuda", enabled=amp)
+    batch = min(config.get("batch_size", 4), 8)
+    pesos = {"fondo": 1.0, "signo": 1.0, "area": config["lambda_area"], "tv_w": 0.001}
+    mejor_loss, mejor_estado, mejor_epoca = float("inf"), None, -1
+    curva = []
+    t0 = time.perf_counter()
+    for ep in range(config["epocas"]):
+        modelo.train()
+        perdidas = []
+        for idx in torch.randperm(len(train), device=device).split(batch):
+            imgs = []
+            for imagen in train[idx]:
+                imagen = torch.rot90(imagen, int(torch.randint(4, ()).item()), (-2, -1))
+                if torch.rand(()).item() < 0.5:
+                    imagen = imagen.flip(-1)
+                imgs.append(imagen)
+            ub = torch.stack(imgs)
+            opt.zero_grad(set_to_none=True)
+            with torch.autocast(device_type=device.type, dtype=torch.float16, enabled=amp):
+                b, w = modelo(ub)
+                loss, _ = perdida_E(ub, b, w.float(), pesos, kt[idx])
+            scaler.scale(loss).backward()
+            scaler.step(opt)
+            scaler.update()
+            perdidas.append(loss.item())
+        scheduler.step()
+        modelo.eval()
+        val_losses, fondos = [], []
+        with torch.no_grad():
+            for i in range(0, len(val), batch):
+                with torch.autocast(device_type=device.type, dtype=torch.float16, enabled=amp):
+                    b, w = modelo(val[i:i+batch])
+                    lv, _ = perdida_E(val[i:i+batch], b, w.float(), pesos, kv[i:i+batch])
+                val_losses.extend([lv.item()] * len(b))
+                if ep == 0 or (ep + 1) % 10 == 0 or ep == config["epocas"] - 1:
+                    fondos.extend(b[:, 0].cpu().numpy())
+        vl = float(np.mean(val_losses))
+        if vl < mejor_loss:
+            mejor_loss, mejor_estado, mejor_epoca = vl, _mejor_estado(modelo), ep
+        fila = {"epoca": ep + 1, "loss_train": float(np.mean(perdidas)), "loss_val": vl,
+                "M1_val": float("nan"), "dh_val": float("nan")}
+        if fondos:
+            ms = []
+            for j, nombre in enumerate(imagenes_val):
+                u = ctx["preprocesadas"][nombre]
+                b_real = fondos[j] * stds[j] + medias[j]
+                ms.append(metricas_archivo(u - b_real, nombre, ctx))
+            fila["M1_val"] = float(np.median([m["RMS lento (niveles eq.)"] for m in ms]))
+            fila["dh_val"] = float(np.median([m["|Δh| mediana (%)"] for m in ms]))
+        curva.append(fila)
+        if (ep + 1) % 50 == 0:
+            print(f"  época {ep+1}: pérdida val={vl:.5f}", flush=True)
+    modelo.load_state_dict(mejor_estado)
+    if device.type == "cuda":
+        torch.cuda.synchronize()
+    return modelo, {"curva": pd.DataFrame(curva), "mejor_epoca": mejor_epoca + 1,
+                    "loss_val": mejor_loss, "tiempo_entrenamiento": time.perf_counter() - t0}
+
+
+def inferir_E(modelo, imagen):
+    """Una pasada, sin optimización por imagen."""
+    un, media, std = normalizar_por_imagen(imagen)
+    u = torch.tensor(un, dtype=torch.float32, device=next(modelo.parameters()).device)[None, None]
+    modelo.eval()
+    with torch.no_grad():
+        b, w = modelo(u)
+    return b[0, 0].cpu().numpy() * std + media, w[0, 0].cpu().numpy()

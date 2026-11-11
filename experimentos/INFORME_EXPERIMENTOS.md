@@ -205,8 +205,11 @@ Ninguna configuración cumple el objetivo. Todos los valores de |Δh| están muy
 | D (mejor: fmax8_lc0.1) | 26.02 | 0.03 | No |
 
 ### Diagnóstico
-- **C:** el encoder amortizado predice coeficientes de `BaseSuave`, pero la base es demasiado rígida para representar el fondo real. El modelo converge a una corrección muy débil (|Δh| ≈ 1 %) que deja el fondo sin corregir (M1 ≈ 20).
-- **D:** la rama de célula se anula (c ≈ 0) porque `λ_c` penaliza cualquier activación. La rama de fondo, una `BaseSuave` sobre features de U-Net, solo puede representar un fondo muy suave. Aumentar `λ_c` reduce levemente M1 pero no lo suficiente. Agregar suavidad explícita sobre `b` empeoró M1 (40 vs 26–37), confirmando que la rigidez es el cuello de botella.
+- **C:** `EncoderAmortizado` termina en `AdaptiveAvgPool2d(1)`, que descarta la disposición espacial del mapa de características y dificulta inferir la orientación de un fondo inclinado. La base ya incluye el polinomio de grado 2, cuyo ajuste obtuvo M1 ≈ 12,8; por tanto, los resultados de C no demuestran que la base sea demasiado rígida.
+- **D:** la rama de fondo también emplea promedio global y la rama de célula colapsa a valores cercanos a cero. Además, `perdida_descomposicion` calcula `r.median()` sobre todo el lote, en vez de hacerlo por imagen.
+- **Error de lote:** en la implementación usada en estas corridas, `BaseSuave.forward` reorganizaba directamente una matriz de tamaño píxeles × lote como lote × alto × ancho, mezclando las imágenes cuando el lote tenía más de un elemento. En D, el fondo tenía forma `(B, H, W)` frente a `(B, 1, H, W)` para la imagen y la célula, lo que también podía mezclar imágenes por difusión. Estos defectos limitan la interpretación de C y D.
+
+Los resultados históricos de las tablas se conservan tal como se registraron; no se han recalculado con esas correcciones.
 
 ### Recursos y tiempos
 - Parámetros entrenables de C (`base_channels=32`, `f_max=5`): ~0.5 M.
@@ -218,9 +221,70 @@ Ninguna configuración cumple el objetivo. Todos los valores de |Δh| están muy
 Guardadas en `experimentos/curvas/`. Las curvas muestran convergencia estable de la pérdida, pero sin correlación con la mejora de M1, lo que indica que la pérdida de descomposición no guía al modelo hacia una corrección útil del fondo.
 
 ### Recomendación final
-Ni C ni D superan al esquema A (SIREN por imagen) ni a Zernike en esta ronda. El problema principal es la rigidez de `BaseSuave` como representación del fondo. Para continuar se recomienda:
-1. Reemplazar `BaseSuave` por una red implícita o SIREN amortizada con más capacidad.
-2. En D, permitir que la rama de fondo sea más flexible (por ejemplo, una red implícita por imagen con `ĉ` fija o una CNN decodificadora).
-3. Revisar la pérdida de descomposición para evitar el colapso `c → 0`, posiblemente con un término de reconstrucción sobre `u − b` antes de incluir `c`.
+Los resultados registrados de C y D no superan al esquema A ni a Zernike. Antes de atribuir el fallo a la capacidad de la base, conviene corregir el manejo de lotes y evaluar una arquitectura que conserve la posición espacial. También debe revisarse la pérdida por imagen y el colapso de la rama de célula si se retoma D.
 
 No se seleccionaron finalistas porque ninguna configuración alcanzó M1 < 6.4 niveles con |Δh| ≤ 5 %.
+
+
+## Ronda 3 — pesos aprendidos y ajuste ponderado
+
+### Protocolo
+
+E predice, con una U-Net de dos niveles y 16 canales iniciales, un peso por píxel y resuelve en una pasada los mínimos cuadrados ponderados sobre la base polinómica de grado 3 y Fourier. El sistema se resuelve en float32 con `μ = 10⁻⁴`; el entrenamiento usa precisión mixta en la red. Se aplican volteos y giros de 90°, 300 épocas y lotes de cuatro imágenes. El umbral de signo se estima por imagen, sin máscaras, mediante la mediana robusta de diferencias entre vecinos; en las 17 imágenes de entrenamiento y validación estuvo entre 0,0143 y 0,0181 en escala normalizada.
+
+La pérdida promedia por imagen el ajuste ponderado, el término de signo, una penalización de área y una variación total de los pesos. Se escogió la cota blanda `relu(0,6 − media(w))²`: evita exigir que todas las imágenes tengan exactamente el promedio poblacional de 76 % de fondo. Una penalización blanda no garantiza que cada media alcance 0,6. Los dos valores de su coeficiente fueron 0,5 y 2,0; el coeficiente de signo fue 1 y el de variación total 0,001.
+
+La pérdida de validación, calculada sin máscaras, eligió el checkpoint y las dos finalistas. M1 y |Δh| se registraron cada diez épocas solo como observaciones. La petición de no usar máscaras en la selección entra en tensión con elegir por M1 y |Δh|, que sí las necesitan: por eso las finalistas se eligieron sin etiquetas y la regla de menor media de M1 con media de |Δh| ≤ 5 % se aplicó **a posteriori entre ellas**. Los valores de pérdida con distintos coeficientes de área corresponden a objetivos distintos y su comparación debe interpretarse con cautela. No se usó el conjunto de prueba para esta ronda.
+
+### Barrido: semilla 42
+
+M1 y |Δh| son medianas entre las cinco imágenes de validación; una sola semilla no permite estimar su desviación entre semillas.
+
+| f_max | λ área | pérdida val. | M1 | &#124;Δh&#124; (%) | época elegida | entrenamiento (s) |
+|---:|---:|---:|---:|---:|---:|---:|
+| 2 | 0,5 | 0,09815 | 8,72 | 1,66 | 288 | 99,54 |
+| 2 | 2,0 | 0,11012 | 7,55 | 1,97 | 300 | 93,39 |
+| 4 | 0,5 | 0,09664 | 9,03 | 1,74 | 288 | 83,46 |
+| 4 | 2,0 | 0,10904 | 8,07 | 2,32 | 296 | 90,78 |
+| 6 | 0,5 | 0,09683 | 8,79 | 1,64 | 288 | 105,43 |
+| 6 | 2,0 | 0,10900 | 7,51 | 1,95 | 300 | 99,07 |
+
+Las finalistas por pérdida fueron `f_max=4, λ=0,5` y `f_max=6, λ=0,5`. La configuración de menor M1 en este barrido fue `f_max=6, λ=2`, pero no fue seleccionada por pérdida y no cuenta con tres semillas; su resultado aislado no permite atribuirle una media ni una desviación.
+
+### Finalistas: tres semillas
+
+Cada observación es la mediana de las cinco imágenes; las columnas finales presentan media ± desviación estándar **muestral entre semillas**.
+
+| Configuración | Semilla 42: M1 / &#124;Δh&#124; | Semilla 2024: M1 / &#124;Δh&#124; | Semilla 12345: M1 / &#124;Δh&#124; | M1 medio ± desv. | &#124;Δh&#124; medio ± desv. (%) |
+|---|---:|---:|---:|---:|---:|
+| E, f_max 4, λ 0,5 | 9,03 / 1,74 | 7,68 / 2,01 | 9,76 / 1,62 | 8,82 ± 1,06 | 1,79 ± 0,20 |
+| E, f_max 6, λ 0,5 | 8,79 / 1,64 | 7,70 / 2,07 | 9,40 / 1,72 | **8,63 ± 0,87** | **1,81 ± 0,23** |
+
+Ambas satisfacen la restricción de altura. Entre ellas, E con `f_max=6` tiene la menor media de M1. No alcanza las metas M1 < 6,18 y M1 < 6,39.
+
+### Comparación con la ronda anterior y la guía
+
+| Método | M1 | &#124;Δh&#124; (%) | Alcance de la cifra |
+|---|---:|---:|---|
+| A | 6,18 ± 0,18 | 4,16 ± 0,56 | Media ± desviación entre tres semillas |
+| E, f_max 6 | 8,63 ± 0,87 | 1,81 ± 0,23 | Media ± desviación entre tres semillas |
+| Zernike, guía | 6,39; desviación entre semillas no disponible | 2,55; desviación entre semillas no disponible | Mediana de cinco imágenes |
+| SIREN, guía | 3,47; desviación entre semillas no disponible | 12,85; desviación entre semillas no disponible | Mediana de cinco imágenes |
+
+Para las referencias solo hay una medición por imagen en `baseline_validacion.csv`; no se inventa una dispersión entre semillas. Como dato distinto, la media ± desviación muestral **entre las cinco imágenes** es 7,37 ± 2,41 para M1 de Zernike y 3,62 ± 0,34 para SIREN; no es comparable a la desviación entre semillas de A y E. SIREN incumple el límite de altura con la mediana de referencia.
+
+### Control E-lineal
+
+El control con CoordConv, mapa reducido 8 × 8, base de grado 3 y `f_max=4` se ejecutó una vez, con semilla 42 y 300 épocas. Eligió la época 260 por pérdida de validación sin máscaras y obtuvo M1 = 11,95 y |Δh| = 2,75 %. Su desviación entre semillas no está disponible. Tiene 130.330 parámetros entrenables, tardó 44,23 s en entrenarse y 0,0037 s por imagen en inferencia media. Es un control exploratorio y no supera la finalista E.
+
+### Curvas, mapas y recursos
+
+La figura [E_pesos_validacion.png](figuras/E_pesos_validacion.png) presenta las cinco imágenes, pesos, fondos y correcciones para la semilla 42 de la finalista. Los pesos bajos coinciden visualmente con las células, pero también abarcan regiones amplias de fondo. Como comprobación retrospectiva con las máscaras, el peso medio de célula fue aproximadamente 0,003 y el de fondo 0,684; la media espacial global osciló entre 0,412 y 0,499. Esto confirma que la cota de 0,6 era blanda y no se cumplió estrictamente.
+
+En [E_curvas_finalista.png](figuras/E_curvas_finalista.png), la pérdida de validación baja de 0,146 en la época 50 a 0,098 en la 300, mientras M1 pasa de 7,28 a 8,15. Por tanto, la mejora de la pérdida no garantiza mejora de M1; el checkpoint de la semilla 42 se eligió en la época 288 por pérdida, sin usar esas métricas.
+
+E tiene 117.393 parámetros entrenables. Para la finalista, el entrenamiento tardó 100,28 s por semilla en promedio y la inferencia 0,0112 s por imagen en promedio. La prueba de humo de dos épocas con 32 canales, `f_max=6` y lote 4 asignó como máximo 0,436 GiB de GPU, menos de 7 GB; el máximo observado durante el barrido de 16 canales fue 0,285 GiB. Se limitó el proceso al 75 % de la memoria de la GPU, se copiaron los mejores estados a CPU y se liberó la caché entre configuraciones. El tiempo acumulado de entrenamiento medido fue 949,06 s para E, más 44,23 s para el control y 4,08 s para la prueba de humo, por debajo del presupuesto de 100 minutos. Los pesos están en `experimentos/pesos/`, fuera de Git.
+
+### Recomendación
+
+Mantener A como referencia seleccionada bajo la regla de calidad: E reduce el error de altura, pero su M1 medio sigue por encima tanto de A como de la mediana de Zernike. E es una alternativa amortizada prometedora para estudiar la selección de fondo, no una sustitución validada. Antes de ampliar el barrido conviene revisar el desajuste entre la pérdida y M1 y la tendencia de `w` a excluir demasiado fondo; cualquier elección por métricas con máscaras debe declararse como supervisada. Estos resultados son de validación y no prueban generalización al conjunto de prueba.

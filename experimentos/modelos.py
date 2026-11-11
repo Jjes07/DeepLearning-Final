@@ -49,7 +49,7 @@ class BaseSuave(nn.Module):
         """coef: (B, n_coef) o (n_coef,). Devuelve fondo (B, H, W) o (H, W)."""
         if coef.dim() == 1:
             return (self.base @ coef).view(self.H, self.W)
-        return (self.base @ coef.T).view(coef.shape[0], self.H, self.W)
+        return (coef @ self.base.T).reshape(coef.shape[0], self.H, self.W)
 
 
 class ImplicitFourierMLP(nn.Module):
@@ -137,6 +137,143 @@ class EncoderAmortizado(nn.Module):
         """u: (B, 1, H, W). Devuelve (B, n_coef)."""
         x = self.conv(u)
         return self.fc(x.view(x.shape[0], -1))
+
+
+class UNetPesos(nn.Module):
+    """U-Net pequeña que predice un mapa de pesos w en (0, 1)."""
+
+    def __init__(self, base_channels=32):
+        super().__init__()
+        c = base_channels
+        self.enc1 = nn.Sequential(
+            nn.Conv2d(1, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+        )
+        self.pool1 = nn.MaxPool2d(2)
+        self.enc2 = nn.Sequential(
+            nn.Conv2d(c, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c * 2, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+        )
+        self.pool2 = nn.MaxPool2d(2)
+        self.bottleneck = nn.Sequential(
+            nn.Conv2d(c * 2, c * 4, 3, padding=1),
+            nn.BatchNorm2d(c * 4),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c * 4, c * 4, 3, padding=1),
+            nn.BatchNorm2d(c * 4),
+            nn.ReLU(inplace=True),
+        )
+        self.up2 = nn.ConvTranspose2d(c * 4, c * 2, 2, stride=2)
+        self.dec2 = nn.Sequential(
+            nn.Conv2d(c * 4, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c * 2, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+        )
+        self.up1 = nn.ConvTranspose2d(c * 2, c, 2, stride=2)
+        self.dec1 = nn.Sequential(
+            nn.Conv2d(c * 2, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+        )
+        self.out = nn.Conv2d(c, 1, 1)
+
+    def forward(self, x):
+        e1 = self.enc1(x)
+        e2 = self.enc2(self.pool1(e1))
+        b = self.bottleneck(self.pool2(e2))
+        d2 = F.interpolate(self.up2(b), size=e2.shape[-2:], mode="bilinear", align_corners=False)
+        d2 = self.dec2(torch.cat([d2, e2], dim=1))
+        d1 = F.interpolate(self.up1(d2), size=e1.shape[-2:], mode="bilinear", align_corners=False)
+        d1 = self.dec1(torch.cat([d1, e1], dim=1))
+        return torch.sigmoid(self.out(d1))
+
+
+class ModeloE(nn.Module):
+    """Fondo por mínimos cuadrados ponderados con pesos aprendidos por U-Net."""
+
+    def __init__(self, H, W, f_max=4, grado_poli=3, base_channels=32, mu=1e-4):
+        super().__init__()
+        self.H, self.W = H, W
+        self.mu = mu
+        self.unet = UNetPesos(base_channels=base_channels)
+        self.base = BaseSuave(H, W, f_max=f_max, grado_poli=grado_poli)
+        self.register_buffer("Phi", self.base.base)  # (H*W, K)
+
+    def forward(self, u):
+        """u: (B, 1, H, W) normalizado. Devuelve (b, w) en escala normalizada."""
+        B = u.shape[0]
+        w = self.unet(u)  # (B, 1, H, W)
+        u_flat = u.view(B, -1)
+        w_flat = w.view(B, -1)
+
+        Phi = self.Phi
+        N, K = Phi.shape
+        # Resolver (Phi^T W Phi + mu I) a = Phi^T W u por imagen del lote.
+        with torch.autocast(device_type=u.device.type, enabled=False):
+            Phi_f = Phi.unsqueeze(0).to(dtype=torch.float32)  # (1, N, K)
+            u_f = u_flat.to(dtype=torch.float32)
+            w_f = w_flat.to(dtype=torch.float32)
+            w_sqrt = torch.sqrt(w_f + 1e-8).unsqueeze(-1)  # (B, N, 1)
+            WPhi = w_sqrt * Phi_f  # (B, N, K)
+            A = torch.bmm(WPhi.transpose(1, 2), WPhi)  # (B, K, K)
+            A = A + self.mu * torch.eye(K, device=A.device, dtype=A.dtype)
+            rhs = torch.bmm(
+                (w_f.unsqueeze(-1) * Phi_f).transpose(1, 2),
+                u_f.unsqueeze(-1),
+            )  # (B, K, 1)
+            a = torch.linalg.solve(A, rhs).squeeze(-1)  # (B, K)
+            b = a @ Phi_f[0].T  # (B, N)
+
+        b = b.view(B, 1, self.H, self.W)
+        return b, w
+
+
+class EncoderCoordConv(nn.Module):
+    """Codificador con CoordConv que reduce a 8x8 y predice coeficientes de BaseSuave."""
+
+    def __init__(self, n_coef, H, W, base_channels=32):
+        super().__init__()
+        self.H, self.W = H, W
+        c = base_channels
+        coords = build_coordinate_grid(H, W, device="cpu")
+        self.register_buffer("coords", coords.view(H, W, 2).permute(2, 0, 1))
+        self.conv = nn.Sequential(
+            nn.Conv2d(3, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+            nn.MaxPool2d(2),
+            nn.Conv2d(c, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+            nn.MaxPool2d(2),
+            nn.Conv2d(c * 2, c * 4, 3, padding=1),
+            nn.BatchNorm2d(c * 4),
+            nn.ReLU(inplace=True),
+            nn.AdaptiveMaxPool2d(8),
+        )
+        self.fc = nn.Linear(c * 4 * 8 * 8, n_coef)
+
+    def forward(self, u):
+        """u: (B, 1, H, W). Devuelve (B, n_coef)."""
+        B = u.shape[0]
+        coords = self.coords.unsqueeze(0).expand(B, -1, -1, -1)
+        x = torch.cat([u, coords], dim=1)
+        feats = self.conv(x)
+        return self.fc(feats.view(B, -1))
 
 
 class UNetCellBranch(nn.Module):
