@@ -1,0 +1,7 @@
+método,M1 (niveles eq.),|Δh| (%),conjunto métricas,complejidad,ajuste (s/imagen),inferencia (s/imagen),mapa E (s/imagen),cálculo completo (s/imagen),conjunto tiempo
+Pistón,18.18378659768244,0.0,prueba,0 entrenables; 1 coeficiente,,,,0.0003200000064680353,prueba; sin control comparable
+Polinomio g3,10.366616222560411,1.1873652162899608,prueba,0 entrenables; coeficientes polinomiales,,,,0.07226699999591801,prueba; sin control comparable
+Zernike (guía),6.486871382850396,2.9385002450936053,prueba,0 entrenables; coeficientes de Zernike,,,,2.470978400000604,prueba; sin control comparable
+SIREN ω0=1 (guía),4.223600354511169,12.273996065921672,prueba,no contabilizados,,,,4.15177969999786,prueba; sin control comparable
+A (propuesto),7.09580101398215,4.805156409117922,prueba; mediana,33537.0,7.472176299997955,0.0031509999971603,0.0,7.474973899996257,validación; medición 8.4
+AE (exploratorio),6.16,4.97,validación; media de medianas por semilla,150930.0,7.371735499997158,0.0027652999997371,0.0048532999935559,7.379257400010829,validación; medición 8.4

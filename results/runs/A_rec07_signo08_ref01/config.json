@@ -1,0 +1,20 @@
+{
+  "modelo": "A_cand_signo0.8_ref0.1_rec0.7",
+  "omega_0": 1.0,
+  "neuronas": 128,
+  "capas_ocultas": 2,
+  "iteraciones": 1000,
+  "optimizador": "Adam",
+  "lr": 0.001,
+  "rho": 0.7,
+  "signo": 0.8,
+  "signo_neg": 1.0,
+  "signo_pos": 0.01,
+  "referencia": 0.1,
+  "laplaciano": 0.0,
+  "semillas": [
+    42,
+    2024,
+    12345
+  ]
+}

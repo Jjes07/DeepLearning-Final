@@ -29,3 +29,7 @@ results/cache/
 
 # Logs de ejecución
 experimentos/*.log
+
+# Caché de corridas y registros de ejecución locales
+results/runs/cache_nuevas/
+results/*.log

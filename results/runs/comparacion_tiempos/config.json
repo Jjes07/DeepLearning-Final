@@ -1,0 +1,13 @@
+{
+  "semilla": 42,
+  "dispositivo": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "actividad_gpu_porcentaje": {
+    "antes_calentamiento": null,
+    "antes_mediciones": null,
+    "despues_mediciones": null
+  },
+  "parametros_unet": 117393,
+  "iteraciones": 1000,
+  "archivo_checkpoint": "E_f6_a0.5_c16_s42.pth"
+}
