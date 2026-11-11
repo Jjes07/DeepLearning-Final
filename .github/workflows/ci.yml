@@ -1,0 +1,30 @@
+name: CI del notebook
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar herramientas de validación
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install nbformat nbqa ruff
+
+      - name: Verificar notebook y archivos versionados
+        run: python scripts/verificar_repo.py
+
+      - name: Revisar estilo del notebook con ruff
+        run: nbqa ruff EritroFase.ipynb

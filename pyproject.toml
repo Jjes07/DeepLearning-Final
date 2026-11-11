@@ -1,0 +1,49 @@
+[tool.ruff]
+# El notebook es autocontenido y didáctico; no se reescribe por advertencias de estilo.
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "C4", "PLC", "PLE", "PLR", "RUF", "UP", "W"]
+ignore = [
+    # Estilo puro: longitud, orden/posición de imports, asignaciones lambda, nombres cortos,
+    # múltiples sentencias en una línea.
+    "E501",
+    "E402",
+    "E702",
+    "E731",
+    "E741",
+    "I001",
+    # Caracteres no ASCII en nombres, cadenas, docstrings y comentarios (el notebook usa σ, ×, −, etc.).
+    "PLC2401",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    # Imports sin usar y redefiniciones: el notebook repite imports en celdas independientes.
+    "F401",
+    "F811",
+    # Variables asignadas pero no usadas: restos de exploración en el notebook.
+    "F841",
+    # f-strings sin placeholders: mensajes de impresión del notebook.
+    "F541",
+    # display() de IPython no es reconocido por ruff en notebooks convertidos por nbqa.
+    "F821",
+    # Expresiones solas al final de celda para mostrar tablas o resultados.
+    "B018",
+    # Variable de bucle no usada y zip() sin strict=: código del notebook sin refactorizar.
+    "B007",
+    "B905",
+    # Import anidado dentro de función (psutil, usado solo si está disponible).
+    "PLC0415",
+    # Funciones largas o con muchos argumentos: el notebook agrupa varios módulos en pocas celdas.
+    "PLR0913",
+    "PLR0915",
+    "PLR0917",
+    # Valores numéricos literales en comparaciones: constantes usadas directamente en el notebook.
+    "PLR2004",
+    # Sugerencia de import alias de torch.nn.
+    "PLR0402",
+    # Preferencias de estilo de ruff (pairwise, Optional implícito, variables no usadas en desempaque).
+    "RUF007",
+    "RUF013",
+    "RUF059",
+]
