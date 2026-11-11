@@ -5,6 +5,10 @@ data/raw/
 results/runs/**/*.pt
 results/runs/**/*.pth
 results/runs/**/*.npy
+experimentos/cache_dev.npz
+experimentos/cache_dev.pkl
+experimentos/*.pt
+experimentos/*.pth
 
 # Python / Jupyter
 __pycache__/
