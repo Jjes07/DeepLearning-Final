@@ -21,3 +21,5 @@ desktop.ini
 
 # Caché de resultados costosos (se regenera con RECALCULAR = True)
 results/cache/
+results/fourier/cache/
+results/fourier/runs/**/*.pt

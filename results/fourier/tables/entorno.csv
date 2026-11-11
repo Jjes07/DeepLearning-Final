@@ -1,0 +1,17 @@
+,Valor
+Sistema operativo,Windows 11
+Procesador,"AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD"
+Núcleos lógicos de CPU,8
+Python,3.12.14
+PyTorch,2.14.1+cu130
+NumPy,2.5.4
+SciPy,1.18.1
+scikit-image,0.26.0
+Pandas,3.1.1
+Matplotlib,3.11.2
+Pillow,13.0.0
+Dispositivo usado,cuda
+RAM total (GB),93.6
+GPU,NVIDIA GeForce RTX 5090
+Memoria de la GPU (GB),31.8
+CUDA (versión de PyTorch),13.0

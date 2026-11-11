@@ -1,6 +1,5 @@
 # Instalar PyTorch primero, según el hardware (ver README):
-#   Windows + CUDA:  pip install torch --index-url https://download.pytorch.org/whl/cu126
-#   Mac (MPS):       pip install torch
+# Elegir la variante para su GPU o CPU en https://pytorch.org/get-started/locally/.
 numpy
 scipy
 matplotlib

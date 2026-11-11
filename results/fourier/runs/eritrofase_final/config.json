@@ -1,0 +1,68 @@
+{
+  "config_elegida": {
+    "semilla": 42,
+    "pasos": 240,
+    "epocas": 80,
+    "lr": 0.003,
+    "signo": 0.0,
+    "curvatura": 25.0,
+    "metodo": "C"
+  },
+  "ajuste_elegido": "sin signo",
+  "alternativas_piloto": {
+    "semilla": 42,
+    "pasos": 120,
+    "epocas": 40,
+    "lr": 0.003,
+    "signo": 0.15,
+    "curvatura": 25.0
+  },
+  "ajustes_fisicos": {
+    "curvatura 25": {
+      "curvatura": 25.0,
+      "signo": 0.15
+    },
+    "curvatura 5": {
+      "curvatura": 5.0,
+      "signo": 0.15
+    },
+    "curvatura 100": {
+      "curvatura": 100.0,
+      "signo": 0.15
+    },
+    "sin signo": {
+      "curvatura": 25.0,
+      "signo": 0.0
+    }
+  },
+  "semillas": [
+    42,
+    1729
+  ],
+  "archivos_entrenamiento": [
+    "Image__2021-01-29__12-29-32_4-11.png",
+    "Image__2021-01-29__12-59-27_2-4.png",
+    "Image__2021-01-29__13-01-44_4-16.png",
+    "Image__2021-01-29__13-04-29_1-7.png",
+    "Image__2021-01-29__13-13-16_2-15.png",
+    "Image__2021-01-29__13-23-48_2-12.png",
+    "Image__2021-01-29__13-25-48_1-14.png",
+    "Image__2021-01-29__13-25-56_1-11.png",
+    "Image__2021-01-29__13-27-04_4-2.png",
+    "Image__2021-01-29__13-31-27_4-16.png",
+    "Image__2021-01-29__13-31-33_2-12.png",
+    "Image__2021-01-29__13-34-26_3-12.png"
+  ],
+  "archivos_validacion": [
+    "Image__2021-01-29__12-33-19_3-8.png",
+    "Image__2021-01-29__13-01-51_2-8.png",
+    "Image__2021-01-29__13-05-53_3-6.png",
+    "Image__2021-01-29__13-11-36_1-12.png",
+    "Image__2021-01-29__13-26-28_4-11.png"
+  ],
+  "dispositivo": "cuda",
+  "pytorch": "2.14.1+cu130",
+  "malla": 64,
+  "parametros": 41261,
+  "segundos_ajuste_y_prediccion_desarrollo": 0.7314900000055786
+}
