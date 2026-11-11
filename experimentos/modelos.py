@@ -137,3 +137,92 @@ class EncoderAmortizado(nn.Module):
         """u: (B, 1, H, W). Devuelve (B, n_coef)."""
         x = self.conv(u)
         return self.fc(x.view(x.shape[0], -1))
+
+
+class UNetCellBranch(nn.Module):
+    """U-Net pequeño para la rama de célula (salida >= 0)."""
+
+    def __init__(self, base_channels=32):
+        super().__init__()
+        c = base_channels
+        self.enc1 = nn.Sequential(
+            nn.Conv2d(1, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+        )
+        self.pool1 = nn.MaxPool2d(2)
+        self.enc2 = nn.Sequential(
+            nn.Conv2d(c, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c * 2, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+        )
+        self.pool2 = nn.MaxPool2d(2)
+        self.bottleneck = nn.Sequential(
+            nn.Conv2d(c * 2, c * 4, 3, padding=1),
+            nn.BatchNorm2d(c * 4),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c * 4, c * 4, 3, padding=1),
+            nn.BatchNorm2d(c * 4),
+            nn.ReLU(inplace=True),
+        )
+        self.up2 = nn.ConvTranspose2d(c * 4, c * 2, 2, stride=2)
+        self.dec2 = nn.Sequential(
+            nn.Conv2d(c * 4, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c * 2, c * 2, 3, padding=1),
+            nn.BatchNorm2d(c * 2),
+            nn.ReLU(inplace=True),
+        )
+        self.up1 = nn.ConvTranspose2d(c * 2, c, 2, stride=2)
+        self.dec1 = nn.Sequential(
+            nn.Conv2d(c * 2, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(c, c, 3, padding=1),
+            nn.BatchNorm2d(c),
+            nn.ReLU(inplace=True),
+        )
+        self.out = nn.Conv2d(c, 1, 1)
+
+    def forward(self, x):
+        e1 = self.enc1(x)
+        e2 = self.enc2(self.pool1(e1))
+        b = self.bottleneck(self.pool2(e2))
+        d2 = self.dec2(torch.cat([self.up2(b), e2], dim=1))
+        d1 = self.dec1(torch.cat([self.up1(d2), e1], dim=1))
+        return F.softplus(self.out(d1))
+
+
+class ModeloDescomposicion(nn.Module):
+    """Fondo amortizado (BaseSuave) + célula esparsa (U-Net compartida)."""
+
+    def __init__(self, H, W, f_max=5, grado_poli=2, base_channels=32):
+        super().__init__()
+        self.H, self.W = H, W
+        self.unet = UNetCellBranch(base_channels=base_channels)
+        # Codificador compartido: backbone de la U-Net hasta el bottleneck.
+        c = base_channels
+        self.backbone = nn.Sequential(
+            self.unet.enc1,
+            self.unet.pool1,
+            self.unet.enc2,
+            self.unet.pool2,
+            self.unet.bottleneck,
+        )
+        self.base = BaseSuave(H, W, f_max=f_max, grado_poli=grado_poli)
+        self.fc_coef = nn.Linear(c * 4, self.base.n_coef)
+
+    def forward(self, u):
+        """u: (B, 1, H, W) normalizado. Devuelve (b, c) en escala normalizada."""
+        c = self.unet(u)
+        feats = F.adaptive_avg_pool2d(self.backbone(u), 1).view(u.shape[0], -1)
+        a = self.fc_coef(feats)
+        b = self.base(a)
+        return b, c

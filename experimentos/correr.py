@@ -1,5 +1,6 @@
 """Entrenamiento e inferencia de los modelos A, C y C+."""
 
+import gc
 import time
 import uuid
 from pathlib import Path
@@ -8,15 +9,30 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 from data import cargar, fijar_semillas, normalizar_por_imagen
 from metricas import metricas_archivo
-from modelos import BaseSuave, EncoderAmortizado, ImplicitFourierMLP, SirenBackgroundNetwork, build_coordinate_grid
-from perdidas import perdida_fisica
+from modelos import BaseSuave, EncoderAmortizado, ImplicitFourierMLP, ModeloDescomposicion, SirenBackgroundNetwork, build_coordinate_grid
+from perdidas import perdida_descomposicion, perdida_fisica
 
 
 def _device():
     return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
+def _limpiar_memoria():
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
+
+def _clip_batch_size(batch_size, maximo):
+    return min(batch_size, maximo)
+
+
+def _mejor_estado(modelo):
+    return {k: v.detach().cpu().clone() for k, v in modelo.state_dict().items()}
 
 
 def ajustar_fino_A(u, modelo, config):
@@ -96,30 +112,60 @@ def _aumentar_imagen(u):
     return imgs
 
 
-def entrenar_C(imagenes_train, imagenes_val, config, ctx):
-    """Entrena el encoder amortizado (esquema C) por batches."""
-    if config.get("semilla") is not None:
-        fijar_semillas(config["semilla"])
-    device = _device()
-    H, W = ctx["preprocesadas"][imagenes_train[0]].shape
-    base = BaseSuave(H, W, f_max=config["f_max"], grado_poli=config["grado_poli"]).to(device)
-    encoder = EncoderAmortizado(base.n_coef, base_channels=config["base_channels"]).to(device)
-
-    # Tensor de entrenamiento con aumento (N, 1, H, W) normalizado
+def _preparar_tensor_train(imagenes_train, ctx, device):
+    """Normaliza y aumenta las imágenes de entrenamiento."""
     train_list = []
     for archivo in imagenes_train:
         u = ctx["preprocesadas"][archivo]
         for ua in _aumentar_imagen(u):
             un, _, _ = normalizar_por_imagen(ua)
             train_list.append(un)
-    train_tensor = torch.tensor(np.stack(train_list), dtype=torch.float32, device=device).unsqueeze(1)
+    return torch.tensor(np.stack(train_list), dtype=torch.float32, device=device).unsqueeze(1)
+
+
+def _val_loss_C(encoder, base, imagenes_val, pesos, device, ctx):
+    """Pérdida de validación del esquema C sin usar máscaras."""
+    encoder.eval()
+    losses = []
+    with torch.no_grad():
+        for archivo in imagenes_val:
+            u = ctx["preprocesadas"][archivo]
+            un, _, _ = normalizar_por_imagen(u)
+            u_t = torch.tensor(un, dtype=torch.float32, device=device).unsqueeze(0).unsqueeze(0)
+            a = encoder(u_t)
+            b = base(a).view(1, -1)
+            r = u_t.view(1, -1) - b
+            loss, _ = perdida_fisica(
+                r, b, pesos, usar_signo=pesos.get("signo", 0) > 0,
+                usar_suav=pesos.get("suav", 0) > 0, usar_ref=pesos.get("ref", 0) > 0,
+                usar_recorte=pesos.get("recorte", False), rho_recorte=pesos.get("rho_recorte", 0.5),
+                recorte_asim=pesos.get("recorte_asim", False)
+            )
+            losses.append(loss.item())
+    return float(np.mean(losses))
+
+
+def entrenar_C(imagenes_train, imagenes_val, config, ctx):
+    """Entrena el encoder amortizado (esquema C) por batches."""
+    if config.get("semilla") is not None:
+        fijar_semillas(config["semilla"])
+    device = _device()
+    if torch.cuda.is_available():
+        torch.cuda.set_per_process_memory_fraction(0.75, 0)
+    H, W = ctx["preprocesadas"][imagenes_train[0]].shape
+    base = BaseSuave(H, W, f_max=config["f_max"], grado_poli=config["grado_poli"]).to(device)
+    encoder = EncoderAmortizado(base.n_coef, base_channels=config["base_channels"]).to(device)
+
+    train_tensor = _preparar_tensor_train(imagenes_train, ctx, device)
     n_train = train_tensor.shape[0]
-    batch_size = config.get("batch_size", min(8, n_train))
+    batch_size = _clip_batch_size(config.get("batch_size", min(8, n_train)), 16)
 
     optim = torch.optim.Adam(encoder.parameters(), lr=config["lr"])
     scheduler = torch.optim.lr_scheduler.StepLR(optim, step_size=config.get("scheduler_step", 50), gamma=0.5)
     pesos = config["pesos"]
 
+    mejor_loss = float("inf")
+    mejor_estado = None
     curva = []
     t0 = time.perf_counter()
     for ep in range(config["epocas"]):
@@ -145,31 +191,57 @@ def entrenar_C(imagenes_train, imagenes_val, config, ctx):
             losses.append(loss.item())
         scheduler.step()
 
-        # Validación
-        val_m1, val_dh = [], []
-        encoder.eval()
-        with torch.no_grad():
-            for archivo in imagenes_val:
-                u = ctx["preprocesadas"][archivo]
-                un, _, _ = normalizar_por_imagen(u)
-                u_t = torch.tensor(un, dtype=torch.float32, device=device).unsqueeze(0).unsqueeze(0)
-                a = encoder(u_t)
-                b = base(a).reshape(H, W).cpu().numpy()
-                media, std = u.mean(), u.std() + 1e-8
-                b_real = b * std + media
-                m = metricas_archivo(u - b_real, archivo, ctx)
-                val_m1.append(m["RMS lento (niveles eq.)"])
-                val_dh.append(m["|Δh| mediana (%)"])
+        loss_val = _val_loss_C(encoder, base, imagenes_val, pesos, device, ctx)
+        if loss_val < mejor_loss:
+            mejor_loss = loss_val
+            mejor_estado = {
+                "encoder": _mejor_estado(encoder),
+                "base": _mejor_estado(base),
+                "epoca": ep,
+            }
 
-        curva.append({
-            "epoca": ep,
-            "loss_train": float(np.mean(losses)),
-            "M1_val": float(np.median(val_m1)),
-            "|Δh|_val": float(np.median(val_dh)),
-        })
+        # Métricas de validación solo cada 10 épocas para ahorrar tiempo.
+        if ep % 10 == 0 or ep == config["epocas"] - 1:
+            val_m1, val_dh = [], []
+            encoder.eval()
+            with torch.no_grad():
+                for archivo in imagenes_val:
+                    u = ctx["preprocesadas"][archivo]
+                    un, _, _ = normalizar_por_imagen(u)
+                    u_t = torch.tensor(un, dtype=torch.float32, device=device).unsqueeze(0).unsqueeze(0)
+                    a = encoder(u_t)
+                    b = base(a).reshape(H, W).cpu().numpy()
+                    media, std = u.mean(), u.std() + 1e-8
+                    b_real = b * std + media
+                    m = metricas_archivo(u - b_real, archivo, ctx)
+                    val_m1.append(m["RMS lento (niveles eq.)"])
+                    val_dh.append(m["|Δh| mediana (%)"])
+            curva.append({
+                "epoca": ep,
+                "loss_train": float(np.mean(losses)),
+                "loss_val": loss_val,
+                "M1_val": float(np.median(val_m1)),
+                "|Δh|_val": float(np.median(val_dh)),
+            })
+        else:
+            curva.append({
+                "epoca": ep,
+                "loss_train": float(np.mean(losses)),
+                "loss_val": loss_val,
+                "M1_val": float("nan"),
+                "|Δh|_val": float("nan"),
+            })
+
+    if mejor_estado is not None:
+        encoder.load_state_dict(mejor_estado["encoder"])
+        base.load_state_dict(mejor_estado["base"])
 
     t_train = time.perf_counter() - t0
-    return encoder, base, {"curva": pd.DataFrame(curva), "tiempo_entrenamiento": t_train}
+    resultado = {"curva": pd.DataFrame(curva), "tiempo_entrenamiento": t_train,
+                 "mejor_epoca": mejor_estado["epoca"] if mejor_estado else config["epocas"] - 1}
+    del optim
+    _limpiar_memoria()
+    return encoder, base, resultado
 
 
 def ajustar_fino_C(encoder, base, imagen, config, ctx, archivo):
@@ -219,6 +291,162 @@ def inferir_C(encoder, base, imagen):
         a = encoder(u_t)
         b = base(a).reshape(H, W).cpu().numpy()
     return b * std + media
+
+
+def _val_loss_D(modelo, val_tensor, pesos):
+    """Pérdida de validación del esquema D en escala normalizada."""
+    modelo.eval()
+    with torch.no_grad():
+        b, c = modelo(val_tensor)
+        loss, _ = perdida_descomposicion(val_tensor, b, c, pesos)
+    return loss.item()
+
+
+def entrenar_D(imagenes_train, imagenes_val, config, ctx):
+    """Entrena el modelo de descomposición fondo + célula (esquema D)."""
+    if config.get("semilla") is not None:
+        fijar_semillas(config["semilla"])
+    device = _device()
+    if torch.cuda.is_available():
+        torch.cuda.set_per_process_memory_fraction(0.75, 0)
+    H, W = ctx["preprocesadas"][imagenes_train[0]].shape
+    modelo = ModeloDescomposicion(
+        H, W, f_max=config["f_max"], grado_poli=config["grado_poli"],
+        base_channels=config["base_channels"]
+    ).to(device)
+
+    train_tensor = _preparar_tensor_train(imagenes_train, ctx, device)
+    n_train = train_tensor.shape[0]
+    batch_size = _clip_batch_size(config.get("batch_size", min(8, n_train)), 8)
+
+    # Tensor de validación normalizado (sin aumento)
+    val_norm, val_media, val_std = [], [], []
+    for archivo in imagenes_val:
+        u = ctx["preprocesadas"][archivo]
+        un, media, std = normalizar_por_imagen(u)
+        val_norm.append(un)
+        val_media.append(media)
+        val_std.append(std)
+    val_tensor = torch.tensor(np.stack(val_norm), dtype=torch.float32, device=device).unsqueeze(1)
+
+    optim = torch.optim.Adam(modelo.parameters(), lr=config["lr"])
+    scheduler = torch.optim.lr_scheduler.StepLR(optim, step_size=config.get("scheduler_step", 50), gamma=0.5)
+    scaler = torch.amp.GradScaler("cuda")
+    pesos = config["pesos"]
+
+    mejor_loss = float("inf")
+    mejor_estado = None
+    curva = []
+    t0 = time.perf_counter()
+    for ep in range(config["epocas"]):
+        modelo.train()
+        perm = torch.randperm(n_train, device=device)
+        losses = []
+        for i in range(0, n_train, batch_size):
+            idx = perm[i:i + batch_size]
+            u_batch = train_tensor[idx]
+            optim.zero_grad()
+            with torch.autocast("cuda", dtype=torch.float16):
+                b, c = modelo(u_batch)
+                loss, _ = perdida_descomposicion(u_batch, b, c, pesos)
+            scaler.scale(loss).backward()
+            scaler.step(optim)
+            scaler.update()
+            losses.append(loss.item())
+        scheduler.step()
+
+        loss_val = _val_loss_D(modelo, val_tensor, pesos)
+        if loss_val < mejor_loss:
+            mejor_loss = loss_val
+            mejor_estado = {"modelo": _mejor_estado(modelo), "epoca": ep}
+
+        # Métricas de validación solo cada 10 épocas para ahorrar tiempo.
+        if ep % 10 == 0 or ep == config["epocas"] - 1:
+            val_m1, val_dh = [], []
+            modelo.eval()
+            with torch.no_grad():
+                b_val, _ = modelo(val_tensor)
+                b_val = b_val.cpu().numpy()
+                for j, archivo in enumerate(imagenes_val):
+                    u = ctx["preprocesadas"][archivo]
+                    b_real = b_val[j, 0] * val_std[j] + val_media[j]
+                    m = metricas_archivo(u - b_real, archivo, ctx)
+                    val_m1.append(m["RMS lento (niveles eq.)"])
+                    val_dh.append(m["|Δh| mediana (%)"])
+            curva.append({
+                "epoca": ep,
+                "loss_train": float(np.mean(losses)),
+                "loss_val": loss_val,
+                "M1_val": float(np.median(val_m1)),
+                "|Δh|_val": float(np.median(val_dh)),
+            })
+        else:
+            curva.append({
+                "epoca": ep,
+                "loss_train": float(np.mean(losses)),
+                "loss_val": loss_val,
+                "M1_val": float("nan"),
+                "|Δh|_val": float("nan"),
+            })
+
+    if mejor_estado is not None:
+        modelo.load_state_dict(mejor_estado["modelo"])
+
+    t_train = time.perf_counter() - t0
+    resultado = {"curva": pd.DataFrame(curva), "tiempo_entrenamiento": t_train,
+                 "mejor_epoca": mejor_estado["epoca"] if mejor_estado else config["epocas"] - 1}
+    del optim
+    _limpiar_memoria()
+    return modelo, resultado
+
+
+def inferir_D(modelo, imagen):
+    """Predice fondo con el esquema D; la corrección usa solo el fondo."""
+    device = _device()
+    un, media, std = normalizar_por_imagen(imagen)
+    u_t = torch.tensor(un, dtype=torch.float32, device=device).unsqueeze(0).unsqueeze(0)
+    modelo.eval()
+    with torch.no_grad():
+        b, _ = modelo(u_t)
+        b = b.reshape(imagen.shape).cpu().numpy()
+    return b * std + media
+
+
+def ajustar_fino_D(modelo, imagen, config, pesos):
+    """Ajuste fino per imagen de los coeficientes del fondo con ĉ fija (D+)."""
+    device = _device()
+    un, media, std = normalizar_por_imagen(imagen)
+    u_t = torch.tensor(un, dtype=torch.float32, device=device).unsqueeze(0).unsqueeze(0)
+
+    modelo.eval()
+    with torch.no_grad():
+        c = modelo.unet(u_t).detach()
+        feats = F.adaptive_avg_pool2d(modelo.backbone(u_t), 1).view(1, -1)
+        a0 = modelo.fc_coef(feats).detach().clone()
+
+    a = nn.Parameter(a0)
+    optim = torch.optim.Adam([a], lr=config["lr_finetune"])
+
+    t0 = time.perf_counter()
+    for _ in range(config["iteraciones_finetune"]):
+        optim.zero_grad()
+        b = modelo.base(a)
+        loss, _ = perdida_descomposicion(u_t, b, c, pesos)
+        loss.backward()
+        optim.step()
+
+    t_fine = time.perf_counter() - t0
+    with torch.no_grad():
+        b = modelo.base(a).reshape(imagen.shape).cpu().numpy()
+    return b * std + media, {"tiempo_finetune": t_fine}
+
+
+def guardar_curva(curva_df, config_id, esquema):
+    """Guarda la curva de entrenamiento en experimentos/curvas/<id>.csv."""
+    exp_dir = Path(__file__).resolve().parent
+    curvas_dir = exp_dir / "curvas"
+    curvas_dir.mkdir(exist_ok=True)
+    curva_df.to_csv(curvas_dir / f"{esquema}_{config_id}.csv", index=False)
 
 
 def guardar_resultado(resultados, config, metricas_val, tiempos, esquema):

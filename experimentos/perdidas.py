@@ -20,6 +20,39 @@ def laplaciano2d(b):
     )
 
 
+def tv2d(x):
+    """Total variation anisotrópica de x (B, 1, H, W)."""
+    dx = x[:, :, :, 1:] - x[:, :, :, :-1]
+    dy = x[:, :, 1:, :] - x[:, :, :-1, :]
+    return torch.abs(dx).mean() + torch.abs(dy).mean()
+
+
+def perdida_descomposicion(u, b, c, pesos):
+    """
+    u, b, c: tensores (B, 1, H, W) en escala normalizada.
+    pesos: dict con 'lambda_c', 'lambda_tv', 'ref', 'suav'.
+    """
+    r = u - b - c
+    terminos = {"esp": charbonnier(r).mean()}
+    terminos["c_l1"] = c.mean()
+    terminos["c_tv"] = tv2d(c)
+    terminos["ref"] = r.median() ** 2
+    if pesos.get("suav", 0) > 0:
+        b2d = b.unsqueeze(1) if b.dim() == 3 else b
+        terminos["suav"] = (laplaciano2d(b2d) ** 2).mean()
+    else:
+        terminos["suav"] = torch.tensor(0.0, device=u.device)
+
+    total = (
+        terminos["esp"]
+        + pesos.get("lambda_c", 0.0) * terminos["c_l1"]
+        + pesos.get("lambda_tv", 0.0) * terminos["c_tv"]
+        + pesos.get("ref", 0.0) * terminos["ref"]
+        + pesos.get("suav", 0.0) * terminos["suav"]
+    )
+    return total, terminos
+
+
 def perdida_fisica(r, b, pesos, usar_signo=True, usar_suav=True, usar_ref=True, usar_recorte=False, rho_recorte=0.5, recorte_asim=False):
     """
     r: residuo u - b (tensor 1D o 2D).
