@@ -1,16 +1,13 @@
-# Instalar PyTorch primero, según el hardware (ver README):
-#   Windows + CUDA:  pip install torch --index-url https://download.pytorch.org/whl/cu126
-#   Mac (MPS):       pip install torch
-numpy
-scipy
-matplotlib
-pillow
-pandas
-scikit-image
-pyyaml
-tqdm
-psutil
-jupyter
-ipykernel
-# Las versiones exactas se fijarán con `pip freeze > requirements-lock.txt`
-# una vez que el entorno esté funcionando en la máquina de entrenamiento.
+# PyTorch se instala por separado según el hardware. Ver README.
+# Dependencias directas de la corrida final con Python 3.12.
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+pillow==13.0.0
+pandas==3.1.1
+scikit-image==0.26.0
+tqdm==4.70.1
+psutil==7.2.2
+jupyter==1.1.1
+nbconvert==7.17.2
+ipykernel==7.4.0
