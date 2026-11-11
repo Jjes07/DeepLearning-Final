@@ -7,7 +7,8 @@ Integrantes: Juan José Escobar, Emmanuel Hernández, Mateo Lopera.
 
 La entrega principal está en [EritroFase.ipynb](EritroFase.ipynb). Su modelo C
 usa un codificador convolucional y una SIREN modulada con FiLM. La sección 11
-incluye una comparación con el [experimento complementario de Fourier](experiments/EritroFase-Fourier.ipynb).
+incluye una comparación con el [experimento complementario de Fourier](experiments/EritroFase-Fourier.ipynb)
+y con el [experimento complementario de Emmanuel](experiments/EritroFase-Emmanuel.ipynb).
 
 ## Estructura
 
@@ -16,7 +17,10 @@ DeepLearning-Final/
 ├── EritroFase.ipynb          # Notebook principal y autocontenido: todo el código está aquí; se entrega con sus salidas
 ├── README.md
 ├── requirements.txt
-├── experiments/EritroFase-Fourier.ipynb
+├── experiments/
+│   ├── EritroFase-Fourier.ipynb
+│   ├── EritroFase-Emmanuel.ipynb  # Versión paralela (PR #13); solo lectura, no se re-ejecuta desde aquí
+│   └── emmanuel/              # Scripts, CSV, curvas e informe de sus experimentos (sección 11.3)
 ├── data/
 │   ├── raw/RBCs_Holograms/   # Dataset de Castañeda et al. (2024). NO se versiona
 │   │   ├── Holograms/{Training,Validation}/
@@ -63,3 +67,9 @@ mismas 12 adquisiciones. Ambos se evaluaron sobre los mismos cinco recortes de p
 y ocho del día reservado. La comparación es descriptiva. Los resultados de Fourier
 se guardan en [`results/fourier/`](results/fourier/) y la selección del modelo C
 está documentada en la sección 8.7 del [notebook principal](EritroFase.ipynb).
+
+El experimento de Emmanuel ajusta por imagen la misma SIREN que la variante A de la
+entrega, con otra pérdida física (recorte por fracción). Su notebook se conserva tal
+como se ejecutó, con notas de integración agregadas, y no debe volver a ejecutarse
+desde `experiments/` porque escribiría en `results/` con los nombres de la entrega.
+La comparación está en la sección 11.3 del notebook principal.
