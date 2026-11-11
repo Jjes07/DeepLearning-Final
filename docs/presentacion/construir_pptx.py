@@ -247,12 +247,12 @@ s = nueva(4, "Datos y partición sin fuga de información", "Juan José Escobar"
           "son la misma escena rotada. Por eso la partición original, que comparte 47,5 % de los recortes entre "
           "carpetas, se descartó. Usamos la adquisición como unidad: doce, cinco y cinco imágenes para desarrollo "
           "el 29 de enero y ocho de generalización el 28 de enero. Los umbrales y los hiperparámetros se eligieron "
-          "con validación, y la prueba se usó una sola vez.")
+          "con validación; la prueba no se usó para ninguna decisión (ver limitaciones).")
 caja(s, 0.6, 1.7, 6.1, 4.9, [
     "192 adquisiciones, 768 campos y 12 288 recortes de 256 × 256 px.",
     "La partición original comparte 5 837 recortes (47,5 %) entre carpetas: hay fuga.",
     "Unidad de independencia: la adquisición, no el recorte.",
-    "Umbrales e hiperparámetros se eligen con validación; la prueba se usa una sola vez.",
+    "Umbrales e hiperparámetros se eligen con validación; la prueba no se usa para decidir nada.",
 ], size=18, espacio=14)
 tabla(s, 7.1, 1.9, 5.6, [
     ["Conjunto", "Imágenes", "Adquisición"],
