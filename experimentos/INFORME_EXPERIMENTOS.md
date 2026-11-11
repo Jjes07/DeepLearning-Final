@@ -288,3 +288,50 @@ E tiene 117.393 parámetros entrenables. Para la finalista, el entrenamiento tar
 ### Recomendación
 
 Mantener A como referencia seleccionada bajo la regla de calidad: E reduce el error de altura, pero su M1 medio sigue por encima tanto de A como de la mediana de Zernike. E es una alternativa amortizada prometedora para estudiar la selección de fondo, no una sustitución validada. Antes de ampliar el barrido conviene revisar el desajuste entre la pérdida y M1 y la tendencia de `w` a excluir demasiado fondo; cualquier elección por métricas con máscaras debe declararse como supervisada. Estos resultados son de validación y no prueban generalización al conjunto de prueba.
+
+## Ronda 4 — SIREN guiada por los pesos de E
+
+### Protocolo
+
+Se combinaron los mapas de la U-Net de E finalista (`f_max=6`, λ de área 0,5) con el ajuste por imagen de A. Las semillas de E y de la SIREN se emparejaron: 42, 2024 y 12345. Los pesos de E ya estaban entrenados y permanecieron fijos.
+
+Para cada imagen se mantuvieron la arquitectura de A (128 unidades, dos capas ocultas, ω0=1), Adam con tasa 0,001, 1000 iteraciones, signo 0,8 y referencia 0,1. El ajuste espacial fue `Σ w·Charbonnier(r) / Σ w`. En la variante con recorte se seleccionó en cada iteración el 70 % de residuos de menor magnitud antes de aplicar esa media ponderada. El recorte de A usa el valor absoluto del residuo; por ello, la variante combinada no es exactamente la misma pérdida espacial de A.
+
+Se probaron cuatro variantes: `w` original, `w^0,5`, `w^0,25` y `w` con recorte ρ=0,7. Elevar un peso entre 0 y 1 a una potencia menor que 1 aumenta su contribución, en particular cerca de regiones que E considera poco fiables. No se probaron los pesos de signo opcionales.
+
+El ajuste y la obtención de `w` no usaron máscaras de referencia. Las máscaras de las cinco imágenes de validación se emplearon después para calcular M1 y |Δh| y seleccionar la variante; esa selección utiliza información de referencia. No se evaluaron imágenes de prueba ni de generalización. Cada valor por semilla es la mediana de las cinco imágenes; la media y la desviación estándar muestral se calculan entre las tres semillas.
+
+### Resultados
+
+| Variante | Semilla 42: M1 / &#124;Δh&#124; | Semilla 2024: M1 / &#124;Δh&#124; | Semilla 12345: M1 / &#124;Δh&#124; | M1 medio ± desv. | &#124;Δh&#124; medio ± desv. (%) |
+|---|---:|---:|---:|---:|---:|
+| `w` | 6,47 / 3,89 | 6,58 / 4,01 | 6,98 / 3,87 | 6,68 ± 0,27 | 3,93 ± 0,07 |
+| `w^0,5` | 6,86 / 4,99 | 6,27 / 5,06 | 7,20 / 3,60 | 6,78 ± 0,47 | 4,55 ± 0,82 |
+| `w^0,25` | 6,14 / 5,18 | 6,09 / 4,32 | 6,26 / 5,41 | **6,16 ± 0,09** | **4,97 ± 0,57** |
+| `w` + recorte 0,7 | 6,90 / 3,43 | 6,59 / 4,09 | 7,20 / 3,54 | 6,90 ± 0,31 | 3,69 ± 0,35 |
+
+Según la regla de menor M1 con |Δh| medio ≤ 5 %, gana `w^0,25`. Su M1 sin redondear es 6,16396 y cumple la meta < 6,18 por un margen cercano a 0,016 niveles respecto a la referencia indicada. El |Δh| medio sin redondear es 4,96935 %; las semillas 42 y 12345 superan individualmente el 5 %. Por tanto, la mejora de fondo y el cumplimiento de altura son marginales y no prueban una ventaja estable.
+
+La figura [AE_validacion.png](figuras/AE_validacion.png) muestra las cinco imágenes de validación con `w^0,25`, fondo e imagen corregida para la semilla 42. El fondo se ve suave y no presenta la cuadrícula evidente observada en E; el mapa todavía asigna pesos reducidos a regiones amplias alrededor de algunas células. La inspección visual no demuestra por sí sola preservación de altura ni generalización.
+
+### Recursos y reproducibilidad
+
+Se ejecutaron 60 ajustes (cuatro variantes × tres semillas × cinco imágenes) en un único proceso de cálculo en GPU, con `torch.cuda.set_per_process_memory_fraction(0.75, 0)` y liberación de memoria entre ajustes. La suma de los tiempos de ajuste medidos fue 1534,05 s (25,57 min), sin incluir la obtención de pesos ni la evaluación posterior; el proceso completo de ajuste transcurrió aproximadamente 26 min y 15 s, por debajo de 45 min. La mejor variante tardó 24,38 s por imagen en promedio solo en ajuste, bajo la carga existente del equipo. E tardó históricamente 0,0112 s por imagen en inferencia; A registró unos 49,67 s de ajuste para las cinco imágenes de una semilla en otra ejecución. Estos tiempos no constituyen una comparación controlada de velocidad.
+
+Los resultados por semilla e imagen están en [resultados_ronda4.csv](resultados_ronda4.csv). El guion [ronda4_ae.py](ronda4_ae.py) conserva el procedimiento; los pesos de E y las salidas intermedias permanecen localmente en `experimentos/pesos/`, fuera de Git.
+
+### Tabla final de decisión
+
+| Método | M1 en validación | &#124;Δh&#124; (%) | Cumple la regla de altura | Alcance |
+|---|---:|---:|:---:|---|
+| A | 6,18 ± 0,18 | 4,16 ± 0,56 | Sí | Media ± desviación muestral entre tres semillas |
+| E, `f_max=6` | 8,63 ± 0,87 | 1,81 ± 0,23 | Sí | Media ± desviación muestral entre tres semillas |
+| **AE, `w^0,25`** | **6,16 ± 0,09** | **4,97 ± 0,57** | **Sí, por media** | Media ± desviación muestral entre tres semillas |
+| Zernike, guía | 6,39 | 2,55 | Sí | Mediana de cinco imágenes; sin dispersión entre semillas |
+| SIREN, guía | 3,47 | 12,85 | No | Mediana de cinco imágenes; sin dispersión entre semillas |
+
+### Recomendación final
+
+Bajo la regla de selección establecida, **AE con `w^0,25` es el modelo seleccionado**: obtiene la menor M1 media de las variantes elegibles y mejora ligeramente la referencia A. La mejora es muy pequeña, mientras que el promedio de altura queda a solo 0,03 puntos porcentuales del límite y dos semillas lo incumplen individualmente. A sigue siendo una alternativa más prudente si se prioriza el margen de preservación observado y una implementación sin el detector adicional de E.
+
+AE produce fondos visualmente suaves, pero requiere una inferencia de E y 1000 iteraciones de SIREN para cada imagen; E es mucho más rápida una vez entrenada, aunque deja mayor residuo de fondo. AE y A pueden aplicarse a una imagen nueva sin su máscara de referencia durante el ajuste, y AE necesita además disponer de los pesos de E. Esta capacidad de ejecución no demuestra que funcionen bien fuera de validación: quedan pendientes la evaluación independiente y la comprobación de preservación en imágenes nuevas.
