@@ -1,0 +1,8 @@
+Aspecto,Adquisiciones
+Del 29/01 en el dataset,187
+Pasan el filtro automático,134
+Pasan además el filtro de estilo,76
+Mostradas al grupo (candidatos_mostrados.csv),40
+"Usadas en entrenamiento, validación o prueba",22
+Pasan filtro y estilo y nunca se mostraron ni usaron,36
+Pasan el filtro automático (sin el de estilo) y nunca se mostraron ni usaron,94

@@ -1,0 +1,15 @@
+método,grado,interiores con pérdida > 10 % (de 36),peor célula interior (%),de borde con pérdida > 10 % (de 68),peor célula de borde (%),de borde con |Δh| > 3 %
+Pistón,0,0,-5.498272927068596e-15,0,-6.593199526703832e-15,0
+Polinomio g3 con recorte duro (línea base),3,0,-5.472429073558486,16,-44.26234897328995,41
+Polinomio + pérdida física (control),1,0,-0.8090980946037163,0,-3.747872616087947,1
+Polinomio + pérdida física (control),2,0,-1.8980601561852162,0,-9.469714763663514,24
+Polinomio + pérdida física (control),3,0,-2.817092240434105,8,-25.385903985766205,33
+Polinomio + pérdida física (control),4,0,-4.607264940804644,12,-41.08268709784811,37
+Polinomio + pérdida física (control),5,0,-6.837132381449164,15,-43.283289982286554,37
+Polinomio + pérdida física (control),6,0,-9.734320438545886,19,-42.08704153646737,40
+Polinomio + pérdida física (control),7,1,-10.484263696870853,18,-40.536232923793726,46
+Polinomio + pérdida física (control),8,1,-12.517271335686583,18,-40.60623820583055,47
+Polinomio + pérdida física (control),9,1,-12.372209550363023,21,-40.638610627697815,53
+Polinomio + pérdida física (control),10,1,-12.534990223893455,28,-39.64064089974355,57
+Polinomio + pérdida física (control),11,1,-12.250368802551098,26,-42.73015328545059,56
+Polinomio + pérdida física (control),12,1,-12.084971495031718,31,-40.843491993669815,54

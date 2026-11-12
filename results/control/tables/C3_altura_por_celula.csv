@@ -1,0 +1,1457 @@
+conjunto,archivo,método,grado,tipo,célula,área (px),anillo (px),h(u) (niveles),Δh (%)
+validacion,2021-01-29__12-33-19_3-8,Pistón,0,interior,0,2279,1828,116.94483669274118,-3.0379397494348887e-15
+validacion,2021-01-29__12-33-19_3-8,Pistón,0,interior,1,7659,4363,116.52614004751047,3.0488555420714833e-15
+validacion,2021-01-29__12-33-19_3-8,Pistón,0,interior,2,2471,1898,131.7895703970057,-2.6957472189174235e-15
+validacion,2021-01-29__12-33-19_3-8,Pistón,0,borde,0,880,439,110.93208997722095,-0.0
+validacion,2021-01-29__12-33-19_3-8,Pistón,0,borde,1,1315,741,128.4453000005131,-2.765935132532143e-15
+validacion,2021-01-29__12-33-19_3-8,Pistón,0,borde,2,775,860,115.08324831207803,-0.0
+validacion,2021-01-29__12-33-19_3-8,Pistón,0,borde,3,1792,1230,141.24082371515678,2.5153589347264997e-15
+validacion,2021-01-29__12-33-19_3-8,Polinomio g3 con recorte duro (línea base),3,interior,0,2279,1828,116.94483669274118,1.3688951259345359
+validacion,2021-01-29__12-33-19_3-8,Polinomio g3 con recorte duro (línea base),3,interior,1,7659,4363,116.52614004751047,-2.758857563885262
+validacion,2021-01-29__12-33-19_3-8,Polinomio g3 con recorte duro (línea base),3,interior,2,2471,1898,131.7895703970057,-0.1922155711591497
+validacion,2021-01-29__12-33-19_3-8,Polinomio g3 con recorte duro (línea base),3,borde,0,880,439,110.93208997722095,-30.182838720469885
+validacion,2021-01-29__12-33-19_3-8,Polinomio g3 con recorte duro (línea base),3,borde,1,1315,741,128.4453000005131,-11.247317586071828
+validacion,2021-01-29__12-33-19_3-8,Polinomio g3 con recorte duro (línea base),3,borde,2,775,860,115.08324831207803,-7.305822617746194
+validacion,2021-01-29__12-33-19_3-8,Polinomio g3 con recorte duro (línea base),3,borde,3,1792,1230,141.24082371515678,-1.378332005294875
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),1,interior,0,2279,1828,116.94483669274118,-0.4609934718002093
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),1,interior,1,7659,4363,116.52614004751047,0.17569091969810177
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),1,interior,2,2471,1898,131.7895703970057,0.2566466784082695
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),1,borde,0,880,439,110.93208997722095,-3.747872616087947
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),1,borde,1,1315,741,128.4453000005131,-2.2381928904504225
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),1,borde,2,775,860,115.08324831207803,-1.789016208881204
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),1,borde,3,1792,1230,141.24082371515678,-0.7454690580197195
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),2,interior,0,2279,1828,116.94483669274118,-0.5825322014394304
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),2,interior,1,7659,4363,116.52614004751047,0.8992774312012604
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),2,interior,2,2471,1898,131.7895703970057,0.2581927157478164
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),2,borde,0,880,439,110.93208997722095,-8.724424385144852
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),2,borde,1,1315,741,128.4453000005131,-5.542236898150489
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),2,borde,2,775,860,115.08324831207803,-4.813305100127978
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),2,borde,3,1792,1230,141.24082371515678,1.029842491199811
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),3,interior,0,2279,1828,116.94483669274118,-0.5511581767672419
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),3,interior,1,7659,4363,116.52614004751047,0.4382346222049114
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),3,interior,2,2471,1898,131.7895703970057,1.5024767768187177
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),3,borde,0,880,439,110.93208997722095,-11.195272503189614
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),3,borde,1,1315,741,128.4453000005131,-4.364127805782406
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),3,borde,2,775,860,115.08324831207803,-2.9728120613090434
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),3,borde,3,1792,1230,141.24082371515678,-1.8411291524321187
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),4,interior,0,2279,1828,116.94483669274118,0.015601551245517008
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),4,interior,1,7659,4363,116.52614004751047,-0.2692646215372443
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),4,interior,2,2471,1898,131.7895703970057,-0.17632892189818028
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),4,borde,0,880,439,110.93208997722095,-25.70364968069653
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),4,borde,1,1315,741,128.4453000005131,-8.555155669205023
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),4,borde,2,775,860,115.08324831207803,-1.8614890385873706
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),4,borde,3,1792,1230,141.24082371515678,0.8270310490498799
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),5,interior,0,2279,1828,116.94483669274118,1.3535203085558731
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),5,interior,1,7659,4363,116.52614004751047,-1.4735906478184935
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),5,interior,2,2471,1898,131.7895703970057,-0.4671475497667662
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),5,borde,0,880,439,110.93208997722095,-7.348324885931694
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),5,borde,1,1315,741,128.4453000005131,0.019304774720313982
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),5,borde,2,775,860,115.08324831207803,-8.721932220526341
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),5,borde,3,1792,1230,141.24082371515678,-2.314674833261464
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),6,interior,0,2279,1828,116.94483669274118,0.6396415077538079
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),6,interior,1,7659,4363,116.52614004751047,-1.2248271095127485
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),6,interior,2,2471,1898,131.7895703970057,-1.822197605082922
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),6,borde,0,880,439,110.93208997722095,-2.0781492682353684
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),6,borde,1,1315,741,128.4453000005131,-6.344072661724398
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),6,borde,2,775,860,115.08324831207803,0.10874061751595751
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),6,borde,3,1792,1230,141.24082371515678,-4.489498603202154
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),7,interior,0,2279,1828,116.94483669274118,1.2094110590377969
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),7,interior,1,7659,4363,116.52614004751047,-3.015279978520533
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),7,interior,2,2471,1898,131.7895703970057,-2.173156002277308
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),7,borde,0,880,439,110.93208997722095,0.2851504550454268
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),7,borde,1,1315,741,128.4453000005131,-3.8476414798207563
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),7,borde,2,775,860,115.08324831207803,-3.0410622935400418
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),7,borde,3,1792,1230,141.24082371515678,-5.78284124412769
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),8,interior,0,2279,1828,116.94483669274118,0.8244383048697868
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),8,interior,1,7659,4363,116.52614004751047,-3.696192923085023
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),8,interior,2,2471,1898,131.7895703970057,-3.801706385673076
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),8,borde,0,880,439,110.93208997722095,-19.375931895753503
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),8,borde,1,1315,741,128.4453000005131,-0.412695341595665
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),8,borde,2,775,860,115.08324831207803,-9.252324831129393
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),8,borde,3,1792,1230,141.24082371515678,-6.919500751485137
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),9,interior,0,2279,1828,116.94483669274118,1.0013579839063813
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),9,interior,1,7659,4363,116.52614004751047,-3.9137212647430606
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),9,interior,2,2471,1898,131.7895703970057,-4.467106915360027
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),9,borde,0,880,439,110.93208997722095,-39.341796664204594
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),9,borde,1,1315,741,128.4453000005131,9.684960596246356
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),9,borde,2,775,860,115.08324831207803,-15.758251627207718
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),9,borde,3,1792,1230,141.24082371515678,-9.149157236853583
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),10,interior,0,2279,1828,116.94483669274118,-0.4489169563286342
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),10,interior,1,7659,4363,116.52614004751047,-3.6682968528509883
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),10,interior,2,2471,1898,131.7895703970057,-4.844607720652497
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),10,borde,0,880,439,110.93208997722095,-13.373763109393398
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),10,borde,1,1315,741,128.4453000005131,-6.201822938018231
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),10,borde,2,775,860,115.08324831207803,-12.55961136630511
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),10,borde,3,1792,1230,141.24082371515678,-7.968279918103901
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),11,interior,0,2279,1828,116.94483669274118,-0.6883975158330295
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),11,interior,1,7659,4363,116.52614004751047,-4.100479230924023
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),11,interior,2,2471,1898,131.7895703970057,-4.671946019692361
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),11,borde,0,880,439,110.93208997722095,-19.243722698713967
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),11,borde,1,1315,741,128.4453000005131,-3.140351916529492
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),11,borde,2,775,860,115.08324831207803,-12.770641878642842
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),11,borde,3,1792,1230,141.24082371515678,-8.046428299226783
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),12,interior,0,2279,1828,116.94483669274118,-1.134652424901155
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),12,interior,1,7659,4363,116.52614004751047,-3.4838936306118904
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),12,interior,2,2471,1898,131.7895703970057,-4.434341146362919
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),12,borde,0,880,439,110.93208997722095,-28.5337651937958
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),12,borde,1,1315,741,128.4453000005131,-7.094722944244887
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),12,borde,2,775,860,115.08324831207803,-16.92058310119953
+validacion,2021-01-29__12-33-19_3-8,Polinomio + pérdida física (control),12,borde,3,1792,1230,141.24082371515678,-12.61852988480986
+validacion,2021-01-29__13-01-51_2-8,Pistón,0,interior,0,2600,1968,125.25857567229518,-0.0
+validacion,2021-01-29__13-01-51_2-8,Pistón,0,interior,1,2434,1641,122.23957374128547,-0.0
+validacion,2021-01-29__13-01-51_2-8,Pistón,0,interior,2,2325,1667,131.65075114009454,-0.0
+validacion,2021-01-29__13-01-51_2-8,Pistón,0,borde,0,2177,1295,138.54999317185812,6.41052662195677e-16
+validacion,2021-01-29__13-01-51_2-8,Pistón,0,borde,1,851,567,112.02978755152668,-0.0
+validacion,2021-01-29__13-01-51_2-8,Pistón,0,borde,2,2759,1469,123.87057420346704,-0.0
+validacion,2021-01-29__13-01-51_2-8,Polinomio g3 con recorte duro (línea base),3,interior,0,2600,1968,125.25857567229518,-2.04661959017001
+validacion,2021-01-29__13-01-51_2-8,Polinomio g3 con recorte duro (línea base),3,interior,1,2434,1641,122.23957374128547,-1.015039143426114
+validacion,2021-01-29__13-01-51_2-8,Polinomio g3 con recorte duro (línea base),3,interior,2,2325,1667,131.65075114009454,-1.1409256605577964
+validacion,2021-01-29__13-01-51_2-8,Polinomio g3 con recorte duro (línea base),3,borde,0,2177,1295,138.54999317185812,1.9795173610114867
+validacion,2021-01-29__13-01-51_2-8,Polinomio g3 con recorte duro (línea base),3,borde,1,851,567,112.02978755152668,1.0972909884085862
+validacion,2021-01-29__13-01-51_2-8,Polinomio g3 con recorte duro (línea base),3,borde,2,2759,1469,123.87057420346704,-5.059876554276913
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),1,interior,0,2600,1968,125.25857567229518,-0.0370127066960899
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),1,interior,1,2434,1641,122.23957374128547,-0.006738115613985232
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),1,interior,2,2325,1667,131.65075114009454,0.04760431607308485
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),1,borde,0,2177,1295,138.54999317185812,0.8942206451397343
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),1,borde,1,851,567,112.02978755152668,0.391125573181656
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),1,borde,2,2759,1469,123.87057420346704,-1.1226937466548972
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),2,interior,0,2600,1968,125.25857567229518,-0.40553995459895287
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),2,interior,1,2434,1641,122.23957374128547,-0.5908815954571257
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),2,interior,2,2325,1667,131.65075114009454,-0.4881207047005583
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),2,borde,0,2177,1295,138.54999317185812,0.47200951361177923
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),2,borde,1,851,567,112.02978755152668,-0.277187650257478
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),2,borde,2,2759,1469,123.87057420346704,-2.345367576222071
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),3,interior,0,2600,1968,125.25857567229518,-0.8826625428448684
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),3,interior,1,2434,1641,122.23957374128547,-0.3668849200320225
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),3,interior,2,2325,1667,131.65075114009454,-0.786096248608989
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),3,borde,0,2177,1295,138.54999317185812,2.208603339870786
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),3,borde,1,851,567,112.02978755152668,0.721691276672982
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),3,borde,2,2759,1469,123.87057420346704,-4.103337265453832
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),4,interior,0,2600,1968,125.25857567229518,-0.910830663394511
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),4,interior,1,2434,1641,122.23957374128547,-1.1605065432074273
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),4,interior,2,2325,1667,131.65075114009454,-1.728700615885294
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),4,borde,0,2177,1295,138.54999317185812,0.8884156945084334
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),4,borde,1,851,567,112.02978755152668,0.6788274174058472
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),4,borde,2,2759,1469,123.87057420346704,-4.232281527107228
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),5,interior,0,2600,1968,125.25857567229518,-2.8605090814025798
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),5,interior,1,2434,1641,122.23957374128547,-1.2426878195563755
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),5,interior,2,2325,1667,131.65075114009454,-1.8877388462757247
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),5,borde,0,2177,1295,138.54999317185812,0.24489725405743212
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),5,borde,1,851,567,112.02978755152668,-0.6295709126436061
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),5,borde,2,2759,1469,123.87057420346704,-7.170788486275926
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),6,interior,0,2600,1968,125.25857567229518,-2.2792759389367134
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),6,interior,1,2434,1641,122.23957374128547,-1.6215989068587369
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),6,interior,2,2325,1667,131.65075114009454,-3.150479081873192
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),6,borde,0,2177,1295,138.54999317185812,-1.5649579625343444
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),6,borde,1,851,567,112.02978755152668,-1.9257945118734037
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),6,borde,2,2759,1469,123.87057420346704,-6.839418988162448
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),7,interior,0,2600,1968,125.25857567229518,-3.7314029604217374
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),7,interior,1,2434,1641,122.23957374128547,-2.6270896156658865
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),7,interior,2,2325,1667,131.65075114009454,-2.9699618228721762
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),7,borde,0,2177,1295,138.54999317185812,-2.124070667601692
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),7,borde,1,851,567,112.02978755152668,-2.2871723917329705
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),7,borde,2,2759,1469,123.87057420346704,-7.999360736891783
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),8,interior,0,2600,1968,125.25857567229518,-4.079026098742983
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),8,interior,1,2434,1641,122.23957374128547,-2.9956488831255066
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),8,interior,2,2325,1667,131.65075114009454,-4.6322471906997285
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),8,borde,0,2177,1295,138.54999317185812,-2.411243648834396
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),8,borde,1,851,567,112.02978755152668,-5.5963678246940525
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),8,borde,2,2759,1469,123.87057420346704,-5.863786990113392
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),9,interior,0,2600,1968,125.25857567229518,-4.676094327043828
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),9,interior,1,2434,1641,122.23957374128547,-4.232104991523858
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),9,interior,2,2325,1667,131.65075114009454,-5.060100627017852
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),9,borde,0,2177,1295,138.54999317185812,-2.5060497677064317
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),9,borde,1,851,567,112.02978755152668,-8.130953201247026
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),9,borde,2,2759,1469,123.87057420346704,-6.8533826057360585
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),10,interior,0,2600,1968,125.25857567229518,-4.73749967433179
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),10,interior,1,2434,1641,122.23957374128547,-4.5012882425821745
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),10,interior,2,2325,1667,131.65075114009454,-5.3952256689540095
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),10,borde,0,2177,1295,138.54999317185812,-2.6754928776798534
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),10,borde,1,851,567,112.02978755152668,-10.700089714400582
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),10,borde,2,2759,1469,123.87057420346704,-6.399637022813473
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),11,interior,0,2600,1968,125.25857567229518,-4.528682634593541
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),11,interior,1,2434,1641,122.23957374128547,-4.75995783763316
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),11,interior,2,2325,1667,131.65075114009454,-5.717855278647077
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),11,borde,0,2177,1295,138.54999317185812,-2.228994570412893
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),11,borde,1,851,567,112.02978755152668,-11.12526811478683
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),11,borde,2,2759,1469,123.87057420346704,-6.599656275509891
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),12,interior,0,2600,1968,125.25857567229518,-4.070461403831985
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),12,interior,1,2434,1641,122.23957374128547,-4.506362683162954
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),12,interior,2,2325,1667,131.65075114009454,-5.763282282489292
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),12,borde,0,2177,1295,138.54999317185812,-1.9495493268997737
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),12,borde,1,851,567,112.02978755152668,-15.037038912342087
+validacion,2021-01-29__13-01-51_2-8,Polinomio + pérdida física (control),12,borde,2,2759,1469,123.87057420346704,-7.11147827304795
+validacion,2021-01-29__13-05-53_3-6,Pistón,0,interior,0,2887,2140,115.14685473715559,-4.820900350076648e-17
+validacion,2021-01-29__13-05-53_3-6,Pistón,0,interior,1,3020,2180,131.60486360046175,1.2654050096457771e-16
+validacion,2021-01-29__13-05-53_3-6,Pistón,0,borde,0,3043,2213,132.13063160522347,4.20123256483876e-17
+validacion,2021-01-29__13-05-53_3-6,Pistón,0,borde,1,1085,755,137.64591204565568,-4.0328950134636307e-17
+validacion,2021-01-29__13-05-53_3-6,Polinomio g3 con recorte duro (línea base),3,interior,0,2887,2140,115.14685473715559,-2.178216422523288
+validacion,2021-01-29__13-05-53_3-6,Polinomio g3 con recorte duro (línea base),3,interior,1,3020,2180,131.60486360046175,0.1451678639656638
+validacion,2021-01-29__13-05-53_3-6,Polinomio g3 con recorte duro (línea base),3,borde,0,3043,2213,132.13063160522347,0.12062251221684582
+validacion,2021-01-29__13-05-53_3-6,Polinomio g3 con recorte duro (línea base),3,borde,1,1085,755,137.64591204565568,-4.935992487671369
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),1,interior,0,2887,2140,115.14685473715559,-0.007310137153345264
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),1,interior,1,3020,2180,131.60486360046175,0.013075841325428297
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),1,borde,0,3043,2213,132.13063160522347,0.01155706047094557
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),1,borde,1,1085,755,137.64591204565568,0.9800815215961721
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),2,interior,0,2887,2140,115.14685473715559,0.019816572019821437
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),2,interior,1,3020,2180,131.60486360046175,0.08372807743393999
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),2,borde,0,3043,2213,132.13063160522347,0.04902616560451374
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),2,borde,1,1085,755,137.64591204565568,-2.051314134696743
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),3,interior,0,2887,2140,115.14685473715559,-1.3837723886277384
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),3,interior,1,3020,2180,131.60486360046175,0.3280724869651781
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),3,borde,0,3043,2213,132.13063160522347,-0.19440953530413502
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),3,borde,1,1085,755,137.64591204565568,-2.221046240480755
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),4,interior,0,2887,2140,115.14685473715559,-1.1937496805167247
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),4,interior,1,3020,2180,131.60486360046175,-0.3882959470462717
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),4,borde,0,3043,2213,132.13063160522347,-0.6188113981490462
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),4,borde,1,1085,755,137.64591204565568,-7.187227364098381
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),5,interior,0,2887,2140,115.14685473715559,-1.7235357963618263
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),5,interior,1,3020,2180,131.60486360046175,-0.5520175968096426
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),5,borde,0,3043,2213,132.13063160522347,-1.1819276130169216
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),5,borde,1,1085,755,137.64591204565568,-7.257344834002213
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),6,interior,0,2887,2140,115.14685473715559,-1.8242504613691972
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),6,interior,1,3020,2180,131.60486360046175,-0.9113439982934641
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),6,borde,0,3043,2213,132.13063160522347,-1.7245201899834492
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),6,borde,1,1085,755,137.64591204565568,-12.38314338238484
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),7,interior,0,2887,2140,115.14685473715559,-2.2984150937756263
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),7,interior,1,3020,2180,131.60486360046175,-1.5739715012129358
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),7,borde,0,3043,2213,132.13063160522347,-1.9023891926989098
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),7,borde,1,1085,755,137.64591204565568,-18.175300062084798
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),8,interior,0,2887,2140,115.14685473715559,-2.9092596797169628
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),8,interior,1,3020,2180,131.60486360046175,-2.2241185774251506
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),8,borde,0,3043,2213,132.13063160522347,-2.6204230786199747
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),8,borde,1,1085,755,137.64591204565568,-19.12391608095376
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),9,interior,0,2887,2140,115.14685473715559,-3.260754121858613
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),9,interior,1,3020,2180,131.60486360046175,-2.5883369949400143
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),9,borde,0,3043,2213,132.13063160522347,-2.6143130929746903
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),9,borde,1,1085,755,137.64591204565568,-21.068592417371683
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),10,interior,0,2887,2140,115.14685473715559,-3.5167899062560157
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),10,interior,1,3020,2180,131.60486360046175,-2.872195767142561
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),10,borde,0,3043,2213,132.13063160522347,-2.712261154922155
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),10,borde,1,1085,755,137.64591204565568,-24.219498150346755
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),11,interior,0,2887,2140,115.14685473715559,-3.2478046646762007
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),11,interior,1,3020,2180,131.60486360046175,-2.9210195366897524
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),11,borde,0,3043,2213,132.13063160522347,-2.471180353454793
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),11,borde,1,1085,755,137.64591204565568,-23.307612074053626
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),12,interior,0,2887,2140,115.14685473715559,-2.9871026153489386
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),12,interior,1,3020,2180,131.60486360046175,-2.862523348353965
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),12,borde,0,3043,2213,132.13063160522347,-2.4178835617623906
+validacion,2021-01-29__13-05-53_3-6,Polinomio + pérdida física (control),12,borde,1,1085,755,137.64591204565568,-25.666555390915246
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,interior,0,5093,3073,109.83179755346521,3.234685908760684e-15
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,borde,0,1113,655,133.03511038867515,-0.0
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,borde,1,2165,1150,103.11922683000302,-0.0
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,borde,2,2386,1677,113.75806071093504,3.1230434631160997e-15
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,borde,3,2181,1318,124.28601336275003,-0.0
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,borde,4,2373,1430,121.26361337777266,2.9297441993029915e-15
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,borde,5,916,675,136.18461103024424,-2.6087482659927743e-15
+validacion,2021-01-29__13-11-36_1-12,Pistón,0,borde,6,765,693,117.85897631779986,-0.0
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,interior,0,5093,3073,109.83179755346521,-2.503243575580149
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,borde,0,1113,655,133.03511038867515,-11.384493391038164
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,borde,1,2165,1150,103.11922683000302,-4.821069554016005
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,borde,2,2386,1677,113.75806071093504,-2.596515190219234
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,borde,3,2181,1318,124.28601336275003,-0.539402954731142
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,borde,4,2373,1430,121.26361337777266,-6.761914997360468
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,borde,5,916,675,136.18461103024424,-17.668320179604617
+validacion,2021-01-29__13-11-36_1-12,Polinomio g3 con recorte duro (línea base),3,borde,6,765,693,117.85897631779986,-7.952470249731031
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,interior,0,5093,3073,109.83179755346521,-0.10481768700091232
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,borde,0,1113,655,133.03511038867515,1.9086618881296653
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,borde,1,2165,1150,103.11922683000302,0.30043242324030023
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,borde,2,2386,1677,113.75806071093504,-0.8358769924973005
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,borde,3,2181,1318,124.28601336275003,-1.0948595445562326
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,borde,4,2373,1430,121.26361337777266,0.2577521335413143
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,borde,5,916,675,136.18461103024424,1.69614426716642
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),1,borde,6,765,693,117.85897631779986,-0.09051388753279252
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,interior,0,5093,3073,109.83179755346521,1.2656415731488524
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,borde,0,1113,655,133.03511038867515,-3.351659992647368
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,borde,1,2165,1150,103.11922683000302,-0.8483805475100292
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,borde,2,2386,1677,113.75806071093504,-0.7341109865281781
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,borde,3,2181,1318,124.28601336275003,-0.42580483269703295
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,borde,4,2373,1430,121.26361337777266,-4.7135809450937485
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,borde,5,916,675,136.18461103024424,-5.227529036380497
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),2,borde,6,765,693,117.85897631779986,-5.002720292273714
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,interior,0,5093,3073,109.83179755346521,-1.6634232534570488
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,borde,0,1113,655,133.03511038867515,-8.549104779506449
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,borde,1,2165,1150,103.11922683000302,-3.1098720839710845
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,borde,2,2386,1677,113.75806071093504,-1.780329589166802
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,borde,3,2181,1318,124.28601336275003,-0.7415381508718646
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,borde,4,2373,1430,121.26361337777266,-4.775121008994239
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,borde,5,916,675,136.18461103024424,-13.537089260628678
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),3,borde,6,765,693,117.85897631779986,-4.762523841701499
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,interior,0,5093,3073,109.83179755346521,-2.4889827094267414
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,borde,0,1113,655,133.03511038867515,-9.12607041537223
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,borde,1,2165,1150,103.11922683000302,-2.865506465357419
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,borde,2,2386,1677,113.75806071093504,-2.0800685989199934
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,borde,3,2181,1318,124.28601336275003,-1.729745734982191
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,borde,4,2373,1430,121.26361337777266,-3.103295714746968
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,borde,5,916,675,136.18461103024424,-12.7865235213316
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),4,borde,6,765,693,117.85897631779986,-5.640600667135003
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,interior,0,5093,3073,109.83179755346521,-3.6887187566125186
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,borde,0,1113,655,133.03511038867515,-3.033597780006735
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,borde,1,2165,1150,103.11922683000302,-2.1002161563200192
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,borde,2,2386,1677,113.75806071093504,-1.426485267126635
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,borde,3,2181,1318,124.28601336275003,-1.458115448020505
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,borde,4,2373,1430,121.26361337777266,-1.2867044628137638
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,borde,5,916,675,136.18461103024424,-15.291007124895616
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),5,borde,6,765,693,117.85897631779986,-4.567045002801731
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,interior,0,5093,3073,109.83179755346521,-4.396077373661873
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,borde,0,1113,655,133.03511038867515,-6.2228903630852646
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,borde,1,2165,1150,103.11922683000302,-2.458112834162612
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,borde,2,2386,1677,113.75806071093504,-2.464469449084356
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,borde,3,2181,1318,124.28601336275003,-1.130689994024734
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,borde,4,2373,1430,121.26361337777266,-1.046062614581229
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,borde,5,916,675,136.18461103024424,-18.18283751612294
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),6,borde,6,765,693,117.85897631779986,-3.9374930700480757
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,interior,0,5093,3073,109.83179755346521,-4.70328888749135
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,borde,0,1113,655,133.03511038867515,-13.289993048816793
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,borde,1,2165,1150,103.11922683000302,-2.104255333336214
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,borde,2,2386,1677,113.75806071093504,-2.6722492610019586
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,borde,3,2181,1318,124.28601336275003,-2.8779840491010713
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,borde,4,2373,1430,121.26361337777266,-1.3724273620893925
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,borde,5,916,675,136.18461103024424,-20.903078826619577
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),7,borde,6,765,693,117.85897631779986,-3.2936363367905894
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,interior,0,5093,3073,109.83179755346521,-4.777768330974133
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,borde,0,1113,655,133.03511038867515,-23.365013972916692
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,borde,1,2165,1150,103.11922683000302,-1.1571816888711637
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,borde,2,2386,1677,113.75806071093504,-3.825792569556571
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,borde,3,2181,1318,124.28601336275003,-1.1521699775763001
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,borde,4,2373,1430,121.26361337777266,-2.8712368469447203
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,borde,5,916,675,136.18461103024424,-26.22446069506037
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),8,borde,6,765,693,117.85897631779986,-2.1249195949498074
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,interior,0,5093,3073,109.83179755346521,-4.922516998234468
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,borde,0,1113,655,133.03511038867515,-27.826955885482064
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,borde,1,2165,1150,103.11922683000302,-0.4034515114583247
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,borde,2,2386,1677,113.75806071093504,-3.584063167749782
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,borde,3,2181,1318,124.28601336275003,-3.097975628156412
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,borde,4,2373,1430,121.26361337777266,-3.812452854711273
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,borde,5,916,675,136.18461103024424,-21.978952504348094
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),9,borde,6,765,693,117.85897631779986,-10.621899214846211
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,interior,0,5093,3073,109.83179755346521,-4.318693103942013
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,borde,0,1113,655,133.03511038867515,-32.98224335574956
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,borde,1,2165,1150,103.11922683000302,1.2182468758463698
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,borde,2,2386,1677,113.75806071093504,-4.240733998907283
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,borde,3,2181,1318,124.28601336275003,-3.854471942454592
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,borde,4,2373,1430,121.26361337777266,-4.837694773854627
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,borde,5,916,675,136.18461103024424,-25.24815374122829
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),10,borde,6,765,693,117.85897631779986,-14.232918315071746
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,interior,0,5093,3073,109.83179755346521,-4.1840556647143545
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,borde,0,1113,655,133.03511038867515,-32.86048082535113
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,borde,1,2165,1150,103.11922683000302,-1.3429958781775
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,borde,2,2386,1677,113.75806071093504,-4.056337770589635
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,borde,3,2181,1318,124.28601336275003,-4.296220058558655
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,borde,4,2373,1430,121.26361337777266,-8.458415016643205
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,borde,5,916,675,136.18461103024424,-22.937804722279445
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),11,borde,6,765,693,117.85897631779986,-23.856078020518023
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,interior,0,5093,3073,109.83179755346521,-3.9185295662196724
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,borde,0,1113,655,133.03511038867515,-25.302060893509594
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,borde,1,2165,1150,103.11922683000302,-0.724274264132904
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,borde,2,2386,1677,113.75806071093504,-4.086900661689076
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,borde,3,2181,1318,124.28601336275003,-4.144952789569257
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,borde,4,2373,1430,121.26361337777266,-9.517609962271749
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,borde,5,916,675,136.18461103024424,-23.33803564754838
+validacion,2021-01-29__13-11-36_1-12,Polinomio + pérdida física (control),12,borde,6,765,693,117.85897631779986,-25.19931087121534
+validacion,2021-01-29__13-26-28_4-11,Pistón,0,interior,0,2498,1673,105.73349438666293,3.3600645655466344e-15
+validacion,2021-01-29__13-26-28_4-11,Pistón,0,interior,1,2972,1827,138.3434098659188,2.5680396935739543e-15
+validacion,2021-01-29__13-26-28_4-11,Pistón,0,interior,2,2881,2150,142.88007636237418,-2.4865004059698745e-15
+validacion,2021-01-29__13-26-28_4-11,Pistón,0,borde,0,3053,1192,101.69361608232192,-0.0
+validacion,2021-01-29__13-26-28_4-11,Pistón,0,borde,1,661,820,137.25962879598538,2.588316542864213e-15
+validacion,2021-01-29__13-26-28_4-11,Pistón,0,borde,2,1075,960,132.37874515503876,5.367498648879999e-15
+validacion,2021-01-29__13-26-28_4-11,Pistón,0,borde,3,2523,1928,133.64133046511512,2.6583944251646603e-15
+validacion,2021-01-29__13-26-28_4-11,Polinomio g3 con recorte duro (línea base),3,interior,0,2498,1673,105.73349438666293,-2.2314498988652054
+validacion,2021-01-29__13-26-28_4-11,Polinomio g3 con recorte duro (línea base),3,interior,1,2972,1827,138.3434098659188,-1.7631580972033236
+validacion,2021-01-29__13-26-28_4-11,Polinomio g3 con recorte duro (línea base),3,interior,2,2881,2150,142.88007636237418,0.019701334803795278
+validacion,2021-01-29__13-26-28_4-11,Polinomio g3 con recorte duro (línea base),3,borde,0,3053,1192,101.69361608232192,0.642118082913361
+validacion,2021-01-29__13-26-28_4-11,Polinomio g3 con recorte duro (línea base),3,borde,1,661,820,137.25962879598538,6.336467986738016
+validacion,2021-01-29__13-26-28_4-11,Polinomio g3 con recorte duro (línea base),3,borde,2,1075,960,132.37874515503876,-3.5664437177711013
+validacion,2021-01-29__13-26-28_4-11,Polinomio g3 con recorte duro (línea base),3,borde,3,2523,1928,133.64133046511512,0.10933541586279064
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),1,interior,0,2498,1673,105.73349438666293,0.4379325950896237
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),1,interior,1,2972,1827,138.3434098659188,-0.3399049905635044
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),1,interior,2,2881,2150,142.88007636237418,-0.00830775963166947
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),1,borde,0,3053,1192,101.69361608232192,-2.121772127867604
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),1,borde,1,661,820,137.25962879598538,-0.7597759139791553
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),1,borde,2,1075,960,132.37874515503876,0.3190789844457329
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),1,borde,3,2523,1928,133.64133046511512,0.062435284631364045
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),2,interior,0,2498,1673,105.73349438666293,-1.187092696890975
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),2,interior,1,2972,1827,138.3434098659188,-0.6554902895061521
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),2,interior,2,2881,2150,142.88007636237418,-0.5224408459559253
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),2,borde,0,3053,1192,101.69361608232192,4.915635108700865
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),2,borde,1,661,820,137.25962879598538,-0.0837920251144708
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),2,borde,2,1075,960,132.37874515503876,0.77675591703067
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),2,borde,3,2523,1928,133.64133046511512,-0.25046479320305354
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),3,interior,0,2498,1673,105.73349438666293,-1.9112958851969295
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),3,interior,1,2972,1827,138.3434098659188,-1.4037438610443194
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),3,interior,2,2881,2150,142.88007636237418,0.14765970092868413
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),3,borde,0,3053,1192,101.69361608232192,1.8597095862688835
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),3,borde,1,661,820,137.25962879598538,4.839782466634486
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),3,borde,2,1075,960,132.37874515503876,-2.7517695820220456
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),3,borde,3,2523,1928,133.64133046511512,0.1656160384841305
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),4,interior,0,2498,1673,105.73349438666293,-1.7562566864534979
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),4,interior,1,2972,1827,138.3434098659188,-1.8472612572251286
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),4,interior,2,2881,2150,142.88007636237418,-0.3301558073071352
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),4,borde,0,3053,1192,101.69361608232192,-7.114316165934235
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),4,borde,1,661,820,137.25962879598538,1.5587065662337465
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),4,borde,2,1075,960,132.37874515503876,0.6147401393265114
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),4,borde,3,2523,1928,133.64133046511512,-0.10586112191381873
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),5,interior,0,2498,1673,105.73349438666293,-2.451184150011838
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),5,interior,1,2972,1827,138.3434098659188,-2.0394964396436364
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),5,interior,2,2881,2150,142.88007636237418,-0.4151331549221986
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),5,borde,0,3053,1192,101.69361608232192,-7.504025327530118
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),5,borde,1,661,820,137.25962879598538,-0.2568042159881344
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),5,borde,2,1075,960,132.37874515503876,2.8819420508611073
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),5,borde,3,2523,1928,133.64133046511512,-1.0036693481807748
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),6,interior,0,2498,1673,105.73349438666293,-1.9496307204643375
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),6,interior,1,2972,1827,138.3434098659188,-2.4712589872487727
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),6,interior,2,2881,2150,142.88007636237418,-0.32660941794367604
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),6,borde,0,3053,1192,101.69361608232192,-13.041910472506581
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),6,borde,1,661,820,137.25962879598538,-3.920293017197295
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),6,borde,2,1075,960,132.37874515503876,2.6335871847080803
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),6,borde,3,2523,1928,133.64133046511512,-0.2837133973378655
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),7,interior,0,2498,1673,105.73349438666293,-2.728797507537879
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),7,interior,1,2972,1827,138.3434098659188,-2.332558896236745
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),7,interior,2,2881,2150,142.88007636237418,-0.730082447751457
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),7,borde,0,3053,1192,101.69361608232192,-22.538640002575967
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),7,borde,1,661,820,137.25962879598538,-6.134395269796038
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),7,borde,2,1075,960,132.37874515503876,2.5299237277648055
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),7,borde,3,2523,1928,133.64133046511512,-1.6777501388576024
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),8,interior,0,2498,1673,105.73349438666293,-2.639214505295076
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),8,interior,1,2972,1827,138.3434098659188,-2.7431941967312867
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),8,interior,2,2881,2150,142.88007636237418,-1.4856372863829548
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),8,borde,0,3053,1192,101.69361608232192,-10.18468509898594
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),8,borde,1,661,820,137.25962879598538,-6.756314027385621
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),8,borde,2,1075,960,132.37874515503876,1.135178948766074
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),8,borde,3,2523,1928,133.64133046511512,-0.8622662939738834
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),9,interior,0,2498,1673,105.73349438666293,-3.4918636955675937
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),9,interior,1,2972,1827,138.3434098659188,-2.9505970619150848
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),9,interior,2,2881,2150,142.88007636237418,-2.0362105112026545
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),9,borde,0,3053,1192,101.69361608232192,-10.944999920769359
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),9,borde,1,661,820,137.25962879598538,-6.114173775991738
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),9,borde,2,1075,960,132.37874515503876,2.1174025877057647
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),9,borde,3,2523,1928,133.64133046511512,-1.2841005570291668
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),10,interior,0,2498,1673,105.73349438666293,-3.0050400101684667
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),10,interior,1,2972,1827,138.3434098659188,-3.2468498621085358
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),10,interior,2,2881,2150,142.88007636237418,-2.5995719360465483
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),10,borde,0,3053,1192,101.69361608232192,-11.910245066665144
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),10,borde,1,661,820,137.25962879598538,-6.881532210384617
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),10,borde,2,1075,960,132.37874515503876,2.9460620165056683
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),10,borde,3,2523,1928,133.64133046511512,-1.3609987896617601
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),11,interior,0,2498,1673,105.73349438666293,-3.3172902412066154
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),11,interior,1,2972,1827,138.3434098659188,-3.1125708935025407
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),11,interior,2,2881,2150,142.88007636237418,-2.722392408014974
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),11,borde,0,3053,1192,101.69361608232192,-18.635567879501778
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),11,borde,1,661,820,137.25962879598538,-2.733297513462485
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),11,borde,2,1075,960,132.37874515503876,-0.8143918114067744
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),11,borde,3,2523,1928,133.64133046511512,-1.3022807956955864
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),12,interior,0,2498,1673,105.73349438666293,-3.267251924459598
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),12,interior,1,2972,1827,138.3434098659188,-3.186849205335033
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),12,interior,2,2881,2150,142.88007636237418,-2.741481754248769
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),12,borde,0,3053,1192,101.69361608232192,-19.25233821948422
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),12,borde,1,661,820,137.25962879598538,-1.1411729051672415
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),12,borde,2,1075,960,132.37874515503876,-2.493346664646289
+validacion,2021-01-29__13-26-28_4-11,Polinomio + pérdida física (control),12,borde,3,2523,1928,133.64133046511512,-1.168336894995567
+prueba,2021-01-29__12-39-26_4-6,Pistón,0,interior,0,3053,1860,132.3603508271434,-0.0
+prueba,2021-01-29__12-39-26_4-6,Pistón,0,interior,1,2579,1276,102.70725846935886,-1.7295338867702319e-15
+prueba,2021-01-29__12-39-26_4-6,Pistón,0,borde,0,1772,955,96.04849786675805,-0.0
+prueba,2021-01-29__12-39-26_4-6,Pistón,0,borde,1,4746,2482,131.01113979353408,-0.0
+prueba,2021-01-29__12-39-26_4-6,Pistón,0,borde,2,1519,513,101.4853429015447,-0.0
+prueba,2021-01-29__12-39-26_4-6,Pistón,0,borde,3,1665,544,134.92507065889419,-0.0
+prueba,2021-01-29__12-39-26_4-6,Pistón,0,borde,4,808,585,127.56072607260725,-0.0
+prueba,2021-01-29__12-39-26_4-6,Polinomio g3 con recorte duro (línea base),3,interior,0,3053,1860,132.3603508271434,-0.4401628551212434
+prueba,2021-01-29__12-39-26_4-6,Polinomio g3 con recorte duro (línea base),3,interior,1,2579,1276,102.70725846935886,2.146300785120689
+prueba,2021-01-29__12-39-26_4-6,Polinomio g3 con recorte duro (línea base),3,borde,0,1772,955,96.04849786675805,-3.788839613747204
+prueba,2021-01-29__12-39-26_4-6,Polinomio g3 con recorte duro (línea base),3,borde,1,4746,2482,131.01113979353408,-5.840298066629024
+prueba,2021-01-29__12-39-26_4-6,Polinomio g3 con recorte duro (línea base),3,borde,2,1519,513,101.4853429015447,-39.09155614991338
+prueba,2021-01-29__12-39-26_4-6,Polinomio g3 con recorte duro (línea base),3,borde,3,1665,544,134.92507065889419,-17.99511000324076
+prueba,2021-01-29__12-39-26_4-6,Polinomio g3 con recorte duro (línea base),3,borde,4,808,585,127.56072607260725,10.351047086467863
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),1,interior,0,3053,1860,132.3603508271434,-0.3459256063973295
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),1,interior,1,2579,1276,102.70725846935886,0.02869687126429673
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),1,borde,0,1772,955,96.04849786675805,1.182187590704811
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),1,borde,1,4746,2482,131.01113979353408,0.2738063524192394
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),1,borde,2,1519,513,101.4853429015447,-1.779267687471386
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),1,borde,3,1665,544,134.92507065889419,-0.5028725861608709
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),1,borde,4,808,585,127.56072607260725,-0.6759282265675237
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),2,interior,0,3053,1860,132.3603508271434,-0.9576259656442772
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),2,interior,1,2579,1276,102.70725846935886,0.7722168499808864
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),2,borde,0,1772,955,96.04849786675805,7.453862616968454
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),2,borde,1,4746,2482,131.01113979353408,-1.0157998607475969
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),2,borde,2,1519,513,101.4853429015447,-6.525054852160846
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),2,borde,3,1665,544,134.92507065889419,-4.101398620863889
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),2,borde,4,808,585,127.56072607260725,2.705882429933677
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),3,interior,0,3053,1860,132.3603508271434,-0.7063500602376948
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),3,interior,1,2579,1276,102.70725846935886,1.5382257709634448
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),3,borde,0,1772,955,96.04849786675805,3.124095251242526
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),3,borde,1,4746,2482,131.01113979353408,-2.9672600313370645
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),3,borde,2,1519,513,101.4853429015447,-25.385903985766205
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),3,borde,3,1665,544,134.92507065889419,-12.098871313374119
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),3,borde,4,808,585,127.56072607260725,3.56950567764218
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),4,interior,0,3053,1860,132.3603508271434,-1.673974727365864
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),4,interior,1,2579,1276,102.70725846935886,0.8227580220684702
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),4,borde,0,1772,955,96.04849786675805,-25.088296155188825
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),4,borde,1,4746,2482,131.01113979353408,-4.997725517277608
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),4,borde,2,1519,513,101.4853429015447,-18.630047930594078
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),4,borde,3,1665,544,134.92507065889419,-9.696835000493698
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),4,borde,4,808,585,127.56072607260725,-10.266469321050172
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),5,interior,0,3053,1860,132.3603508271434,-1.786849776902333
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),5,interior,1,2579,1276,102.70725846935886,0.4217793577920848
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),5,borde,0,1772,955,96.04849786675805,-23.784473536871666
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),5,borde,1,4746,2482,131.01113979353408,-5.437298465764521
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),5,borde,2,1519,513,101.4853429015447,-20.996996403094542
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),5,borde,3,1665,544,134.92507065889419,-11.466770722326427
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),5,borde,4,808,585,127.56072607260725,-12.045600406607173
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),6,interior,0,3053,1860,132.3603508271434,-3.0878191973877
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),6,interior,1,2579,1276,102.70725846935886,0.08246259126802617
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),6,borde,0,1772,955,96.04849786675805,-24.257521063319956
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),6,borde,1,4746,2482,131.01113979353408,-7.940221661700035
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),6,borde,2,1519,513,101.4853429015447,-9.753417629504348
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),6,borde,3,1665,544,134.92507065889419,-14.741970643079446
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),6,borde,4,808,585,127.56072607260725,-16.965448228967222
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),7,interior,0,3053,1860,132.3603508271434,-3.6095927186038352
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),7,interior,1,2579,1276,102.70725846935886,0.10529077414898917
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),7,borde,0,1772,955,96.04849786675805,-33.0381605930211
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),7,borde,1,4746,2482,131.01113979353408,-9.655212998390128
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),7,borde,2,1519,513,101.4853429015447,-40.536232923793726
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),7,borde,3,1665,544,134.92507065889419,-11.670036105096074
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),7,borde,4,808,585,127.56072607260725,-8.565989355072869
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),8,interior,0,3053,1860,132.3603508271434,-4.854758698579769
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),8,interior,1,2579,1276,102.70725846935886,-0.2884727621764988
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),8,borde,0,1772,955,96.04849786675805,-28.614120219793826
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),8,borde,1,4746,2482,131.01113979353408,-9.848132062089558
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),8,borde,2,1519,513,101.4853429015447,-40.60623820583055
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),8,borde,3,1665,544,134.92507065889419,-10.089508957788592
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),8,borde,4,808,585,127.56072607260725,-6.1554539897878655
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),9,interior,0,3053,1860,132.3603508271434,-4.883957555335205
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),9,interior,1,2579,1276,102.70725846935886,-1.4235506297181246
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),9,borde,0,1772,955,96.04849786675805,-26.11550131014064
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),9,borde,1,4746,2482,131.01113979353408,-10.227529338606686
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),9,borde,2,1519,513,101.4853429015447,-36.90254879950776
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),9,borde,3,1665,544,134.92507065889419,-6.236608487673057
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),9,borde,4,808,585,127.56072607260725,-13.289718600921951
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),10,interior,0,3053,1860,132.3603508271434,-5.102169829853312
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),10,interior,1,2579,1276,102.70725846935886,-1.2021072530497785
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),10,borde,0,1772,955,96.04849786675805,-33.75956646978377
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),10,borde,1,4746,2482,131.01113979353408,-12.13883191640628
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),10,borde,2,1519,513,101.4853429015447,-39.64064089974355
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),10,borde,3,1665,544,134.92507065889419,-4.722186991145633
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),10,borde,4,808,585,127.56072607260725,-19.6442842309083
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),11,interior,0,3053,1860,132.3603508271434,-5.030904450447089
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),11,interior,1,2579,1276,102.70725846935886,-2.6854148820584913
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),11,borde,0,1772,955,96.04849786675805,-28.30216398680831
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),11,borde,1,4746,2482,131.01113979353408,-13.425939706599507
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),11,borde,2,1519,513,101.4853429015447,-13.6593021227401
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),11,borde,3,1665,544,134.92507065889419,-9.68006159120341
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),11,borde,4,808,585,127.56072607260725,-20.999590559770116
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),12,interior,0,3053,1860,132.3603508271434,-5.069945159446558
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),12,interior,1,2579,1276,102.70725846935886,-2.019859486843491
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),12,borde,0,1772,955,96.04849786675805,-25.33121851422857
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),12,borde,1,4746,2482,131.01113979353408,-14.179827580908446
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),12,borde,2,1519,513,101.4853429015447,-23.834938651878126
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),12,borde,3,1665,544,134.92507065889419,-5.96285825776117
+prueba,2021-01-29__12-39-26_4-6,Polinomio + pérdida física (control),12,borde,4,808,585,127.56072607260725,-19.19150515865704
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,interior,0,2889,2148,118.82343062009433,-0.0
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,interior,1,2376,1720,106.21172774254168,-0.0
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,interior,2,2289,1810,120.63843942564608,-0.0
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,borde,0,1274,735,137.67598116169546,-0.0
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,borde,1,3049,2016,101.2695082501679,-0.0
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,borde,2,827,860,108.35690784848569,-0.0
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,borde,3,731,850,128.25332421340627,-0.0
+prueba,2021-01-29__12-55-21_1-5,Pistón,0,borde,4,2556,1383,123.07267575081727,-0.0
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,interior,0,2889,2148,118.82343062009433,-2.725799388992917
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,interior,1,2376,1720,106.21172774254168,0.2656789350475516
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,interior,2,2289,1810,120.63843942564608,1.020402928655207
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,borde,0,1274,735,137.67598116169546,-7.0979726444484115
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,borde,1,3049,2016,101.2695082501679,-1.1286296061643155
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,borde,2,827,860,108.35690784848569,0.6654050020884377
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,borde,3,731,850,128.25332421340627,-0.7639392588140813
+prueba,2021-01-29__12-55-21_1-5,Polinomio g3 con recorte duro (línea base),3,borde,4,2556,1383,123.07267575081727,-1.936417019094692
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,interior,0,2889,2148,118.82343062009433,0.005025299571580927
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,interior,1,2376,1720,106.21172774254168,0.6890475190773285
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,interior,2,2289,1810,120.63843942564608,-0.08843893175080658
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,borde,0,1274,735,137.67598116169546,1.153471646198614
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,borde,1,3049,2016,101.2695082501679,-0.053903864758771035
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,borde,2,827,860,108.35690784848569,-1.116583485177926
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,borde,3,731,850,128.25332421340627,-0.9385621811747434
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),1,borde,4,2556,1383,123.07267575081727,0.12719830479055713
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,interior,0,2889,2148,118.82343062009433,0.7296866258602224
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,interior,1,2376,1720,106.21172774254168,-0.729546843206731
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,interior,2,2289,1810,120.63843942564608,0.3194222074379247
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,borde,0,1274,735,137.67598116169546,-8.972883528999848
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,borde,1,3049,2016,101.2695082501679,0.6289962124033319
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,borde,2,827,860,108.35690784848569,-2.002783987588972
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,borde,3,731,850,128.25332421340627,-3.821185092211513
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),2,borde,4,2556,1383,123.07267575081727,0.3215632917362491
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,interior,0,2889,2148,118.82343062009433,-1.8996676466463025
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,interior,1,2376,1720,106.21172774254168,0.3515905011323142
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,interior,2,2289,1810,120.63843942564608,0.8205289375271737
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,borde,0,1274,735,137.67598116169546,-8.705386523153182
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,borde,1,3049,2016,101.2695082501679,-0.6680129737150039
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,borde,2,827,860,108.35690784848569,-0.20478803753184446
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,borde,3,731,850,128.25332421340627,-1.3545691677958074
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),3,borde,4,2556,1383,123.07267575081727,-1.1399853965130835
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,interior,0,2889,2148,118.82343062009433,-1.5451612137932613
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,interior,1,2376,1720,106.21172774254168,-0.03174381416053257
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,interior,2,2289,1810,120.63843942564608,0.8854913312704501
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,borde,0,1274,735,137.67598116169546,0.5186307661294645
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,borde,1,3049,2016,101.2695082501679,-2.5808137241456275
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,borde,2,827,860,108.35690784848569,-2.0736859969590924
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,borde,3,731,850,128.25332421340627,-1.7588893346663868
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),4,borde,4,2556,1383,123.07267575081727,-1.9953772040825106
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,interior,0,2889,2148,118.82343062009433,-2.6114450344775455
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,interior,1,2376,1720,106.21172774254168,-1.4455334545715384
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,interior,2,2289,1810,120.63843942564608,0.9511446135806187
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,borde,0,1274,735,137.67598116169546,0.35553884636289035
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,borde,1,3049,2016,101.2695082501679,-1.501487279104874
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,borde,2,827,860,108.35690784848569,-1.648692370092277
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,borde,3,731,850,128.25332421340627,-3.4635856989208027
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),5,borde,4,2556,1383,123.07267575081727,-1.3615740625127148
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,interior,0,2889,2148,118.82343062009433,-2.5799611811058156
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,interior,1,2376,1720,106.21172774254168,-1.376704031239864
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,interior,2,2289,1810,120.63843942564608,0.467854282620172
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,borde,0,1274,735,137.67598116169546,1.1880144972685538
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,borde,1,3049,2016,101.2695082501679,-2.1878353989676858
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,borde,2,827,860,108.35690784848569,-3.1579316432210907
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,borde,3,731,850,128.25332421340627,-1.9081254183895493
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),6,borde,4,2556,1383,123.07267575081727,-2.1837685600327066
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,interior,0,2889,2148,118.82343062009433,-3.590998006640327
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,interior,1,2376,1720,106.21172774254168,-3.0966231032197804
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,interior,2,2289,1810,120.63843942564608,-0.06711534456230797
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,borde,0,1274,735,137.67598116169546,-5.110861309577431
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,borde,1,3049,2016,101.2695082501679,-1.6390886009176986
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,borde,2,827,860,108.35690784848569,-3.2308265347858343
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,borde,3,731,850,128.25332421340627,-4.854361260464123
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),7,borde,4,2556,1383,123.07267575081727,-1.8219186798452522
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,interior,0,2889,2148,118.82343062009433,-3.391705981318644
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,interior,1,2376,1720,106.21172774254168,-2.3523224159873988
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,interior,2,2289,1810,120.63843942564608,-0.70410635180051
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,borde,0,1274,735,137.67598116169546,2.0749926473313516
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,borde,1,3049,2016,101.2695082501679,-2.206754766219375
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,borde,2,827,860,108.35690784848569,-4.149330559311808
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,borde,3,731,850,128.25332421340627,-5.880956255446032
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),8,borde,4,2556,1383,123.07267575081727,-2.9657651313304165
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,interior,0,2889,2148,118.82343062009433,-5.10312631754573
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,interior,1,2376,1720,106.21172774254168,-3.797401726700039
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,interior,2,2289,1810,120.63843942564608,-1.8175012573906049
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,borde,0,1274,735,137.67598116169546,-13.098763250787265
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,borde,1,3049,2016,101.2695082501679,-2.543340991234909
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,borde,2,827,860,108.35690784848569,-9.241997463161496
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,borde,3,731,850,128.25332421340627,-4.796428890153871
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),9,borde,4,2556,1383,123.07267575081727,-4.452862105724336
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,interior,0,2889,2148,118.82343062009433,-4.7528421039002655
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,interior,1,2376,1720,106.21172774254168,-3.564337071379293
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,interior,2,2289,1810,120.63843942564608,-2.4835438127790823
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,borde,0,1274,735,137.67598116169546,-12.058238044162607
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,borde,1,3049,2016,101.2695082501679,-2.8463452994985263
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,borde,2,827,860,108.35690784848569,-10.045694424764768
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,borde,3,731,850,128.25332421340627,-3.3868463610526303
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),10,borde,4,2556,1383,123.07267575081727,-5.622849941956461
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,interior,0,2889,2148,118.82343062009433,-4.736630224492679
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,interior,1,2376,1720,106.21172774254168,-4.381561234492674
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,interior,2,2289,1810,120.63843942564608,-2.830257154134985
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,borde,0,1274,735,137.67598116169546,-27.539072345333313
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,borde,1,3049,2016,101.2695082501679,-3.4111829269361946
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,borde,2,827,860,108.35690784848569,-13.127331895547353
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,borde,3,731,850,128.25332421340627,-4.4828790744551315
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),11,borde,4,2556,1383,123.07267575081727,-3.0103362155848825
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,interior,0,2889,2148,118.82343062009433,-4.090141010600505
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,interior,1,2376,1720,106.21172774254168,-3.6889201594849563
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,interior,2,2289,1810,120.63843942564608,-2.9040947203791516
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,borde,0,1274,735,137.67598116169546,-36.678678570847936
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,borde,1,3049,2016,101.2695082501679,-3.108708882119002
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,borde,2,827,860,108.35690784848569,-17.09146662568123
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,borde,3,731,850,128.25332421340627,-11.435486078378428
+prueba,2021-01-29__12-55-21_1-5,Polinomio + pérdida física (control),12,borde,4,2556,1383,123.07267575081727,-0.8875074192095825
+prueba,2021-01-29__13-00-40_2-16,Pistón,0,interior,0,2232,1296,113.1740093588212,-0.0
+prueba,2021-01-29__13-00-40_2-16,Pistón,0,interior,1,4501,2922,125.9893503778383,-0.0
+prueba,2021-01-29__13-00-40_2-16,Pistón,0,borde,0,2135,1390,142.82220275302006,-0.0
+prueba,2021-01-29__13-00-40_2-16,Pistón,0,borde,1,2730,1290,118.25687878013458,-0.0
+prueba,2021-01-29__13-00-40_2-16,Polinomio g3 con recorte duro (línea base),3,interior,0,2232,1296,113.1740093588212,-2.102304542750068
+prueba,2021-01-29__13-00-40_2-16,Polinomio g3 con recorte duro (línea base),3,interior,1,4501,2922,125.9893503778383,-0.6721917870960684
+prueba,2021-01-29__13-00-40_2-16,Polinomio g3 con recorte duro (línea base),3,borde,0,2135,1390,142.82220275302006,-3.9890372909489407
+prueba,2021-01-29__13-00-40_2-16,Polinomio g3 con recorte duro (línea base),3,borde,1,2730,1290,118.25687878013458,-3.043491930033671
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),1,interior,0,2232,1296,113.1740093588212,0.8091266969495866
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),1,interior,1,4501,2922,125.9893503778383,0.6012822250612041
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),1,borde,0,2135,1390,142.82220275302006,-1.1319020528007075
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),1,borde,1,2730,1290,118.25687878013458,0.3292016980149025
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),2,interior,0,2232,1296,113.1740093588212,-0.012005722317983074
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),2,interior,1,4501,2922,125.9893503778383,0.450111165407798
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),2,borde,0,2135,1390,142.82220275302006,-1.7724096498971467
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),2,borde,1,2730,1290,118.25687878013458,0.06935557121556873
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),3,interior,0,2232,1296,113.1740093588212,-1.036399814298274
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),3,interior,1,4501,2922,125.9893503778383,-0.11736522071732622
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),3,borde,0,2135,1390,142.82220275302006,-3.2517607212793758
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),3,borde,1,2730,1290,118.25687878013458,-2.13628476671537
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),4,interior,0,2232,1296,113.1740093588212,-2.5480461905397322
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),4,interior,1,4501,2922,125.9893503778383,-1.5961082726646372
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),4,borde,0,2135,1390,142.82220275302006,-1.5642191994276653
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),4,borde,1,2730,1290,118.25687878013458,-2.651332327435158
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),5,interior,0,2232,1296,113.1740093588212,-3.502211456979054
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),5,interior,1,4501,2922,125.9893503778383,-1.8578501943861463
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),5,borde,0,2135,1390,142.82220275302006,-2.5663798646653686
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),5,borde,1,2730,1290,118.25687878013458,-3.7428696444798466
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),6,interior,0,2232,1296,113.1740093588212,-5.051247005046809
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),6,interior,1,4501,2922,125.9893503778383,-3.6396089670487197
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),6,borde,0,2135,1390,142.82220275302006,-2.670330515667849
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),6,borde,1,2730,1290,118.25687878013458,-4.398922496584334
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),7,interior,0,2232,1296,113.1740093588212,-5.724327279602036
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),7,interior,1,4501,2922,125.9893503778383,-4.054344161378192
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),7,borde,0,2135,1390,142.82220275302006,-4.607487276616956
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),7,borde,1,2730,1290,118.25687878013458,-5.807621383479623
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),8,interior,0,2232,1296,113.1740093588212,-6.334977823985605
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),8,interior,1,4501,2922,125.9893503778383,-4.842603744011004
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),8,borde,0,2135,1390,142.82220275302006,-5.32032720778975
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),8,borde,1,2730,1290,118.25687878013458,-6.067495146105023
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),9,interior,0,2232,1296,113.1740093588212,-6.554844784331311
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),9,interior,1,4501,2922,125.9893503778383,-4.981726400302764
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),9,borde,0,2135,1390,142.82220275302006,-7.167576203474501
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),9,borde,1,2730,1290,118.25687878013458,-6.8864664007093666
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),10,interior,0,2232,1296,113.1740093588212,-6.683547417196062
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),10,interior,1,4501,2922,125.9893503778383,-4.920490686647214
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),10,borde,0,2135,1390,142.82220275302006,-9.288516458008552
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),10,borde,1,2730,1290,118.25687878013458,-7.494185824581583
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),11,interior,0,2232,1296,113.1740093588212,-7.012978299550705
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),11,interior,1,4501,2922,125.9893503778383,-4.9790131046465556
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),11,borde,0,2135,1390,142.82220275302006,-11.08382722816604
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),11,borde,1,2730,1290,118.25687878013458,-8.675029925402944
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),12,interior,0,2232,1296,113.1740093588212,-7.139342820308355
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),12,interior,1,4501,2922,125.9893503778383,-4.855753090393792
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),12,borde,0,2135,1390,142.82220275302006,-15.03999125542915
+prueba,2021-01-29__13-00-40_2-16,Polinomio + pérdida física (control),12,borde,1,2730,1290,118.25687878013458,-10.402622038910728
+prueba,2021-01-29__13-06-04_1-5,Pistón,0,interior,0,1973,1581,132.62293556305505,-0.0
+prueba,2021-01-29__13-06-04_1-5,Pistón,0,interior,1,2897,2150,133.12482584229076,3.335885752640628e-16
+prueba,2021-01-29__13-06-04_1-5,Pistón,0,borde,0,2186,1209,139.3553548144936,-0.0
+prueba,2021-01-29__13-06-04_1-5,Pistón,0,borde,1,2368,1341,116.7253615822198,-0.0
+prueba,2021-01-29__13-06-04_1-5,Pistón,0,borde,2,1452,1090,136.92375211666285,-0.0
+prueba,2021-01-29__13-06-04_1-5,Polinomio g3 con recorte duro (línea base),3,interior,0,1973,1581,132.62293556305505,-1.3099669959299514
+prueba,2021-01-29__13-06-04_1-5,Polinomio g3 con recorte duro (línea base),3,interior,1,2897,2150,133.12482584229076,-1.064763437949758
+prueba,2021-01-29__13-06-04_1-5,Polinomio g3 con recorte duro (línea base),3,borde,0,2186,1209,139.3553548144936,-2.9998209167081713
+prueba,2021-01-29__13-06-04_1-5,Polinomio g3 con recorte duro (línea base),3,borde,1,2368,1341,116.7253615822198,-3.6449897104716387
+prueba,2021-01-29__13-06-04_1-5,Polinomio g3 con recorte duro (línea base),3,borde,2,1452,1090,136.92375211666285,5.821771498060402
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),1,interior,0,1973,1581,132.62293556305505,-0.23223864610525422
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),1,interior,1,2897,2150,133.12482584229076,-0.027173252907737044
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),1,borde,0,2186,1209,139.3553548144936,0.7978025577771971
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),1,borde,1,2368,1341,116.7253615822198,-0.5135729579011562
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),1,borde,2,1452,1090,136.92375211666285,-0.96050179597722
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),2,interior,0,1973,1581,132.62293556305505,-0.3566675934067207
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),2,interior,1,2897,2150,133.12482584229076,-0.3824458175187577
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),2,borde,0,2186,1209,139.3553548144936,1.2669964075006508
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),2,borde,1,2368,1341,116.7253615822198,-1.3788906693695835
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),2,borde,2,1452,1090,136.92375211666285,-0.9596818430218554
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),3,interior,0,1973,1581,132.62293556305505,-0.5641704830481717
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),3,interior,1,2897,2150,133.12482584229076,-0.8170526409402804
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),3,borde,0,2186,1209,139.3553548144936,-0.5168675976906316
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),3,borde,1,2368,1341,116.7253615822198,-2.5905591271092807
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),3,borde,2,1452,1090,136.92375211666285,3.2303234836314996
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),4,interior,0,1973,1581,132.62293556305505,-1.3142892580605303
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),4,interior,1,2897,2150,133.12482584229076,-1.4281421072650782
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),4,borde,0,2186,1209,139.3553548144936,-2.1413609298011633
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),4,borde,1,2368,1341,116.7253615822198,-3.069204553367117
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),4,borde,2,1452,1090,136.92375211666285,-0.3776125733663248
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),5,interior,0,1973,1581,132.62293556305505,-1.2036137593076357
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),5,interior,1,2897,2150,133.12482584229076,-1.2989098524917504
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),5,borde,0,2186,1209,139.3553548144936,-3.9069400254649436
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),5,borde,1,2368,1341,116.7253615822198,-3.093018748942926
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),5,borde,2,1452,1090,136.92375211666285,-2.495630901173904
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),6,interior,0,1973,1581,132.62293556305505,-1.8804070020546098
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),6,interior,1,2897,2150,133.12482584229076,-2.061175011091833
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),6,borde,0,2186,1209,139.3553548144936,-1.651433115546689
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),6,borde,1,2368,1341,116.7253615822198,-3.1283445227374758
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),6,borde,2,1452,1090,136.92375211666285,-4.706427846314365
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),7,interior,0,1973,1581,132.62293556305505,-1.8528049509801812
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),7,interior,1,2897,2150,133.12482584229076,-2.050158958644031
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),7,borde,0,2186,1209,139.3553548144936,-2.6011736235872545
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),7,borde,1,2368,1341,116.7253615822198,-3.5585925054747154
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),7,borde,2,1452,1090,136.92375211666285,-3.165785242323363
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),8,interior,0,1973,1581,132.62293556305505,-2.5800310197220324
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),8,interior,1,2897,2150,133.12482584229076,-2.8728673215357285
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),8,borde,0,2186,1209,139.3553548144936,-2.293908895529813
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),8,borde,1,2368,1341,116.7253615822198,-2.9069546264719137
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),8,borde,2,1452,1090,136.92375211666285,-8.76301614593322
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),9,interior,0,1973,1581,132.62293556305505,-2.828878973089111
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),9,interior,1,2897,2150,133.12482584229076,-2.5663070214290373
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),9,borde,0,2186,1209,139.3553548144936,-2.1114811413743846
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),9,borde,1,2368,1341,116.7253615822198,-3.1480433970198867
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),9,borde,2,1452,1090,136.92375211666285,-9.605044653747301
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),10,interior,0,1973,1581,132.62293556305505,-3.375086343436985
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),10,interior,1,2897,2150,133.12482584229076,-3.1313951172226586
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),10,borde,0,2186,1209,139.3553548144936,-3.2201775769875525
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),10,borde,1,2368,1341,116.7253615822198,-3.5976171584839163
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),10,borde,2,1452,1090,136.92375211666285,-12.376153692309565
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),11,interior,0,1973,1581,132.62293556305505,-3.3768771487990605
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),11,interior,1,2897,2150,133.12482584229076,-3.0806883489562376
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),11,borde,0,2186,1209,139.3553548144936,-3.291609925034195
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),11,borde,1,2368,1341,116.7253615822198,-3.312856607553001
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),11,borde,2,1452,1090,136.92375211666285,-11.65910049757392
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),12,interior,0,1973,1581,132.62293556305505,-3.4308115576093883
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),12,interior,1,2897,2150,133.12482584229076,-3.119277062859195
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),12,borde,0,2186,1209,139.3553548144936,-3.688807259030087
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),12,borde,1,2368,1341,116.7253615822198,-3.5946009142360618
+prueba,2021-01-29__13-06-04_1-5,Polinomio + pérdida física (control),12,borde,2,1452,1090,136.92375211666285,-10.525504027958638
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,interior,0,2152,1586,116.68626035430836,-0.0
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,interior,1,3115,1909,124.68719195296083,-0.0
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,interior,2,2870,1741,130.68020621734075,-0.0
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,borde,0,3317,1072,110.91270602819486,-0.0
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,borde,1,1922,1292,113.16025859930477,-0.0
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,borde,2,2166,1291,114.35010832147842,-0.0
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,borde,3,2415,1480,119.59103995299648,-0.0
+prueba,2021-01-29__13-06-43_3-12,Pistón,0,borde,4,1877,1178,113.55839928072196,-0.0
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,interior,0,2152,1586,116.68626035430836,-0.8256514173471691
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,interior,1,3115,1909,124.68719195296083,-0.24944193093225223
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,interior,2,2870,1741,130.68020621734075,-1.0451587790533197
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,borde,0,3317,1072,110.91270602819486,-44.26234897328995
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,borde,1,1922,1292,113.16025859930477,2.0384141778997424
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,borde,2,2166,1291,114.35010832147842,-18.859577042632445
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,borde,3,2415,1480,119.59103995299648,-11.17786981393982
+prueba,2021-01-29__13-06-43_3-12,Polinomio g3 con recorte duro (línea base),3,borde,4,1877,1178,113.55839928072196,-1.1916600129334332
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,interior,0,2152,1586,116.68626035430836,-0.022544060496455326
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,interior,1,3115,1909,124.68719195296083,0.004568580373670178
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,interior,2,2870,1741,130.68020621734075,-0.022699598134664278
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,borde,0,3317,1072,110.91270602819486,0.1973104284130593
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,borde,1,1922,1292,113.16025859930477,-0.012185088044145725
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,borde,2,2166,1291,114.35010832147842,-0.06833348184728597
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,borde,3,2415,1480,119.59103995299648,-0.049953844747796336
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),1,borde,4,1877,1178,113.55839928072196,-0.043606492859324865
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,interior,0,2152,1586,116.68626035430836,-0.9172525130856615
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,interior,1,3115,1909,124.68719195296083,-0.29491480939471004
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,interior,2,2870,1741,130.68020621734075,-0.5392786302341311
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,borde,0,3317,1072,110.91270602819486,10.608074443037554
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,borde,1,1922,1292,113.16025859930477,-0.9998295388928644
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,borde,2,2166,1291,114.35010832147842,-1.4116265778047368
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,borde,3,2415,1480,119.59103995299648,-0.444607810965887
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),2,borde,4,1877,1178,113.55839928072196,0.24440631762977252
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,interior,0,2152,1586,116.68626035430836,-0.5621979117954842
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,interior,1,3115,1909,124.68719195296083,-0.31362095929279027
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,interior,2,2870,1741,130.68020621734075,-0.20409151157068967
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,borde,0,3317,1072,110.91270602819486,-13.890603953844899
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,borde,1,1922,1292,113.16025859930477,0.5180011367564019
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,borde,2,2166,1291,114.35010832147842,-5.191175234465209
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,borde,3,2415,1480,119.59103995299648,-2.882396275514247
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),3,borde,4,1877,1178,113.55839928072196,0.24053011529295776
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,interior,0,2152,1586,116.68626035430836,-1.8639187402779707
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,interior,1,3115,1909,124.68719195296083,-1.3306703938519069
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,interior,2,2870,1741,130.68020621734075,-1.0685195918162869
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,borde,0,3317,1072,110.91270602819486,-41.08268709784811
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,borde,1,1922,1292,113.16025859930477,-2.7975419135471813
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,borde,2,2166,1291,114.35010832147842,-1.175203586024836
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,borde,3,2415,1480,119.59103995299648,-2.68820915358321
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),4,borde,4,1877,1178,113.55839928072196,-0.5266654096829955
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,interior,0,2152,1586,116.68626035430836,-1.975882464262155
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,interior,1,3115,1909,124.68719195296083,-2.3836346637674968
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,interior,2,2870,1741,130.68020621734075,-1.1189242368500598
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,borde,0,3317,1072,110.91270602819486,-43.283289982286554
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,borde,1,1922,1292,113.16025859930477,-2.588429330082804
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,borde,2,2166,1291,114.35010832147842,-2.2004298589178672
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,borde,3,2415,1480,119.59103995299648,-1.7481099158088689
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),5,borde,4,1877,1178,113.55839928072196,-0.20561943571902236
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,interior,0,2152,1586,116.68626035430836,-3.4702591556649267
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,interior,1,3115,1909,124.68719195296083,-1.601003749803009
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,interior,2,2870,1741,130.68020621734075,-2.046843645325197
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,borde,0,3317,1072,110.91270602819486,-42.08704153646737
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,borde,1,1922,1292,113.16025859930477,-3.6114094422810035
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,borde,2,2166,1291,114.35010832147842,-0.6123979663359596
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,borde,3,2415,1480,119.59103995299648,-3.6058895880353883
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),6,borde,4,1877,1178,113.55839928072196,-2.0823276675747886
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,interior,0,2152,1586,116.68626035430836,-3.5874466129848455
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,interior,1,3115,1909,124.68719195296083,-2.3808488716630105
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,interior,2,2870,1741,130.68020621734075,-2.039210631905497
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,borde,0,3317,1072,110.91270602819486,-39.54415209552665
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,borde,1,1922,1292,113.16025859930477,-4.838869546527908
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,borde,2,2166,1291,114.35010832147842,-1.4757416188023813
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,borde,3,2415,1480,119.59103995299648,-1.7511741187366954
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),7,borde,4,1877,1178,113.55839928072196,-2.799808349340932
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,interior,0,2152,1586,116.68626035430836,-4.418122284023996
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,interior,1,3115,1909,124.68719195296083,-1.808019674022082
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,interior,2,2870,1741,130.68020621734075,-2.8105648204159768
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,borde,0,3317,1072,110.91270602819486,-37.66264097925287
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,borde,1,1922,1292,113.16025859930477,-5.365835587650731
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,borde,2,2166,1291,114.35010832147842,-2.12701480107609
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,borde,3,2415,1480,119.59103995299648,-1.6811149471907936
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),8,borde,4,1877,1178,113.55839928072196,-3.9759370636069122
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,interior,0,2152,1586,116.68626035430836,-4.383737276551276
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,interior,1,3115,1909,124.68719195296083,-1.9505714811653314
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,interior,2,2870,1741,130.68020621734075,-2.992427725290612
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,borde,0,3317,1072,110.91270602819486,-40.638610627697815
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,borde,1,1922,1292,113.16025859930477,-4.466991268285916
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,borde,2,2166,1291,114.35010832147842,0.030585242294398667
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,borde,3,2415,1480,119.59103995299648,-2.569417328494165
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),9,borde,4,1877,1178,113.55839928072196,-4.66660585332185
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,interior,0,2152,1586,116.68626035430836,-4.258309491500187
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,interior,1,3115,1909,124.68719195296083,-2.044983064269543
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,interior,2,2870,1741,130.68020621734075,-3.2829178464396707
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,borde,0,3317,1072,110.91270602819486,-34.67926456628993
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,borde,1,1922,1292,113.16025859930477,-11.916996614262604
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,borde,2,2166,1291,114.35010832147842,-6.04794489127042
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,borde,3,2415,1480,119.59103995299648,-0.38994748482001074
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),10,borde,4,1877,1178,113.55839928072196,-4.77952939736166
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,interior,0,2152,1586,116.68626035430836,-4.258901591407503
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,interior,1,3115,1909,124.68719195296083,-2.1035497219961905
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,interior,2,2870,1741,130.68020621734075,-3.3218445814454998
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,borde,0,3317,1072,110.91270602819486,-35.93691734428055
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,borde,1,1922,1292,113.16025859930477,-12.00055950142571
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,borde,2,2166,1291,114.35010832147842,-4.161042083833934
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,borde,3,2415,1480,119.59103995299648,-1.6899168411172538
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),11,borde,4,1877,1178,113.55839928072196,-4.430631239855616
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,interior,0,2152,1586,116.68626035430836,-4.382583671733087
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,interior,1,3115,1909,124.68719195296083,-2.294378745725424
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,interior,2,2870,1741,130.68020621734075,-3.4107784766844222
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,borde,0,3317,1072,110.91270602819486,-33.84714486895361
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,borde,1,1922,1292,113.16025859930477,-12.195254234978774
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,borde,2,2166,1291,114.35010832147842,-1.9273538078374999
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,borde,3,2415,1480,119.59103995299648,-3.9543714205214044
+prueba,2021-01-29__13-06-43_3-12,Polinomio + pérdida física (control),12,borde,4,1877,1178,113.55839928072196,-4.138789784599685
+generalizacion,2021-01-28__15-49-28_4-10,Pistón,0,interior,0,3195,1824,104.41128253438762,-0.0
+generalizacion,2021-01-28__15-49-28_4-10,Pistón,0,borde,0,1202,619,108.71539760066018,-0.0
+generalizacion,2021-01-28__15-49-28_4-10,Pistón,0,borde,1,5588,2664,123.99026576684057,-0.0
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio g3 con recorte duro (línea base),3,interior,0,3195,1824,104.41128253438762,-3.33261713220658
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio g3 con recorte duro (línea base),3,borde,0,1202,619,108.71539760066018,2.67820768530052
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio g3 con recorte duro (línea base),3,borde,1,5588,2664,123.99026576684057,-2.24662254094021
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),1,interior,0,3195,1824,104.41128253438762,0.05039980666155614
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),1,borde,0,1202,619,108.71539760066018,0.06254667388451336
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),1,borde,1,5588,2664,123.99026576684057,-0.035494622344470886
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),2,interior,0,3195,1824,104.41128253438762,-0.22756322227469147
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),2,borde,0,1202,619,108.71539760066018,-0.8852329879577892
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),2,borde,1,5588,2664,123.99026576684057,0.03359894921526406
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),3,interior,0,3195,1824,104.41128253438762,-1.796962276067569
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),3,borde,0,1202,619,108.71539760066018,2.7511380780715537
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),3,borde,1,5588,2664,123.99026576684057,-1.4108803775860597
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),4,interior,0,3195,1824,104.41128253438762,-2.961905963533418
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),4,borde,0,1202,619,108.71539760066018,-8.685327039265275
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),4,borde,1,5588,2664,123.99026576684057,-0.8600264935693944
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),5,interior,0,3195,1824,104.41128253438762,-4.542227862774379
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),5,borde,0,1202,619,108.71539760066018,-12.800605093409343
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),5,borde,1,5588,2664,123.99026576684057,-2.1504222808298152
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),6,interior,0,3195,1824,104.41128253438762,-4.612335642618223
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),6,borde,0,1202,619,108.71539760066018,-15.78486366535849
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),6,borde,1,5588,2664,123.99026576684057,-2.689685502816186
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),7,interior,0,3195,1824,104.41128253438762,-5.564197476803717
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),7,borde,0,1202,619,108.71539760066018,-23.244943319288762
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),7,borde,1,5588,2664,123.99026576684057,-3.5936957966198566
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),8,interior,0,3195,1824,104.41128253438762,-6.736245629379973
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),8,borde,0,1202,619,108.71539760066018,-25.104351795222964
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),8,borde,1,5588,2664,123.99026576684057,-4.579000149475793
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),9,interior,0,3195,1824,104.41128253438762,-6.588529200797974
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),9,borde,0,1202,619,108.71539760066018,-22.538796478003736
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),9,borde,1,5588,2664,123.99026576684057,-4.434723406211772
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),10,interior,0,3195,1824,104.41128253438762,-6.966254925440341
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),10,borde,0,1202,619,108.71539760066018,-26.14608247223188
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),10,borde,1,5588,2664,123.99026576684057,-4.4482788502989425
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),11,interior,0,3195,1824,104.41128253438762,-6.98784451289688
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),11,borde,0,1202,619,108.71539760066018,-21.695953628459588
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),11,borde,1,5588,2664,123.99026576684057,-3.8482759616707907
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),12,interior,0,3195,1824,104.41128253438762,-6.749505077320911
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),12,borde,0,1202,619,108.71539760066018,-32.239415738385325
+generalizacion,2021-01-28__15-49-28_4-10,Polinomio + pérdida física (control),12,borde,1,5588,2664,123.99026576684057,-3.7443541684725017
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,interior,0,2543,1740,137.13144444293778,-5.1814719712645225e-15
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,interior,1,2599,1750,129.2301683064915,-5.498272927068596e-15
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,borde,0,1528,877,145.99883810825816,-0.0
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,borde,1,1743,835,131.04765134103565,-0.0
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,borde,2,2411,1580,107.76903275598653,-6.593199526703832e-15
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,borde,3,2798,2013,121.9737680771909,5.825373331997372e-15
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,borde,4,2646,1641,127.02841652606604,-5.593573116880488e-15
+generalizacion,2021-01-28__15-49-28_4-2-A,Pistón,0,borde,5,2089,1330,124.5018644025094,-0.0
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,interior,0,2543,1740,137.13144444293778,-1.1959573815832827
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,interior,1,2599,1750,129.2301683064915,-1.623507972784723
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,borde,0,1528,877,145.99883810825816,-3.922985211102491
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,borde,1,1743,835,131.04765134103565,-0.7455012439394966
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,borde,2,2411,1580,107.76903275598653,-2.321305557217222
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,borde,3,2798,2013,121.9737680771909,-0.9416619292536342
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,borde,4,2646,1641,127.02841652606604,-0.9127529725102634
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio g3 con recorte duro (línea base),3,borde,5,2089,1330,124.5018644025094,3.8032982474178
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,interior,0,2543,1740,137.13144444293778,0.3033841838610603
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,interior,1,2599,1750,129.2301683064915,-0.36386147477645225
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,borde,0,1528,877,145.99883810825816,-0.9345519523648368
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,borde,1,1743,835,131.04765134103565,-2.067965093001661
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,borde,2,2411,1580,107.76903275598653,-1.0843655980041074
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,borde,3,2798,2013,121.9737680771909,0.07631955674947129
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,borde,4,2646,1641,127.02841652606604,-0.2901533156523128
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),1,borde,5,2089,1330,124.5018644025094,1.2781526021421237
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,interior,0,2543,1740,137.13144444293778,-1.7373586768120943
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,interior,1,2599,1750,129.2301683064915,-1.8980601561852162
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,borde,0,1528,877,145.99883810825816,0.4326352986502551
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,borde,1,1743,835,131.04765134103565,7.375627413979811
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,borde,2,2411,1580,107.76903275598653,-0.5262441112348273
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,borde,3,2798,2013,121.9737680771909,-0.8337410793565926
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,borde,4,2646,1641,127.02841652606604,0.602929799349176
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),2,borde,5,2089,1330,124.5018644025094,3.4964002637021143
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,interior,0,2543,1740,137.13144444293778,-1.065955614074566
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,interior,1,2599,1750,129.2301683064915,-1.325942500288229
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,borde,0,1528,877,145.99883810825816,-0.831435493632351
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,borde,1,1743,835,131.04765134103565,4.127222284055773
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,borde,2,2411,1580,107.76903275598653,-1.1180713068122956
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,borde,3,2798,2013,121.9737680771909,-1.4552833613700635
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,borde,4,2646,1641,127.02841652606604,-0.4141771056863426
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),3,borde,5,2089,1330,124.5018644025094,1.546492577487876
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,interior,0,2543,1740,137.13144444293778,-1.3474136937596182
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,interior,1,2599,1750,129.2301683064915,-1.8369339851900615
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,borde,0,1528,877,145.99883810825816,-3.6285802110181917
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,borde,1,1743,835,131.04765134103565,-11.871835741020236
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,borde,2,2411,1580,107.76903275598653,-0.9451597096219312
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,borde,3,2798,2013,121.9737680771909,-1.7903705205091145
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,borde,4,2646,1641,127.02841652606604,-3.548976416437216
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),4,borde,5,2089,1330,124.5018644025094,-1.0369474744613374
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,interior,0,2543,1740,137.13144444293778,-1.0764002520445137
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,interior,1,2599,1750,129.2301683064915,-2.0102896679579922
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,borde,0,1528,877,145.99883810825816,-5.617043391465591
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,borde,1,1743,835,131.04765134103565,-11.227243894044262
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,borde,2,2411,1580,107.76903275598653,-3.12318168787592
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,borde,3,2798,2013,121.9737680771909,-0.25552728039034533
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,borde,4,2646,1641,127.02841652606604,-3.5576234348375677
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),5,borde,5,2089,1330,124.5018644025094,-2.436532184219254
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,interior,0,2543,1740,137.13144444293778,-1.8738090786730075
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,interior,1,2599,1750,129.2301683064915,-2.6217040533929206
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,borde,0,1528,877,145.99883810825816,-5.350570059277473
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,borde,1,1743,835,131.04765134103565,-11.143564275042543
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,borde,2,2411,1580,107.76903275598653,-2.072410158015353
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,borde,3,2798,2013,121.9737680771909,-0.9608563911835529
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,borde,4,2646,1641,127.02841652606604,-2.680923805720699
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),6,borde,5,2089,1330,124.5018644025094,-4.022725784040106
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,interior,0,2543,1740,137.13144444293778,-2.0404164284332515
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,interior,1,2599,1750,129.2301683064915,-3.159197414319986
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,borde,0,1528,877,145.99883810825816,-7.402808072851618
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,borde,1,1743,835,131.04765134103565,-9.733909057324801
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,borde,2,2411,1580,107.76903275598653,-4.686128521862133
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,borde,3,2798,2013,121.9737680771909,-0.2277762706542297
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,borde,4,2646,1641,127.02841652606604,-3.377007075225638
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),7,borde,5,2089,1330,124.5018644025094,-4.603720557990753
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,interior,0,2543,1740,137.13144444293778,-2.5878286351271607
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,interior,1,2599,1750,129.2301683064915,-3.0902623493382615
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,borde,0,1528,877,145.99883810825816,-11.732279477711327
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,borde,1,1743,835,131.04765134103565,7.783791860983968
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,borde,2,2411,1580,107.76903275598653,-4.727219565162806
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,borde,3,2798,2013,121.9737680771909,-0.9332820302469044
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,borde,4,2646,1641,127.02841652606604,-3.0136566790745625
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),8,borde,5,2089,1330,124.5018644025094,-7.694251922755927
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,interior,0,2543,1740,137.13144444293778,-3.653070765492259
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,interior,1,2599,1750,129.2301683064915,-4.091993536883165
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,borde,0,1528,877,145.99883810825816,-9.414725511358336
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,borde,1,1743,835,131.04765134103565,-0.8112630039042107
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,borde,2,2411,1580,107.76903275598653,-5.403693997068073
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,borde,3,2798,2013,121.9737680771909,-1.1858405910692575
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,borde,4,2646,1641,127.02841652606604,-4.469157020466278
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),9,borde,5,2089,1330,124.5018644025094,-8.891393746663717
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,interior,0,2543,1740,137.13144444293778,-3.605927169134997
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,interior,1,2599,1750,129.2301683064915,-3.7221626849893616
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,borde,0,1528,877,145.99883810825816,-7.787793746787447
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,borde,1,1743,835,131.04765134103565,-31.67692178556264
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,borde,2,2411,1580,107.76903275598653,-5.439304729071631
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,borde,3,2798,2013,121.9737680771909,-1.4604736561910583
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,borde,4,2646,1641,127.02841652606604,-5.919113739227665
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),10,borde,5,2089,1330,124.5018644025094,-9.228315898442544
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,interior,0,2543,1740,137.13144444293778,-4.097850115124955
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,interior,1,2599,1750,129.2301683064915,-3.925004243318386
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,borde,0,1528,877,145.99883810825816,-7.670016934959596
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,borde,1,1743,835,131.04765134103565,0.9497254007420878
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,borde,2,2411,1580,107.76903275598653,-4.520228664511387
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,borde,3,2798,2013,121.9737680771909,-1.8760110330343582
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,borde,4,2646,1641,127.02841652606604,-5.729437369970787
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),11,borde,5,2089,1330,124.5018644025094,-7.852886453241726
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,interior,0,2543,1740,137.13144444293778,-3.695283024838453
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,interior,1,2599,1750,129.2301683064915,-3.9873940603071114
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,borde,0,1528,877,145.99883810825816,-6.754184186665737
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,borde,1,1743,835,131.04765134103565,4.932949398796101
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,borde,2,2411,1580,107.76903275598653,-4.124450860026894
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,borde,3,2798,2013,121.9737680771909,-1.719316512042088
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,borde,4,2646,1641,127.02841652606604,-6.833234315384953
+generalizacion,2021-01-28__15-49-28_4-2-A,Polinomio + pérdida física (control),12,borde,5,2089,1330,124.5018644025094,-7.789829290335475
+generalizacion,2021-01-28__15-49-28_4-5-A,Pistón,0,interior,0,3027,2210,110.27184494900345,-0.0
+generalizacion,2021-01-28__15-49-28_4-5-A,Pistón,0,borde,0,1801,845,127.19609224329677,-0.0
+generalizacion,2021-01-28__15-49-28_4-5-A,Pistón,0,borde,1,3032,1749,112.55457679548509,-0.0
+generalizacion,2021-01-28__15-49-28_4-5-A,Pistón,0,borde,2,2476,1373,123.50583548165814,-0.0
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio g3 con recorte duro (línea base),3,interior,0,3027,2210,110.27184494900345,-0.6475459853785963
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio g3 con recorte duro (línea base),3,borde,0,1801,845,127.19609224329677,-4.515088666235013
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio g3 con recorte duro (línea base),3,borde,1,3032,1749,112.55457679548509,-4.0401871277698795
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio g3 con recorte duro (línea base),3,borde,2,2476,1373,123.50583548165814,-2.203812660267416
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),1,interior,0,3027,2210,110.27184494900345,-0.11832456199264761
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),1,borde,0,1801,845,127.19609224329677,-2.534772503209432
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),1,borde,1,3032,1749,112.55457679548509,-2.562817118355619
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),1,borde,2,2476,1373,123.50583548165814,-0.8514245605802382
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),2,interior,0,3027,2210,110.27184494900345,-0.38375548309289814
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),2,borde,0,1801,845,127.19609224329677,-1.169349780634585
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),2,borde,1,3032,1749,112.55457679548509,-2.9057997286034767
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),2,borde,2,2476,1373,123.50583548165814,0.2642594473993926
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),3,interior,0,3027,2210,110.27184494900345,-0.4932124138211069
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),3,borde,0,1801,845,127.19609224329677,-4.507985982308583
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),3,borde,1,3032,1749,112.55457679548509,-3.849886220226779
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),3,borde,2,2476,1373,123.50583548165814,-1.4938006781190871
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),4,interior,0,3027,2210,110.27184494900345,-1.309815445496603
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),4,borde,0,1801,845,127.19609224329677,-5.112901913382744
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),4,borde,1,3032,1749,112.55457679548509,-5.044499204216087
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),4,borde,2,2476,1373,123.50583548165814,-5.179165548288781
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),5,interior,0,3027,2210,110.27184494900345,-1.8465734107923262
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),5,borde,0,1801,845,127.19609224329677,-6.769303706170401
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),5,borde,1,3032,1749,112.55457679548509,-4.421234618708803
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),5,borde,2,2476,1373,123.50583548165814,-3.533654928118972
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),6,interior,0,3027,2210,110.27184494900345,-3.6134589496570264
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),6,borde,0,1801,845,127.19609224329677,-13.92483236561723
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),6,borde,1,3032,1749,112.55457679548509,-4.911934992667278
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),6,borde,2,2476,1373,123.50583548165814,-6.946549791198632
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),7,interior,0,3027,2210,110.27184494900345,-3.888523428843673
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),7,borde,0,1801,845,127.19609224329677,-10.621603607413437
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),7,borde,1,3032,1749,112.55457679548509,-6.772092188935578
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),7,borde,2,2476,1373,123.50583548165814,-7.283751499462268
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),8,interior,0,3027,2210,110.27184494900345,-4.743807256033309
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),8,borde,0,1801,845,127.19609224329677,-12.839680831489016
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),8,borde,1,3032,1749,112.55457679548509,-6.8326403485181455
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),8,borde,2,2476,1373,123.50583548165814,-9.089250627370982
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),9,interior,0,3027,2210,110.27184494900345,-4.8007563821954005
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),9,borde,0,1801,845,127.19609224329677,-14.467177200779577
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),9,borde,1,3032,1749,112.55457679548509,-7.599764567508195
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),9,borde,2,2476,1373,123.50583548165814,-10.37401840935257
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),10,interior,0,3027,2210,110.27184494900345,-4.8630286336753
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),10,borde,0,1801,845,127.19609224329677,-8.496142403761448
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),10,borde,1,3032,1749,112.55457679548509,-6.545237091137606
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),10,borde,2,2476,1373,123.50583548165814,-11.256567946306212
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),11,interior,0,3027,2210,110.27184494900345,-4.609541824261697
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),11,borde,0,1801,845,127.19609224329677,-6.97068966250717
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),11,borde,1,3032,1749,112.55457679548509,-6.620465074881503
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),11,borde,2,2476,1373,123.50583548165814,-10.973553126909993
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),12,interior,0,3027,2210,110.27184494900345,-4.691338282487015
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),12,borde,0,1801,845,127.19609224329677,-2.1354084454615756
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),12,borde,1,3032,1749,112.55457679548509,-7.43760058144606
+generalizacion,2021-01-28__15-49-28_4-5-A,Polinomio + pérdida física (control),12,borde,2,2476,1373,123.50583548165814,-10.854290894839536
+generalizacion,2021-01-28__15-49-38_1-1,Pistón,0,interior,0,2327,1221,139.4787976631552,-0.0
+generalizacion,2021-01-28__15-49-38_1-1,Pistón,0,interior,1,3023,1558,119.22656849477073,-0.0
+generalizacion,2021-01-28__15-49-38_1-1,Pistón,0,interior,2,2664,1787,114.59895583888309,-0.0
+generalizacion,2021-01-28__15-49-38_1-1,Pistón,0,borde,0,2435,913,79.59231767465606,-0.0
+generalizacion,2021-01-28__15-49-38_1-1,Pistón,0,borde,1,2422,1249,110.41081684505325,-0.0
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio g3 con recorte duro (línea base),3,interior,0,2327,1221,139.4787976631552,-1.3215273669320364
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio g3 con recorte duro (línea base),3,interior,1,3023,1558,119.22656849477073,-2.0389468830586277
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio g3 con recorte duro (línea base),3,interior,2,2664,1787,114.59895583888309,0.5941423873736222
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio g3 con recorte duro (línea base),3,borde,0,2435,913,79.59231767465606,-15.505090092517078
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio g3 con recorte duro (línea base),3,borde,1,2422,1249,110.41081684505325,-5.679221509202675
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),1,interior,0,2327,1221,139.4787976631552,0.17082601137759768
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),1,interior,1,3023,1558,119.22656849477073,-0.18522017050148315
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),1,interior,2,2664,1787,114.59895583888309,0.13815013891801406
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),1,borde,0,2435,913,79.59231767465606,1.0214372882950753
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),1,borde,1,2422,1249,110.41081684505325,-0.2800948737003977
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),2,interior,0,2327,1221,139.4787976631552,-0.6205967349469372
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),2,interior,1,3023,1558,119.22656849477073,-1.439215440903075
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),2,interior,2,2664,1787,114.59895583888309,0.06507934081172229
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),2,borde,0,2435,913,79.59231767465606,17.502870096822292
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),2,borde,1,2422,1249,110.41081684505325,-0.47078765889197416
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),3,interior,0,2327,1221,139.4787976631552,-0.5549863768537835
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),3,interior,1,3023,1558,119.22656849477073,-1.1041067214887543
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),3,interior,2,2664,1787,114.59895583888309,1.4688475107187569
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),3,borde,0,2435,913,79.59231767465606,-10.52466964201197
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),3,borde,1,2422,1249,110.41081684505325,-4.5282840205155965
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),4,interior,0,2327,1221,139.4787976631552,-2.0744759859287143
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),4,interior,1,3023,1558,119.22656849477073,-2.450311715097736
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),4,interior,2,2664,1787,114.59895583888309,0.24019416705703142
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),4,borde,0,2435,913,79.59231767465606,-30.11060876524726
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),4,borde,1,2422,1249,110.41081684505325,-3.3531317713608173
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),5,interior,0,2327,1221,139.4787976631552,-2.8839023920942064
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),5,interior,1,3023,1558,119.22656849477073,-2.9280009049384588
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),5,interior,2,2664,1787,114.59895583888309,-0.17098119523864821
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),5,borde,0,2435,913,79.59231767465606,-18.8998917165246
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),5,borde,1,2422,1249,110.41081684505325,-5.431452790915076
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),6,interior,0,2327,1221,139.4787976631552,-3.805604687174811
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),6,interior,1,3023,1558,119.22656849477073,-4.301501698511422
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),6,interior,2,2664,1787,114.59895583888309,-0.7251706500713209
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),6,borde,0,2435,913,79.59231767465606,-21.658538434675545
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),6,borde,1,2422,1249,110.41081684505325,-5.955630817712187
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),7,interior,0,2327,1221,139.4787976631552,-4.379084124179098
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),7,interior,1,3023,1558,119.22656849477073,-4.921664407904661
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),7,interior,2,2664,1787,114.59895583888309,-1.1441737638746816
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),7,borde,0,2435,913,79.59231767465606,-23.150127652755206
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),7,borde,1,2422,1249,110.41081684505325,-4.765339301204684
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),8,interior,0,2327,1221,139.4787976631552,-4.526243445583577
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),8,interior,1,3023,1558,119.22656849477073,-6.240476420587122
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),8,interior,2,2664,1787,114.59895583888309,-2.1336413203634006
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),8,borde,0,2435,913,79.59231767465606,-26.992647513211708
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),8,borde,1,2422,1249,110.41081684505325,-5.647172687028297
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),9,interior,0,2327,1221,139.4787976631552,-5.10299836727315
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),9,interior,1,3023,1558,119.22656849477073,-6.590932565403329
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),9,interior,2,2664,1787,114.59895583888309,-2.7243983827327036
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),9,borde,0,2435,913,79.59231767465606,-26.087274141583293
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),9,borde,1,2422,1249,110.41081684505325,-6.6653681156258235
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),10,interior,0,2327,1221,139.4787976631552,-5.032810443101254
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),10,interior,1,3023,1558,119.22656849477073,-6.631959383360592
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),10,interior,2,2664,1787,114.59895583888309,-3.011471804050603
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),10,borde,0,2435,913,79.59231767465606,-30.081130741198685
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),10,borde,1,2422,1249,110.41081684505325,-7.1337995420083224
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),11,interior,0,2327,1221,139.4787976631552,-4.942881564721285
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),11,interior,1,3023,1558,119.22656849477073,-6.62330693751405
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),11,interior,2,2664,1787,114.59895583888309,-2.956457916740364
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),11,borde,0,2435,913,79.59231767465606,-31.635407750956542
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),11,borde,1,2422,1249,110.41081684505325,-7.13381524505712
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),12,interior,0,2327,1221,139.4787976631552,-4.915092766016359
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),12,interior,1,3023,1558,119.22656849477073,-6.158956427630994
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),12,interior,2,2664,1787,114.59895583888309,-2.8759626091642296
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),12,borde,0,2435,913,79.59231767465606,-29.47219239716527
+generalizacion,2021-01-28__15-49-38_1-1,Polinomio + pérdida física (control),12,borde,1,2422,1249,110.41081684505325,-7.396619487249337
+generalizacion,2021-01-28__15-49-38_2-1-A,Pistón,0,borde,0,1126,970,122.82661551702037,-0.0
+generalizacion,2021-01-28__15-49-38_2-1-A,Pistón,0,borde,1,2554,1837,128.9609469748479,-0.0
+generalizacion,2021-01-28__15-49-38_2-1-A,Pistón,0,borde,2,4022,1885,142.12124376934818,-0.0
+generalizacion,2021-01-28__15-49-38_2-1-A,Pistón,0,borde,3,1394,1188,106.4105521982136,-0.0
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio g3 con recorte duro (línea base),3,borde,0,1126,970,122.82661551702037,-2.6026143321984665
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio g3 con recorte duro (línea base),3,borde,1,2554,1837,128.9609469748479,0.8498663338570936
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio g3 con recorte duro (línea base),3,borde,2,4022,1885,142.12124376934818,-16.028901478904892
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio g3 con recorte duro (línea base),3,borde,3,1394,1188,106.4105521982136,-7.203814444748564
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),1,borde,0,1126,970,122.82661551702037,-0.8880958464410618
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),1,borde,1,2554,1837,128.9609469748479,-0.2628016107624986
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),1,borde,2,4022,1885,142.12124376934818,-2.8267825750225293
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),1,borde,3,1394,1188,106.4105521982136,-1.3674632970477594
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),2,borde,0,1126,970,122.82661551702037,-1.7823018675774742
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),2,borde,1,2554,1837,128.9609469748479,-0.3013607207285787
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),2,borde,2,4022,1885,142.12124376934818,-6.450980308592384
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),2,borde,3,1394,1188,106.4105521982136,-1.2766208873445237
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),3,borde,0,1126,970,122.82661551702037,-0.06562675454534145
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),3,borde,1,2554,1837,128.9609469748479,0.5222425713872031
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),3,borde,2,4022,1885,142.12124376934818,-11.338720932865593
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),3,borde,3,1394,1188,106.4105521982136,-10.830532491313702
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),4,borde,0,1126,970,122.82661551702037,-6.518636647269543
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),4,borde,1,2554,1837,128.9609469748479,-0.4970801523914916
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),4,borde,2,4022,1885,142.12124376934818,-12.402258469235212
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),4,borde,3,1394,1188,106.4105521982136,-13.156201788243633
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),5,borde,0,1126,970,122.82661551702037,-9.898278772706858
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),5,borde,1,2554,1837,128.9609469748479,-0.8317167835382907
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),5,borde,2,4022,1885,142.12124376934818,-14.382038052980768
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),5,borde,3,1394,1188,106.4105521982136,-17.884139805390735
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),6,borde,0,1126,970,122.82661551702037,-11.607671783670055
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),6,borde,1,2554,1837,128.9609469748479,-1.0186064259668106
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),6,borde,2,4022,1885,142.12124376934818,-12.796388202577083
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),6,borde,3,1394,1188,106.4105521982136,-10.261457272938324
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),7,borde,0,1126,970,122.82661551702037,-9.360348852075047
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),7,borde,1,2554,1837,128.9609469748479,-1.5297039055511845
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),7,borde,2,4022,1885,142.12124376934818,-12.710055392138619
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),7,borde,3,1394,1188,106.4105521982136,-12.741961011196604
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),8,borde,0,1126,970,122.82661551702037,-5.115902790384236
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),8,borde,1,2554,1837,128.9609469748479,-2.095050625767485
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),8,borde,2,4022,1885,142.12124376934818,-11.92464697081042
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),8,borde,3,1394,1188,106.4105521982136,-5.45528370609582
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),9,borde,0,1126,970,122.82661551702037,-5.765700359565983
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),9,borde,1,2554,1837,128.9609469748479,-1.9329538406078528
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),9,borde,2,4022,1885,142.12124376934818,-11.795474615814594
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),9,borde,3,1394,1188,106.4105521982136,-2.291215040624867
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),10,borde,0,1126,970,122.82661551702037,-7.606784757031977
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),10,borde,1,2554,1837,128.9609469748479,-2.0941318867067875
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),10,borde,2,4022,1885,142.12124376934818,-12.15160103747408
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),10,borde,3,1394,1188,106.4105521982136,-2.2662369666738966
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),11,borde,0,1126,970,122.82661551702037,-8.65642807956025
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),11,borde,1,2554,1837,128.9609469748479,-2.1823495577253245
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),11,borde,2,4022,1885,142.12124376934818,-12.543217082036534
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),11,borde,3,1394,1188,106.4105521982136,-0.7554778478490769
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),12,borde,0,1126,970,122.82661551702037,-10.986068566400348
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),12,borde,1,2554,1837,128.9609469748479,-2.3046803519007755
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),12,borde,2,4022,1885,142.12124376934818,-12.53724265612636
+generalizacion,2021-01-28__15-49-38_2-1-A,Polinomio + pérdida física (control),12,borde,3,1394,1188,106.4105521982136,-2.9355438786888093
+generalizacion,2021-01-28__15-49-38_3-1,Pistón,0,interior,0,4726,2432,92.84437730388446,-0.0
+generalizacion,2021-01-28__15-49-38_3-1,Pistón,0,borde,0,1355,775,129.91245804070942,-0.0
+generalizacion,2021-01-28__15-49-38_3-1,Pistón,0,borde,1,3374,1830,98.18814690286699,-0.0
+generalizacion,2021-01-28__15-49-38_3-1,Pistón,0,borde,2,2046,959,109.79586711067756,-0.0
+generalizacion,2021-01-28__15-49-38_3-1,Pistón,0,borde,3,2584,1236,123.1190409991283,-0.0
+generalizacion,2021-01-28__15-49-38_3-1,Pistón,0,borde,4,1410,521,138.27654537781953,-0.0
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio g3 con recorte duro (línea base),3,interior,0,4726,2432,92.84437730388446,-5.472429073558486
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio g3 con recorte duro (línea base),3,borde,0,1355,775,129.91245804070942,-6.6769638221817695
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio g3 con recorte duro (línea base),3,borde,1,3374,1830,98.18814690286699,-1.9730425413385284
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio g3 con recorte duro (línea base),3,borde,2,2046,959,109.79586711067756,-5.6568552909362895
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio g3 con recorte duro (línea base),3,borde,3,2584,1236,123.1190409991283,-10.252405822210699
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio g3 con recorte duro (línea base),3,borde,4,1410,521,138.27654537781953,-13.432409167102977
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),1,interior,0,4726,2432,92.84437730388446,-0.8090980946037163
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),1,borde,0,1355,775,129.91245804070942,-1.9645115511123077
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),1,borde,1,3374,1830,98.18814690286699,-1.6033372789124274
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),1,borde,2,2046,959,109.79586711067756,0.05033055834924491
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),1,borde,3,2584,1236,123.1190409991283,1.7472208224379226
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),1,borde,4,1410,521,138.27654537781953,1.5520959007768749
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),2,interior,0,4726,2432,92.84437730388446,-0.010126587420275517
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),2,borde,0,1355,775,129.91245804070942,-9.469714763663514
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),2,borde,1,3374,1830,98.18814690286699,1.3661511407227422
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),2,borde,2,2046,959,109.79586711067756,-3.0280134495174997
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),2,borde,3,2584,1236,123.1190409991283,-5.78741931704465
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),2,borde,4,1410,521,138.27654537781953,-8.476722753107042
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),3,interior,0,4726,2432,92.84437730388446,-2.817092240434105
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),3,borde,0,1355,775,129.91245804070942,-9.026070615585121
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),3,borde,1,3374,1830,98.18814690286699,-0.8869108739689818
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),3,borde,2,2046,959,109.79586711067756,-4.347777190441114
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),3,borde,3,2584,1236,123.1190409991283,-6.144372195671886
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),3,borde,4,1410,521,138.27654537781953,-7.633917971931554
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),4,interior,0,4726,2432,92.84437730388446,-4.607264940804644
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),4,borde,0,1355,775,129.91245804070942,-14.598581965375415
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),4,borde,1,3374,1830,98.18814690286699,-6.239560225643606
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),4,borde,2,2046,959,109.79586711067756,-4.283655512851232
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),4,borde,3,2584,1236,123.1190409991283,-9.631600995762101
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),4,borde,4,1410,521,138.27654537781953,-18.735481384919925
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),5,interior,0,4726,2432,92.84437730388446,-6.837132381449164
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),5,borde,0,1355,775,129.91245804070942,-20.299973643255665
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),5,borde,1,3374,1830,98.18814690286699,-12.054780377942377
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),5,borde,2,2046,959,109.79586711067756,-4.136198352795985
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),5,borde,3,2584,1236,123.1190409991283,-15.079798614827867
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),5,borde,4,1410,521,138.27654537781953,-20.319003608527957
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),6,interior,0,4726,2432,92.84437730388446,-9.734320438545886
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),6,borde,0,1355,775,129.91245804070942,-18.762271311797775
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),6,borde,1,3374,1830,98.18814690286699,-12.570618604891553
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),6,borde,2,2046,959,109.79586711067756,-5.348355706142199
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),6,borde,3,2584,1236,123.1190409991283,-14.135671689555657
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),6,borde,4,1410,521,138.27654537781953,-18.725079117797755
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),7,interior,0,4726,2432,92.84437730388446,-10.484263696870853
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),7,borde,0,1355,775,129.91245804070942,-12.956816499938133
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),7,borde,1,3374,1830,98.18814690286699,-14.581308402410187
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),7,borde,2,2046,959,109.79586711067756,-7.932973490891643
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),7,borde,3,2584,1236,123.1190409991283,-15.376046098498435
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),7,borde,4,1410,521,138.27654537781953,-23.27127063934301
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),8,interior,0,4726,2432,92.84437730388446,-12.517271335686583
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),8,borde,0,1355,775,129.91245804070942,-6.089959630756412
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),8,borde,1,3374,1830,98.18814690286699,-14.428061532016436
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),8,borde,2,2046,959,109.79586711067756,-7.074126452697151
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),8,borde,3,2584,1236,123.1190409991283,-18.275942942590557
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),8,borde,4,1410,521,138.27654537781953,-15.286365764080342
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),9,interior,0,4726,2432,92.84437730388446,-12.372209550363023
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),9,borde,0,1355,775,129.91245804070942,-5.21027183408444
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),9,borde,1,3374,1830,98.18814690286699,-14.712247688636381
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),9,borde,2,2046,959,109.79586711067756,-7.736959200515677
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),9,borde,3,2584,1236,123.1190409991283,-18.93995149652274
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),9,borde,4,1410,521,138.27654537781953,-16.80967125426484
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),10,interior,0,4726,2432,92.84437730388446,-12.534990223893455
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),10,borde,0,1355,775,129.91245804070942,-15.298989959779624
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),10,borde,1,3374,1830,98.18814690286699,-16.091694662642205
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),10,borde,2,2046,959,109.79586711067756,-11.497550431657404
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),10,borde,3,2584,1236,123.1190409991283,-11.937498211486737
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),10,borde,4,1410,521,138.27654537781953,-32.33807946195832
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),11,interior,0,4726,2432,92.84437730388446,-12.250368802551098
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),11,borde,0,1355,775,129.91245804070942,-4.482490310692834
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),11,borde,1,3374,1830,98.18814690286699,-15.473449820656624
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),11,borde,2,2046,959,109.79586711067756,-14.419233503421648
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),11,borde,3,2584,1236,123.1190409991283,-12.762563295834017
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),11,borde,4,1410,521,138.27654537781953,-42.73015328545059
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),12,interior,0,4726,2432,92.84437730388446,-12.084971495031718
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),12,borde,0,1355,775,129.91245804070942,-0.3128778610197792
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),12,borde,1,3374,1830,98.18814690286699,-15.726077199028936
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),12,borde,2,2046,959,109.79586711067756,-15.691219421374422
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),12,borde,3,2584,1236,123.1190409991283,-10.568067609952333
+generalizacion,2021-01-28__15-49-38_3-1,Polinomio + pérdida física (control),12,borde,4,1410,521,138.27654537781953,-40.843491993669815
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,interior,0,2050,1588,109.77480678257665,-0.0
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,interior,1,2675,1644,126.3055417604657,1.406396595621317e-15
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,interior,2,2679,1620,126.30174747349066,1.406438845807013e-15
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,borde,0,2012,1141,143.68134314185005,-0.0
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,borde,1,2293,1419,120.24630620447007,-0.0
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,borde,2,2079,1193,140.365378528832,-0.0
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,borde,3,2350,1047,112.90195939767115,-0.0
+generalizacion,2021-01-28__16-04-42_1-4-A,Pistón,0,borde,4,1738,881,111.26459235960809,-0.0
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,interior,0,2050,1588,109.77480678257665,-3.519159094083119
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,interior,1,2675,1644,126.3055417604657,-0.45676480826621124
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,interior,2,2679,1620,126.30174747349066,2.0141712346133183
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,borde,0,2012,1141,143.68134314185005,-16.22774518782437
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,borde,1,2293,1419,120.24630620447007,-8.11391252634418
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,borde,2,2079,1193,140.365378528832,-10.243618161172671
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,borde,3,2350,1047,112.90195939767115,-32.97392289878641
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio g3 con recorte duro (línea base),3,borde,4,1738,881,111.26459235960809,-1.6916734963580027
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,interior,0,2050,1588,109.77480678257665,-0.33044427179725067
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,interior,1,2675,1644,126.3055417604657,0.09437622072485657
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,interior,2,2679,1620,126.30174747349066,-0.018753187310216475
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,borde,0,2012,1141,143.68134314185005,-0.5797033324438301
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,borde,1,2293,1419,120.24630620447007,-0.3990295868671253
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,borde,2,2079,1193,140.365378528832,-0.21202257208681283
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,borde,3,2350,1047,112.90195939767115,-0.19122150523192677
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),1,borde,4,1738,881,111.26459235960809,-0.6149095080461123
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,interior,0,2050,1588,109.77480678257665,-0.5529858549401082
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,interior,1,2675,1644,126.3055417604657,0.045971217617108116
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,interior,2,2679,1620,126.30174747349066,0.777084715640582
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,borde,0,2012,1141,143.68134314185005,-3.663283085601079
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,borde,1,2293,1419,120.24630620447007,-2.0090347266502238
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,borde,2,2079,1193,140.365378528832,-3.585421714667084
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,borde,3,2350,1047,112.90195939767115,0.29331172497450975
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),2,borde,4,1738,881,111.26459235960809,1.863827336944832
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,interior,0,2050,1588,109.77480678257665,-1.0978380561432206
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,interior,1,2675,1644,126.3055417604657,0.027986403153916872
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,interior,2,2679,1620,126.30174747349066,0.011628102314748303
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,borde,0,2012,1141,143.68134314185005,-5.944194889488214
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,borde,1,2293,1419,120.24630620447007,-3.1900620166779947
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,borde,2,2079,1193,140.365378528832,-3.6137959971435643
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,borde,3,2350,1047,112.90195939767115,-6.05956305240637
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),3,borde,4,1738,881,111.26459235960809,-0.22719545460016125
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,interior,0,2050,1588,109.77480678257665,-0.7625167486192377
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,interior,1,2675,1644,126.3055417604657,0.14382506520772714
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,interior,2,2679,1620,126.30174747349066,-0.45688464553978037
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,borde,0,2012,1141,143.68134314185005,-5.238376172403517
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,borde,1,2293,1419,120.24630620447007,-3.5140280059582736
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,borde,2,2079,1193,140.365378528832,-7.055246101073881
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,borde,3,2350,1047,112.90195939767115,-8.105253019264342
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),4,borde,4,1738,881,111.26459235960809,-1.9750720820202026
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,interior,0,2050,1588,109.77480678257665,-2.0692112907876554
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,interior,1,2675,1644,126.3055417604657,-0.8501243813009638
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,interior,2,2679,1620,126.30174747349066,-1.1711255640235447
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,borde,0,2012,1141,143.68134314185005,-2.4952700651534685
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,borde,1,2293,1419,120.24630620447007,-1.5233626429581888
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,borde,2,2079,1193,140.365378528832,-2.7364700628673697
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,borde,3,2350,1047,112.90195939767115,-5.244082447313529
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),5,borde,4,1738,881,111.26459235960809,-2.188565421109503
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,interior,0,2050,1588,109.77480678257665,-3.0100566430316853
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,interior,1,2675,1644,126.3055417604657,-1.4727259328534148
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,interior,2,2679,1620,126.30174747349066,-1.9783058725333311
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,borde,0,2012,1141,143.68134314185005,-0.781753562648202
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,borde,1,2293,1419,120.24630620447007,-1.8427226567033475
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,borde,2,2079,1193,140.365378528832,-5.5979482599839665
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,borde,3,2350,1047,112.90195939767115,-17.244749607429796
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),6,borde,4,1738,881,111.26459235960809,-0.3671735470603122
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,interior,0,2050,1588,109.77480678257665,-3.589729488901524
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,interior,1,2675,1644,126.3055417604657,-2.0631965816792235
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,interior,2,2679,1620,126.30174747349066,-2.0349677442807357
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,borde,0,2012,1141,143.68134314185005,-2.282042823014966
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,borde,1,2293,1419,120.24630620447007,-0.6514553094590823
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,borde,2,2079,1193,140.365378528832,-3.197854267810623
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,borde,3,2350,1047,112.90195939767115,-15.160983754740089
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),7,borde,4,1738,881,111.26459235960809,-0.8456258096145756
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,interior,0,2050,1588,109.77480678257665,-3.8031892695990357
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,interior,1,2675,1644,126.3055417604657,-2.2879084588295235
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,interior,2,2679,1620,126.30174747349066,-2.656423230337134
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,borde,0,2012,1141,143.68134314185005,0.394274330516156
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,borde,1,2293,1419,120.24630620447007,-1.6853034174147203
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,borde,2,2079,1193,140.365378528832,-6.39596297228808
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,borde,3,2350,1047,112.90195939767115,-12.710496787978297
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),8,borde,4,1738,881,111.26459235960809,-5.30709279848733
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,interior,0,2050,1588,109.77480678257665,-3.998974548375262
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,interior,1,2675,1644,126.3055417604657,-2.4551397562004817
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,interior,2,2679,1620,126.30174747349066,-2.7105593722044388
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,borde,0,2012,1141,143.68134314185005,-1.9267508608000135
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,borde,1,2293,1419,120.24630620447007,-0.8544917204498903
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,borde,2,2079,1193,140.365378528832,-5.7911783313319765
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,borde,3,2350,1047,112.90195939767115,-9.161070043285804
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),9,borde,4,1738,881,111.26459235960809,-6.675970516160608
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,interior,0,2050,1588,109.77480678257665,-3.800622549216567
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,interior,1,2675,1644,126.3055417604657,-2.713909285141533
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,interior,2,2679,1620,126.30174747349066,-2.834422557220576
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,borde,0,2012,1141,143.68134314185005,-3.545350654413784
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,borde,1,2293,1419,120.24630620447007,-0.8707437832477206
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,borde,2,2079,1193,140.365378528832,-6.601031206062849
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,borde,3,2350,1047,112.90195939767115,-10.906064574994966
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),10,borde,4,1738,881,111.26459235960809,-6.999748961132201
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,interior,0,2050,1588,109.77480678257665,-3.5565821234083557
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,interior,1,2675,1644,126.3055417604657,-2.5671841251141094
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,interior,2,2679,1620,126.30174747349066,-2.519551424279555
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,borde,0,2012,1141,143.68134314185005,-7.081651632133894
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,borde,1,2293,1419,120.24630620447007,-0.4594534194283478
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,borde,2,2079,1193,140.365378528832,-8.200176279210472
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,borde,3,2350,1047,112.90195939767115,-9.007164941265412
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),11,borde,4,1738,881,111.26459235960809,-4.512383323767156
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,interior,0,2050,1588,109.77480678257665,-3.261298071966265
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,interior,1,2675,1644,126.3055417604657,-2.586767961518097
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,interior,2,2679,1620,126.30174747349066,-2.6276266918942177
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,borde,0,2012,1141,143.68134314185005,-8.22222299230172
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,borde,1,2293,1419,120.24630620447007,-0.6858432671611306
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,borde,2,2079,1193,140.365378528832,-8.599551214026139
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,borde,3,2350,1047,112.90195939767115,-10.022623837251256
+generalizacion,2021-01-28__16-04-42_1-4-A,Polinomio + pérdida física (control),12,borde,4,1738,881,111.26459235960809,-5.414532073375182
+generalizacion,2021-01-28__16-04-42_2-3-B,Pistón,0,interior,0,8350,4167,119.476652856993,-0.0
+generalizacion,2021-01-28__16-04-42_2-3-B,Pistón,0,borde,0,3119,1710,122.25621497368513,-0.0
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio g3 con recorte duro (línea base),3,interior,0,8350,4167,119.476652856993,-3.104731130029349
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio g3 con recorte duro (línea base),3,borde,0,3119,1710,122.25621497368513,-0.541913390388403
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),1,interior,0,8350,4167,119.476652856993,-0.015517557116312095
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),1,borde,0,3119,1710,122.25621497368513,-0.5812832628093734
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),2,interior,0,8350,4167,119.476652856993,-1.209021363931497
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),2,borde,0,3119,1710,122.25621497368513,-1.2251370064077294
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),3,interior,0,8350,4167,119.476652856993,-2.16241145345277
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),3,borde,0,3119,1710,122.25621497368513,-0.5947938138286378
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),4,interior,0,8350,4167,119.476652856993,-3.6075245539047303
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),4,borde,0,3119,1710,122.25621497368513,-1.539847973542047
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),5,interior,0,8350,4167,119.476652856993,-5.218017674423662
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),5,borde,0,3119,1710,122.25621497368513,1.3253647472495513
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),6,interior,0,8350,4167,119.476652856993,-5.789395566005784
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),6,borde,0,3119,1710,122.25621497368513,-0.23400339678655088
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),7,interior,0,8350,4167,119.476652856993,-6.649131720989692
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),7,borde,0,3119,1710,122.25621497368513,-0.7422512889492515
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),8,interior,0,8350,4167,119.476652856993,-7.0762423753697945
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),8,borde,0,3119,1710,122.25621497368513,-2.5041312618745923
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),9,interior,0,8350,4167,119.476652856993,-7.586700954139875
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),9,borde,0,3119,1710,122.25621497368513,-7.051613314401626
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),10,interior,0,8350,4167,119.476652856993,-7.852598502351702
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),10,borde,0,3119,1710,122.25621497368513,-7.49799436195232
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),11,interior,0,8350,4167,119.476652856993,-7.670607937941068
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),11,borde,0,3119,1710,122.25621497368513,-9.61802862124986
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),12,interior,0,8350,4167,119.476652856993,-7.619091423566774
+generalizacion,2021-01-28__16-04-42_2-3-B,Polinomio + pérdida física (control),12,borde,0,3119,1710,122.25621497368513,-9.167466766248602

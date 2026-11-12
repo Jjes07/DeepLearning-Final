@@ -1,0 +1,97 @@
+conjunto,grado,referencia,imágenes,imágenes con M2,control con menos M1,control con menos M2,control mejor en ambas
+prueba,1,Zernike (guía),5,5,0,5,0
+prueba,1,INR condicionada (C),5,5,0,5,0
+prueba,1,SIREN por imagen + física (A),5,5,0,5,0
+prueba,1,C + ajuste fino (100 it.),5,5,0,5,0
+prueba,2,Zernike (guía),5,5,0,5,0
+prueba,2,INR condicionada (C),5,5,0,5,0
+prueba,2,SIREN por imagen + física (A),5,5,0,5,0
+prueba,2,C + ajuste fino (100 it.),5,5,0,5,0
+prueba,3,Zernike (guía),5,5,0,4,0
+prueba,3,INR condicionada (C),5,5,1,5,1
+prueba,3,SIREN por imagen + física (A),5,5,0,5,0
+prueba,3,C + ajuste fino (100 it.),5,5,0,5,0
+prueba,4,Zernike (guía),5,5,0,4,0
+prueba,4,INR condicionada (C),5,5,2,5,2
+prueba,4,SIREN por imagen + física (A),5,5,0,5,0
+prueba,4,C + ajuste fino (100 it.),5,5,0,5,0
+prueba,5,Zernike (guía),5,5,2,4,1
+prueba,5,INR condicionada (C),5,5,2,5,2
+prueba,5,SIREN por imagen + física (A),5,5,0,5,0
+prueba,5,C + ajuste fino (100 it.),5,5,0,5,0
+prueba,6,Zernike (guía),5,5,5,4,4
+prueba,6,INR condicionada (C),5,5,5,5,5
+prueba,6,SIREN por imagen + física (A),5,5,0,5,0
+prueba,6,C + ajuste fino (100 it.),5,5,0,5,0
+prueba,7,Zernike (guía),5,5,5,3,3
+prueba,7,INR condicionada (C),5,5,4,5,4
+prueba,7,SIREN por imagen + física (A),5,5,0,5,0
+prueba,7,C + ajuste fino (100 it.),5,5,0,5,0
+prueba,8,Zernike (guía),5,5,5,2,2
+prueba,8,INR condicionada (C),5,5,5,4,4
+prueba,8,SIREN por imagen + física (A),5,5,3,4,2
+prueba,8,C + ajuste fino (100 it.),5,5,3,5,3
+prueba,9,Zernike (guía),5,5,5,1,1
+prueba,9,INR condicionada (C),5,5,5,2,2
+prueba,9,SIREN por imagen + física (A),5,5,3,3,2
+prueba,9,C + ajuste fino (100 it.),5,5,4,5,4
+prueba,10,Zernike (guía),5,5,5,0,0
+prueba,10,INR condicionada (C),5,5,5,1,1
+prueba,10,SIREN por imagen + física (A),5,5,3,1,0
+prueba,10,C + ajuste fino (100 it.),5,5,5,4,4
+prueba,11,Zernike (guía),5,5,5,0,0
+prueba,11,INR condicionada (C),5,5,5,1,1
+prueba,11,SIREN por imagen + física (A),5,5,4,0,0
+prueba,11,C + ajuste fino (100 it.),5,5,5,1,1
+prueba,12,Zernike (guía),5,5,5,0,0
+prueba,12,INR condicionada (C),5,5,5,1,1
+prueba,12,SIREN por imagen + física (A),5,5,4,1,0
+prueba,12,C + ajuste fino (100 it.),5,5,5,2,2
+generalizacion,1,Zernike (guía),8,7,0,7,0
+generalizacion,1,INR condicionada (C),8,7,0,7,0
+generalizacion,1,SIREN por imagen + física (A),8,7,0,7,0
+generalizacion,1,C + ajuste fino (100 it.),8,7,0,7,0
+generalizacion,2,Zernike (guía),8,7,0,7,0
+generalizacion,2,INR condicionada (C),8,7,1,7,0
+generalizacion,2,SIREN por imagen + física (A),8,7,0,7,0
+generalizacion,2,C + ajuste fino (100 it.),8,7,0,7,0
+generalizacion,3,Zernike (guía),8,7,1,7,0
+generalizacion,3,INR condicionada (C),8,7,1,7,0
+generalizacion,3,SIREN por imagen + física (A),8,7,1,7,0
+generalizacion,3,C + ajuste fino (100 it.),8,7,1,7,0
+generalizacion,4,Zernike (guía),8,7,5,7,5
+generalizacion,4,INR condicionada (C),8,7,1,7,1
+generalizacion,4,SIREN por imagen + física (A),8,7,0,7,0
+generalizacion,4,C + ajuste fino (100 it.),8,7,0,7,0
+generalizacion,5,Zernike (guía),8,7,8,7,7
+generalizacion,5,INR condicionada (C),8,7,4,7,3
+generalizacion,5,SIREN por imagen + física (A),8,7,1,7,0
+generalizacion,5,C + ajuste fino (100 it.),8,7,1,7,0
+generalizacion,6,Zernike (guía),8,7,8,5,5
+generalizacion,6,INR condicionada (C),8,7,7,7,6
+generalizacion,6,SIREN por imagen + física (A),8,7,1,7,0
+generalizacion,6,C + ajuste fino (100 it.),8,7,1,7,0
+generalizacion,7,Zernike (guía),8,7,8,3,3
+generalizacion,7,INR condicionada (C),8,7,7,6,5
+generalizacion,7,SIREN por imagen + física (A),8,7,1,7,0
+generalizacion,7,C + ajuste fino (100 it.),8,7,1,7,0
+generalizacion,8,Zernike (guía),8,7,8,2,2
+generalizacion,8,INR condicionada (C),8,7,8,4,4
+generalizacion,8,SIREN por imagen + física (A),8,7,2,5,1
+generalizacion,8,C + ajuste fino (100 it.),8,7,5,5,2
+generalizacion,9,Zernike (guía),8,7,8,0,0
+generalizacion,9,INR condicionada (C),8,7,8,4,4
+generalizacion,9,SIREN por imagen + física (A),8,7,5,5,3
+generalizacion,9,C + ajuste fino (100 it.),8,7,8,5,5
+generalizacion,10,Zernike (guía),8,7,8,0,0
+generalizacion,10,INR condicionada (C),8,7,8,4,4
+generalizacion,10,SIREN por imagen + física (A),8,7,7,5,4
+generalizacion,10,C + ajuste fino (100 it.),8,7,8,5,5
+generalizacion,11,Zernike (guía),8,7,8,0,0
+generalizacion,11,INR condicionada (C),8,7,8,4,4
+generalizacion,11,SIREN por imagen + física (A),8,7,8,6,6
+generalizacion,11,C + ajuste fino (100 it.),8,7,8,5,5
+generalizacion,12,Zernike (guía),8,7,8,0,0
+generalizacion,12,INR condicionada (C),8,7,8,4,4
+generalizacion,12,SIREN por imagen + física (A),8,7,8,6,6
+generalizacion,12,C + ajuste fino (100 it.),8,7,8,6,6
