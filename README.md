@@ -10,6 +10,9 @@ usa un codificador convolucional y una SIREN modulada con FiLM. La sección 11
 incluye una comparación con el [experimento complementario de Fourier](experiments/EritroFase-Fourier.ipynb)
 y con el [experimento complementario de Emmanuel](experiments/EritroFase-Emmanuel.ipynb).
 
+Entregables: [informe](docs/final-report/EritroFase_Informe.pdf) y
+[presentación de la sustentación](docs/final-report/EritroFase_Sustentacion.pptx).
+
 ## Estructura
 
 ```
@@ -26,7 +29,9 @@ DeepLearning-Final/
 │   │   ├── Holograms/{Training,Validation}/
 │   │   └── Phase/{Training,Validation}/
 │   └── selection/            # Lista de imágenes elegidas, partición y máscaras de referencia
-├── docs/references/          # Artículos de referencia (PDF)
+├── docs/
+│   ├── final-report/         # Entregables: informe (PDF, 3 páginas) y presentación de la sustentación (PPTX)
+│   └── references/           # Artículos de referencia (PDF)
 ├── reference_code/INR/       # Copia sin modificar del código guía (el notebook la incorpora en la sección 4.4)
 └── results/
     ├── fourier/              # Tablas, figuras y configuración del experimento de Fourier
