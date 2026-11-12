@@ -1,0 +1,188 @@
+<!doctype html>
+<!--
+  Fuente del informe (3 páginas, A4). Para regenerar el PDF desde la raíz del repositorio:
+
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
+      --user-data-dir="$(mktemp -d)" --print-to-pdf=docs/final-report/EritroFase_Informe.pdf \
+      "file://$PWD/docs/final-report/src/EritroFase_Informe.html"
+
+  (en Windows o Linux, el ejecutable de Chrome o Chromium con las mismas opciones). Las figuras están en src/figuras/.
+  La versión entregada el 11/11/2026 se compiló con LaTeX y no tenía fuente versionada; esta la reemplaza desde el 12/11/2026.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>EritroFase: corrección del fondo en imágenes de fase de eritrocitos mediante redes neuronales informadas por la física</title>
+<style>
+  @page { size: A4; margin: 11.5mm 13.5mm 12.5mm 13.5mm; @bottom-center { content: counter(page); font-family: "STIX Two Text", serif; font-size: 8pt; } }
+  html { font-family: "STIX Two Text", "Times New Roman", Times, serif; font-size: 8.7pt; line-height: 1.18; color: #111; }
+  body { margin: 0; }
+  math { font-family: "STIX Two Math", "STIX Two Text", serif; font-size: 105%; }
+  h1 { font-size: 15pt; line-height: 1.12; text-align: center; margin: 0 0 4pt 0; }
+  .autores { text-align: center; font-size: 10pt; margin: 0; }
+  .afil { text-align: center; font-size: 8.6pt; margin: 2pt 0 0 0; }
+  .afil code, .ref code, code { font-family: Menlo, "Courier New", monospace; font-size: 88%; }
+  .nota-version { text-align: center; font-size: 7.6pt; font-style: italic; margin: 1.5pt 0 7pt 0; color: #333; }
+  .mc { column-count: 2; column-gap: 6.5mm; text-align: justify; hyphens: auto; -webkit-hyphens: auto; orphans: 2; widows: 2; }
+  h2 { font-size: 10.2pt; color: #2b6cb0; margin: 6.5pt 0 2.5pt 0; break-after: avoid; text-align: left; }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 3.6pt 0; }
+  p b:first-child, .ri { font-weight: 700; }
+  .eq { display: flex; align-items: center; margin: 3.5pt 0 4pt 0; break-inside: avoid; }
+  .eq math { flex: 1; text-align: center; }
+  .eq span { width: 7mm; text-align: right; }
+  figure { margin: 2pt 0 5pt 0; break-inside: avoid; }
+  figure img { width: 100%; display: block; }
+  figcaption, .cap { font-size: 7.45pt; line-height: 1.14; margin-top: 2.5pt; text-align: justify; }
+  figcaption b, .cap b { font-weight: 700; }
+  table { border-collapse: collapse; width: 100%; font-size: 7.75pt; line-height: 1.13; font-variant-numeric: tabular-nums; text-align: left; hyphens: manual; }
+  .tabla { margin: 3pt 0 5pt 0; break-inside: avoid; }
+  thead th { font-weight: 400; border-top: 0.9pt solid #111; border-bottom: 0.5pt solid #111; padding: 2pt 3pt 1.6pt 3pt; vertical-align: bottom; }
+  tbody td { padding: 0.9pt 3pt; vertical-align: top; }
+  tbody tr:last-child td { border-bottom: 0.9pt solid #111; padding-bottom: 2pt; }
+  tbody tr.sep td { border-top: 0.4pt solid #111; padding-top: 2pt; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  th.grupo { text-align: center; border-bottom: none; padding-bottom: 0; }
+  th.sub { border-top: none; }
+  .pie-tabla { font-size: 6.9pt; line-height: 1.13; margin-top: 2pt; text-align: justify; }
+  .ancho { break-inside: avoid; }
+  .nb { white-space: nowrap; }
+  .salto { break-before: page; }
+  .ref { font-size: 7.25pt; line-height: 1.13; text-align: left; hyphens: manual; }
+  sup { font-size: 68%; line-height: 0; }
+  i.v { font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>EritroFase: corrección del fondo en imágenes de fase de eritrocitos<br>mediante redes neuronales informadas por la física</h1>
+<p class="autores">Juan José Escobar · Emmanuel Hernández · Mateo Lopera</p>
+<p class="afil">SI3014 · Grupo 1 · Universidad EAFIT · noviembre de 2026<br>
+Notebook principal, experimentos complementarios y resultados: <code>https://github.com/Jjes07/DeepLearning-Final</code></p>
+<p class="nota-version">Versión actualizada el 12 de noviembre de 2026: añade un control posterior a la entrega (sección 4) y precisa las afirmaciones sobre velocidad, suavidad y el experimento de Fourier.</p>
+
+<!-- ============================== PÁGINA 1 ============================== -->
+<div class="mc">
+<h2>1. Objetivos</h2>
+<p><b>Problema.</b> La microscopía holográfica digital (DHM) mide la <i>fase</i> que un eritrocito, casi transparente, imprime en la luz: un mapa de su espesor útil para estimar volumen y morfología sin tinciones. La fase reconstruida arrastra un <i>fondo</i> <i>b</i> (inclinaciones y aberraciones del sistema) que sesga las mediciones cuantitativas. Con la fase desenvuelta <i>u</i>,</p>
+<div class="eq"><math display="block"><mi>u</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>φ</mi><mtext>cel</mtext></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>+</mo><mi>b</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>+</mo><mi>ε</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>,</mo></math><span>(1)</span></div>
+<p>y se busca <i>b̂</i> tal que <i>u</i> − <i>b̂</i> tenga fondo en cero (negro) <i>sin alterar</i> las células. La descomposición no es única (<i>b̂</i> = <i>u</i> reproduce la medida y borra las células) y no existen imágenes «limpias» para supervisar: solo supuestos físicos (S1 fondo suave, S2 células esparsas, S3 signo de la fase celular, S4 fondo de referencia en cero) seleccionan una solución. Los ajustes polinomiales clásicos (Zernike) se sesgan hacia las células, y la SIREN del código guía las absorbe.</p>
+<p><b>Objetivo general.</b> Desarrollar y entrenar una red neuronal informada por la física, basada en representaciones neuronales implícitas (INR), que estime y compense el fondo de imágenes de fase de eritrocitos preservando la morfología y el perfil de fase de las células.</p>
+<p><b>Objetivos específicos.</b> (1) Fundamentar matemática y físicamente las INR sinusoidales y traducir los supuestos S1–S4 en arquitectura y pérdidas. (2) Caracterizar y seleccionar un subconjunto representativo y sin fuga de información. (3) Validar cuantitativamente la reducción del fondo y la preservación de las células frente a líneas base, incluso en datos de otro día.</p>
+
+<h2>2. Base de datos</h2>
+<p><b>Origen.</b> Castañeda, Trujillo y Doblas (2024): DHM fuera de eje (láser de 532 nm, objetivo 40×/0,65 NA), 36.864 recortes PNG de 256×256 y 8 bits con su fase, aumentados con rotaciones y volteos. Datos públicos en OSF.</p>
+<p><b>Hallazgos que condicionaron el diseño.</b> (i) <i>Fuga en la partición original</i>: los volteos son copias exactas, los 16 recortes de un campo forman un mosaico y los 4 campos de una adquisición son la misma escena rotada; la unidad independiente es la <i>adquisición</i>. (ii) <i>Fase envuelta</i>: los niveles de gris son consistentes con <i>φ</i> = 2π<i>g</i>/255 − π y presentan saltos de 2π dentro de las células (fig. 1).</p>
+<p><b>Preprocesamiento.</b> <i>u</i> = −(255/2π)·𝒰(2π<i>g</i>/255 − π): se desenvuelve (𝒰, Herráez et al., 2002), se invierte el signo (aquí las células quedan bajo el fondo) y se trabaja en <i>niveles de gris equivalentes</i> (1 niv. ≈ 0,0246 rad) sin el tope de 255. El desenvolvimiento es reversible (se verificó que <i>u</i> recupera <i>g</i> exactamente).</p>
+<p><b>Selección y partición.</b> De 3.072 recortes evaluados con métricas automáticas (saltos residuales, rango del fondo, fracción celular) salieron 40 candidatos; se eligieron 22 por inspección visual y se repartieron 12/5/5, estratificando por rango del fondo (semilla 42), cada uno de una adquisición distinta. Una prueba de similitud por FFT de todos contra todos (con control positivo) confirmó que no hay fuga. Para generalización se tomaron 8 recortes de <i>otro día</i>, con defectos visibles (tabla 1). Las métricas usan máscaras de referencia célula/fondo calculadas una sola vez con un ajuste polinomial robusto, independientes del modelo.</p>
+
+<figure><img src="figuras/fig1_preprocesamiento.png" alt="Un recorte de cada conjunto, original y preprocesado">
+<figcaption><b>Figura 1:</b> Un recorte de cada conjunto. Arriba: imagen original en grises, con la fase envuelta (saltos negro/blanco en las células). Abajo: tras el preprocesamiento; queda el fondo lento que el modelo debe quitar.</figcaption></figure>
+
+<div class="tabla">
+<div class="cap" style="text-align:center;margin-bottom:2pt"><b>Tabla 1:</b> Partición sin fuga (una adquisición por recorte).</div>
+<table>
+<thead><tr><th>Conjunto</th><th style="text-align:center">Recortes</th><th style="text-align:center">Día</th><th>Uso</th></tr></thead>
+<tbody>
+<tr><td>Entrenamiento</td><td style="text-align:center">12 → 120<sup>*</sup></td><td style="text-align:center">29/01</td><td>ajustar pesos</td></tr>
+<tr><td>Validación</td><td style="text-align:center">5</td><td style="text-align:center">29/01</td><td>hiperparámetros y selección</td></tr>
+<tr><td>Prueba</td><td style="text-align:center">5</td><td style="text-align:center">29/01</td><td>evaluación final</td></tr>
+<tr><td>Generalización</td><td style="text-align:center">8 (3 escenas)</td><td style="text-align:center">28/01</td><td>datos de otro día, no vistos</td></tr>
+</tbody></table>
+<div class="pie-tabla"><sup>*</sup>Versión 2: los 16 recortes del campo de cada adquisición de entrenamiento con ≤ 2 saltos residuales (120 de 192), más las 8 simetrías del cuadrado como aumento.</div>
+</div>
+
+<h2>3. Modelo implementado</h2>
+<p><b>Alternativas.</b> (A) una SIREN optimizada por imagen: sencilla, pero tarda ∼4,3 s por imagen y no aprende entre imágenes; (B) U-Net: rápida, pero no garantiza un fondo suave y puede copiar las células (descartada); (C) <b>INR condicionada</b>: una sola red, entrenada una vez, que corrige una imagen nueva en una pasada. Se eligió C, con A como referencia y plan B.</p>
+<p><b>Arquitectura.</b> (fig. 2) Con <i>ũ</i> = (<i>u</i> − med <i>u</i>)/64, un codificador CNN con canales de coordenadas (CoordConv; 6 bloques Conv 3×3 paso 2 + GroupNorm + GELU) produce <b>z</b> ∈ ℝ<sup>64</sup>; un generador FiLM lo convierte en escalas y desplazamientos que modulan una SIREN de 3 capas de 128 neuronas:</p>
+<div class="eq"><math display="block"><msub><mi>𝐡</mi><mi>l</mi></msub><mo>=</mo><mi>sin</mi><mo stretchy="false">(</mo><msub><mi>ω</mi><mn>0</mn></msub><mspace width="0.15em"/><mo stretchy="false">[</mo><msub><mi>𝜸</mi><mi>l</mi></msub><mo>⊙</mo><mo stretchy="false">(</mo><msub><mi>W</mi><mi>l</mi></msub><msub><mi>𝐡</mi><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>𝐛</mi><mi>l</mi></msub><mo stretchy="false">)</mo><mo>+</mo><msub><mi>𝜷</mi><mi>l</mi></msub><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>,</mo><mspace width="0.9em"/><msub><mi>𝐡</mi><mn>0</mn></msub><mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>.</mo></math><span>(2)</span></div>
+<p>El decodificador es idéntico a la SIREN guía, así que las diferencias con ella se deben al condicionamiento y a la pérdida. <i>ω</i><sub>0</sub> = 1 favorece los fondos lentos (S1), pero no los garantiza: FiLM escala la frecuencia de cada neurona, y lo que la limita es la penalización del laplaciano. FiLM genera 768 modulaciones en lugar de los 33.537 pesos de una hiperred: más estable con pocos datos.</p>
+</div>
+
+<figure class="ancho" style="margin-top:5pt"><img src="figuras/fig2_arquitectura.png" alt="Arquitectura de la INR condicionada" style="width:76%;margin:0 auto">
+<figcaption style="text-align:center"><b>Figura 2:</b> Arquitectura de la INR condicionada (C): 284.033 parámetros compartidos; por imagen solo cambia <b>z</b>.</figcaption></figure>
+
+<!-- ============================== PÁGINA 2 ============================== -->
+<div class="ancho salto tabla">
+<div class="cap"><b>Tabla 2:</b> Medianas por imagen en prueba (5 imágenes, 29/01) y generalización (8 imágenes, 28/01). M1: RMS del fondo lento (niveles eq., menor es mejor). M2: <span class="nb">|Δ<i>h</i>|</span> mediano (%, cota 5 %). En <b>negrita</b>, los resultados de la entrega con <span class="nb">|Δ<i>h</i>|</span> ≤ 5 % y menos fondo que el Zernike más allá de la variación entre semillas (0,67 niv.). Tiempos medidos en el equipo de la corrida principal (líneas base y A en CPU; C en GPU), salvo los experimentos complementarios y el control.</div>
+<table style="margin-top:3pt">
+<thead>
+<tr><th rowspan="2">Método</th><th rowspan="2" class="n">Parámetros ajustados por imagen</th><th rowspan="2" class="n">Tiempo/imagen</th><th colspan="2" class="grupo">Prueba</th><th colspan="2" class="grupo">Generalización</th></tr>
+<tr><th class="n sub">M1</th><th class="n sub">M2 (%)</th><th class="n sub">M1</th><th class="n sub">M2 (%)</th></tr>
+</thead>
+<tbody>
+<tr><td>Pistón (resta la mediana)</td><td class="n">1</td><td class="n">0,4 ms</td><td class="n">18,18</td><td class="n">0,00</td><td class="n">20,53</td><td class="n">0,00</td></tr>
+<tr><td>Polinomio de grado 3 (recorte duro)</td><td class="n">10</td><td class="n">67 ms</td><td class="n">10,37</td><td class="n">1,19</td><td class="n">9,29</td><td class="n">2,01</td></tr>
+<tr><td>Zernike (código guía)</td><td class="n">15</td><td class="n">2,12 s</td><td class="n">6,49</td><td class="n">2,94</td><td class="n">5,98</td><td class="n">4,60</td></tr>
+<tr><td>SIREN <i>ω</i><sub>0</sub> = 1 (código guía)</td><td class="n">33.537</td><td class="n">4,45 s</td><td class="n">4,23</td><td class="n">12,29</td><td class="n">3,83</td><td class="n">12,53</td></tr>
+<tr class="sep"><td>A: SIREN por imagen + pérdida física</td><td class="n">33.537</td><td class="n">4,34 s</td><td class="n"><b>4,76</b></td><td class="n"><b>3,16</b></td><td class="n">3,74</td><td class="n">5,07</td></tr>
+<tr><td>C: INR condicionada (modelo final)</td><td class="n">0 (284.033 compartidos)</td><td class="n"><b>6,3 ms</b></td><td class="n">6,70</td><td class="n">3,47</td><td class="n">4,88</td><td class="n">5,45</td></tr>
+<tr><td>C + ajuste fino (100 iteraciones)</td><td class="n">34.305</td><td class="n">1,40 s</td><td class="n"><b>5,12</b></td><td class="n"><b>3,54</b></td><td class="n">3,83</td><td class="n">5,67</td></tr>
+<tr class="sep"><td>Corrección de Fourier sobre Zernike<sup>†</sup></td><td class="n">15 (41.261 compartidos)</td><td class="n">—</td><td class="n">6,47</td><td class="n">2,91</td><td class="n">6,07</td><td class="n">4,59</td></tr>
+<tr><td>SIREN por imagen, recorte por fracción<sup>‡</sup></td><td class="n">33.537</td><td class="n">7,47 s</td><td class="n">7,10</td><td class="n">4,81</td><td class="n">11,79</td><td class="n">2,07</td></tr>
+<tr class="sep"><td>Control: polinomio de grado 6 + la misma pérdida física<sup>§</sup></td><td class="n">28</td><td class="n">0,17 s</td><td class="n">5,96</td><td class="n">1,97</td><td class="n">4,66</td><td class="n">3,81</td></tr>
+<tr><td>Control: polinomio de grado 10 + la misma pérdida física<sup>§</sup></td><td class="n">66</td><td class="n">0,40 s</td><td class="n">4,75</td><td class="n">3,28</td><td class="n">3,56</td><td class="n">5,03</td></tr>
+</tbody></table>
+<div class="pie-tabla">Experimentos complementarios, cada uno en su notebook y equipo (<code>experiments/</code>): <sup>†</sup>una CNN predice coeficientes de Fourier de baja frecuencia que corrigen el fondo Zernike (12 recortes de entrenamiento); su diferencia con el Zernike es un desplazamiento constante del fondo (+0,74 niv. de media, misma desviación). <sup>‡</sup>Misma red que A, pero la pérdida excluye siempre el 30 % de píxeles con mayor residuo en lugar de usar el umbral por ruido (tiempo en GPU, RTX 3060). <sup>§</sup>Control posterior a la entrega y no ciego (<code>experiments/EritroFase-Control.ipynb</code>): tiempo en CPU, en otro equipo; M2 no evalúa las células cortadas por el borde, donde el control absorbe (sección 4).</div>
+</div>
+
+<div class="mc">
+<p><b>Pérdida física, sin etiquetas.</b> Con el residuo <i>r̃</i> = <i>ũ</i> − <i>b̃</i> y el umbral <i>τ</i> = <i>κσ̂</i> (<i>κ</i> = 3, <i>σ̂</i>: ruido del fondo),</p>
+<div class="eq"><math display="block"><mi>ℒ</mi><mo>=</mo><mfrac><mrow><munder><mo>∑</mo><mi>i</mi></munder><msub><mi>w</mi><mi>i</mi></msub><mspace width="0.15em"/><mi>min</mi><mo stretchy="false">{</mo><mi>ρ</mi><mo stretchy="false">(</mo><msub><mover><mi>r</mi><mo>~</mo></mover><mi>i</mi></msub><mo stretchy="false">)</mo><mo>,</mo><mi>ρ</mi><mo stretchy="false">(</mo><mi>τ</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo></mrow><mrow><munder><mo>∑</mo><mi>i</mi></munder><msub><mi>w</mi><mi>i</mi></msub></mrow></mfrac><mo>+</mo><msub><mi>λ</mi><mi>g</mi></msub><mspace width="0.15em"/><mrow style="border-top:0.55pt solid #111;padding-top:1.2pt"><mi>max</mi><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mo>−</mo><mover><mi>r</mi><mo>~</mo></mover><mo>−</mo><mi>τ</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mo>+</mo><msub><mi>λ</mi><mi>s</mi></msub><mspace width="0.15em"/><mrow style="border-top:0.55pt solid #111;padding-top:1.2pt"><mo stretchy="false">(</mo><mi mathvariant="normal">Δ</mi><mover><mi>b</mi><mo>~</mo></mover><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mo>,</mo></math><span>(3)</span></div>
+<p>con <i>ρ</i> la función de Charbonnier. El <i>recorte</i> anula el gradiente de los píxeles con |<i>r̃</i>| &gt; <i>τ</i> (las células, S2), el segundo término penaliza residuos negativos (S3), el laplaciano impone suavidad (S1), y <i>w<sub>i</sub></i> = 0 a menos de <i>d</i> = 6 px de un residuo &gt; <i>τ</i> apaga también bordes y halos (<i>exclusión por vecindad</i>).</p>
+<p><b>Entrenamiento.</b> Adam (10<sup>−3</sup>, coseno hasta 10<sup>−5</sup>), 6.000 pasos, lotes de 4 imágenes × 16.384 píxeles, 10 % inicial de calentamiento con Charbonnier completa (evita que la red «abandone» regiones), ≈ 2,1 min por corrida en una RTX 4060 Laptop. Rejilla <i>ω</i><sub>0</sub> ∈ {1, 3}, <i>λ<sub>s</sub></i> ∈ {10<sup>−4</sup>, 10<sup>−3</sup>}; regla fijada de antemano: entre las configuraciones con <span class="nb">|Δ<i>h</i>|</span> ≤ 5 % en validación, la de menor fondo lento ⇒ <i>ω</i><sub>0</sub> = 1, <i>λ<sub>s</sub></i> = 10<sup>−3</sup>. La <i>versión 1</i> (12 imágenes, sin exclusión ni calentamiento) presentó sobreajuste (fondo lento 6,9 niv. en entrenamiento frente a 13,8 en validación) y absorbió células; esa evidencia motivó la versión 2. Por eso la prueba de la versión 2 no es ciega, y se declara.</p>
+<p><b>Métricas (sin verdad conocida).</b> M1, <i>RMS del fondo lento</i>: residuo en la máscara de fondo suavizado con una gaussiana de <i>σ</i> = 8 px (ideal 0). M2, <i>cambio de altura local</i> de cada célula frente a su anillo de fondo, Δ<i>h</i> = (<i>h</i>(<i>u</i> − <i>b̂</i>) − <i>h</i>(<i>u</i>))/<i>h</i>(<i>u</i>); se demuestra que es invariante a errores afines del fondo. Solo se calcula en células completas: de las 104 de validación, prueba y generalización, 68 están cortadas por el borde y quedan fuera. Criterio de éxito fijado antes de entrenar: <span class="nb">|Δ<i>h</i>|</span> ≤ 5 % y M1 menor o igual que la mejor línea base que cumpla esa cota.</p>
+
+<h2>4. Resultados</h2>
+<p><b>Entrenamiento y validación.</b> Las pérdidas de entrenamiento y validación bajan juntas, sin sobreajuste (fig. 3; la de validación termina a 0,4 % de su mínimo), y el fondo lento es igual en ambos conjuntos (5,71 y 5,69 niv.): la ampliación de datos eliminó la brecha de la versión 1. En validación, C deja menos fondo que el Zernike (5,69 frente a 6,39 niv.) con <span class="nb">|Δ<i>h</i>|</span> = 3,21 % (Zernike: 2,55 %); con otras dos semillas deja 6,16 y 6,35 niv.</p>
+
+<div class="tabla">
+<div class="cap"><b>Tabla 3:</b> Ablación y experimentos sobre C (validación, medianas). Cada fila cambia un solo elemento respecto a la base.</div>
+<table style="margin-top:2pt">
+<thead><tr><th>Variante</th><th class="n">M1 (niv.)</th><th class="n">M2 (%)</th></tr></thead>
+<tbody>
+<tr><td>Base (<i>ω</i><sub>0</sub> = 1, <i>λ<sub>s</sub></i> = 10<sup>−3</sup>, <i>κ</i> = 3, <i>d</i> = 6)</td><td class="n">5,69</td><td class="n">3,21</td></tr>
+<tr><td>Semillas 43 / 44</td><td class="n">6,16 / 6,35</td><td class="n">3,22 / 2,80</td></tr>
+<tr><td>Sin exclusión por vecindad</td><td class="n">5,89</td><td class="n">4,06</td></tr>
+<tr><td>Sin recorte ni exclusión (Charbonnier)</td><td class="n">10,61</td><td class="n">7,39</td></tr>
+<tr><td><i>λ<sub>s</sub></i> × 3 / <i>λ<sub>s</sub></i> × 10</td><td class="n">6,87 / 8,05</td><td class="n">1,43 / 0,67</td></tr>
+<tr><td><i>κ</i> = 2 / <i>κ</i> = 4</td><td class="n">7,75 / 5,81</td><td class="n">1,41 / 3,72</td></tr>
+<tr><td><i>d</i> = 12</td><td class="n">8,63</td><td class="n">1,46</td></tr>
+<tr><td>15.000 pasos</td><td class="n">5,72</td><td class="n">4,11</td></tr>
+<tr class="sep"><td>Zernike (referencia)</td><td class="n">6,39</td><td class="n">2,55</td></tr>
+</tbody></table>
+</div>
+
+<p><b>Prueba.</b> (tabla 2, fig. 5) <i>La pérdida física reduce la absorción unas 4 veces con la misma arquitectura</i>: la SIREN guía quita 12,29 % de la altura de las células; A, 3,16 %, con un fondo lento parecido (4,23 frente a 4,76 niv.). A y C con ajuste fino cumplen el criterio de éxito. C cumple la cota de altura (3,47 %), pero no la de fondo: deja 0,21 niv. más que el Zernike, una diferencia menor que la variación entre semillas (0,67 niv.), así que con estos datos no hay una diferencia concluyente. A cambio, C corrige una imagen en 6,3 ms en GPU sin ajustar nada por imagen; en CPU, el Zernike del código guía (una implementación iterativa) tarda 2,12 s y el polinomio robusto, 67 ms. Visualmente, el fondo corregido por C es negro y sin manchas con forma de célula; el residuo se concentra en bordes y en una franja junto a las células (fig. 4).</p>
+
+</div>
+
+
+
+<figure class="ancho" style="margin-top:5pt"><img src="figuras/fig3_curvas.png" alt="Curvas de entrenamiento y métricas de validación" style="width:84%;margin:0 auto">
+<figcaption><b>Figura 3:</b> Configuración elegida (<i>ω</i><sub>0</sub> = 1, <i>λ<sub>s</sub></i> = 10<sup>−3</sup>), eje horizontal en épocas (200 épocas de 120 recortes). Izquierda: pérdida física de entrenamiento y validación (franja: calentamiento; discontinua: mejor época). Derecha: métricas de validación; el fondo lento baja mientras <span class="nb">|Δ<i>h</i>|</span> sube, frenado por <i>λ<sub>s</sub></i>.</figcaption></figure>
+
+<!-- ============================== PÁGINA 3 ============================== -->
+
+<figure class="ancho salto"><img src="figuras/fig4_ejemplo_prueba.png" alt="Imagen de prueba corregida con C y con Zernike, y sus fondos residuales">
+<figcaption><b>Figura 4:</b> Imagen de prueba <code>13-00-40_2-16</code>. De izquierda a derecha: entrada; corrección con C en la visualización final (fondo negro); corrección con el Zernike; fondo lento residual (M1) de C y del Zernike, en la máscara de fondo (ideal: blanco).</figcaption></figure>
+
+<div class="mc" style="margin-top:4pt">
+<p><b>Ablación (tabla 3).</b> Sin recorte, el modelo empeora en las dos métricas: es el término decisivo, como predice la anulación del gradiente de las células. La exclusión por vecindad ayuda en la dirección esperada, pero su efecto (0,85 puntos) no supera el umbral de 1 punto fijado. <i>λ<sub>s</sub></i>, <i>κ</i> y <i>d</i> mueven el punto de operación de forma predecible: más suavidad o un umbral más bajo protegen la célula a costa de dejar más fondo. Entrenar más (15.000 pasos) no mejora el fondo y aumenta la absorción. Ningún cambio mejoró a la base en las dos métricas a la vez más allá de la variación entre semillas, así que se conservó.</p>
+<figure><img src="figuras/fig5_compromiso.png" alt="Compromiso fondo-célula con la curva del control">
+<figcaption><b>Figura 5:</b> Compromiso fondo–célula (tabla 2). Lleno: prueba; vacío: generalización; la línea une ambos. En azul, el control posterior a la entrega en prueba (grados 1 a 12). La SIREN guía queda fuera del eje (M2 ≈ 12 %; tabla 2). Lo ideal es la esquina inferior izquierda.</figcaption></figure>
+
+<p><b>Generalización (otro día, nunca usado para decidir).</b> El fondo generaliza: C deja 4,88 niv. frente a 5,98 del Zernike (menos en 7 de 8 imágenes), incluso menos que en prueba. La preservación empeora para <i>todos</i> los métodos (el Zernike pasa de 2,94 a 4,60 %) y los métodos con INR superan la cota (C: 5,45 %). La corrección de Fourier queda igual al Zernike dentro de la variación entre semillas, en los dos conjuntos.</p>
+<p><b>Variante paralela del grupo.</b> Misma SIREN que A, pero la pérdida recorta una fracción fija de píxeles (como el código guía): en prueba, 7,10 niv. y 4,81 %, sin mejorar al Zernike en ninguna imagen; en el otro día conserva mejor la célula (2,07 %) a costa de casi duplicar el fondo del Zernike. Las pérdidas difieren en más términos, así que no es un experimento controlado de la regla de recorte.</p>
+<p><b>Control posterior a la entrega.</b> La comparación de la tabla 2 cambia a la vez la familia de funciones del fondo y la pérdida. Para separarlas se ajustó, sin red, un polinomio de grado 1 a 12 con <i>la misma</i> pérdida (3) y los hiperparámetros del modelo final. Con M1 y M2, su frontera pasa por A y queda por debajo de C (fig. 5): con grado 6 (28 coeficientes) mejora a C en las dos métricas en 5 de 5 imágenes de prueba, y con grado 10 queda a la par de A. No es un método mejor: absorbe las células cortadas por el borde, que M2 no evalúa (con grado 6, 19 de 68 pierden más del 10 % de altura y ninguna de las 36 interiores), algo que no pudo medirse en A ni en C porque sus fondos no se guardaron. El control también muestra que la exclusión por vecindad deja el fondo corregido desplazado hacia arriba (media de +2,30 niv. en C); sin esa constante, C dejaría menos fondo que el Zernike (≈ 5,6 frente a 6,5 niv., estimado). Es consistente con que el aporte medible del trabajo sea la pérdida física, y no la representación neuronal.</p>
+
+<h2>5. Conclusiones</h2>
+<p><b>Hallazgos.</b> (1) La partición original tiene fuga y la fase está envuelta: se construyó una selección por adquisición sin fuga y un preprocesamiento reversible. (2) Sin verdad conocida, hacen falta métricas locales que separen fondo y célula. (3) Las restricciones físicas, sobre todo el recorte por umbral, reducen la absorción de una INR unas 4 veces. (4) Una sola red (C) logra calidad del orden del Zernike con inferencia de milisegundos, y el compromiso fondo–célula se controla con <i>λ<sub>s</sub></i>, <i>κ</i> y <i>d</i>. (5) Con M1 y M2, un polinomio ajustado con la misma pérdida iguala a la red: lo que estas métricas permiten atribuir al trabajo es la pérdida física.</p>
+<p><b>Cumplimiento de objetivos.</b> <i>General</i>: sí, con matices; en prueba A cumple el criterio completo y C la cota de altura, pero en generalización ambos superan el 5 %. <i>Específico 1</i>: sí (supuestos S1–S4 convertidos en pérdidas y evaluados por ablación). <i>Específico 2</i>: sí (selección 12/5/5 + 8 sin fuga). <i>Específico 3</i>: sí, con limitaciones (métricas validadas con casos sintéticos; 6 líneas base en dos dominios).</p>
+<p><b>Limitaciones.</b> Pocas imágenes (5 + 8, con 12 células evaluables por conjunto): los resultados son evidencia consistente con las hipótesis, no una demostración concluyente. La prueba de la versión 2 no fue ciega, y el control es posterior a la entrega. M2 no evalúa las células cortadas por el borde. Las máscaras de referencia son heurísticas y no hay verdad conocida en datos reales. El modelo final usa una semilla. Un solo dataset y microscopio; la escala en radianes es una hipótesis. Los tiempos comparan CPU y GPU.</p>
+<p><b>Trabajo futuro.</b> Evaluar una sola vez en las 36 adquisiciones del mismo día que pasan los filtros de selección y nunca se usaron; medir las células de borde en todos los métodos; estimar el fondo sobre el campo completo de 1024 × 1024; entrenar con más días de adquisición; y comparar de forma controlada la base de Fourier y la regla de recorte.</p>
+<p class="ref"><b>Referencias.</b> Castañeda, Trujillo y Doblas (2024), <i>Data in Brief</i> 54, 110424, doi:10.1016/j.dib.2024.110424 · Chan et al. (2021), π-GAN, <i>CVPR</i>, arXiv:2012.00926 · Herráez et al. (2002), <i>Appl. Opt.</i> 41(35), 7437–7444, doi:10.1364/AO.41.007437 · Huang y Cao (2023), <i>Opt. Express</i> 31(8), 12520–12533, doi:10.1364/OE.488201 · Liu et al. (2018), CoordConv, <i>NeurIPS</i>, arXiv:1807.03247 · Perez et al. (2018), FiLM, <i>AAAI</i>, arXiv:1709.07871 · Sitzmann et al. (2020), SIREN, <i>NeurIPS</i>, arXiv:2006.09661 · Tancik et al. (2020), <i>NeurIPS</i>, arXiv:2006.10739 · Tang et al. (2023), <i>Opt. Lasers Eng.</i> 168, 107671, doi:10.1016/j.optlaseng.2023.107671 · Xu, Cao y Sun (2025), <i>Adv. Photonics</i> 7(6), 066013, doi:10.1117/1.AP.7.6.066013.</p>
+</div>
+
+</body>
+</html>

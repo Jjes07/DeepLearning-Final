@@ -18,6 +18,8 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
+# Archivos de bloqueo de Office (aparecen mientras un documento está abierto)
+~$*
 
 # Caché de resultados costosos (se regenera con RECALCULAR = True)
 results/cache/

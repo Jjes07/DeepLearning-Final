@@ -12,6 +12,11 @@ y con el [experimento complementario de Emmanuel](experiments/EritroFase-Emmanue
 
 Entregables: [informe](docs/final-report/EritroFase_Informe.pdf) y
 [presentación de la sustentación](docs/final-report/EritroFase_Sustentacion.pptx).
+Ambos se actualizaron el 12/11/2026 para incluir el
+[experimento de control](#experimento-de-control-posterior-a-la-entrega) y precisar las
+afirmaciones sobre velocidad y suavidad; las versiones entregadas el 11/11/2026 están en
+el historial de git (commit `06e7fd8`). La fuente del informe está en
+[`docs/final-report/src/`](docs/final-report/src/EritroFase_Informe.html).
 
 ## Estructura
 
@@ -22,6 +27,7 @@ DeepLearning-Final/
 ├── requirements.txt
 ├── experiments/
 │   ├── EritroFase-Fourier.ipynb
+│   ├── EritroFase-Control.ipynb   # Control posterior a la entrega: la misma pérdida física sobre una base polinomial
 │   ├── EritroFase-Emmanuel.ipynb  # Versión paralela (PR #13); solo lectura, no se re-ejecuta desde aquí
 │   └── emmanuel/              # Scripts, CSV, curvas e informe de sus experimentos (sección 11.3)
 ├── data/
@@ -31,10 +37,12 @@ DeepLearning-Final/
 │   └── selection/            # Lista de imágenes elegidas, partición y máscaras de referencia
 ├── docs/
 │   ├── final-report/         # Entregables: informe (PDF, 3 páginas) y presentación de la sustentación (PPTX)
+│   │   └── src/              # Fuente HTML del informe y sus figuras (el PDF se imprime con Chrome)
 │   └── references/           # Artículos de referencia (PDF)
 ├── reference_code/INR/       # Copia sin modificar del código guía (el notebook la incorpora en la sección 4.4)
 └── results/
     ├── fourier/              # Tablas, figuras y configuración del experimento de Fourier
+    ├── control/              # Tablas y figuras del experimento de control
     ├── figures/              # Figuras por etapa (E1_..., E2_..., ...)
     ├── tables/               # Tablas de métricas (CSV)
     └── runs/                 # Una carpeta por corrida: config, curvas, métricas
@@ -78,3 +86,27 @@ entrega, con otra pérdida física (recorte por fracción). Su notebook se conse
 como se ejecutó, con notas de integración agregadas, y no debe volver a ejecutarse
 desde `experiments/` porque escribiría en `results/` con los nombres de la entrega.
 La comparación está en la sección 11.3 del notebook principal.
+
+## Experimento de control (posterior a la entrega)
+
+[`experiments/EritroFase-Control.ipynb`](experiments/EritroFase-Control.ipynb) ajusta un
+polinomio de grado 1 a 12 con la misma pérdida física del modelo final (Definiciones 17
+y 18, hiperparámetros de `results/runs/E4_C_w1_ls0.001/config.json`) y lo evalúa con las
+métricas de la entrega sobre las mismas imágenes. Separa dos cosas que la entrega cambia
+a la vez: la familia de funciones del fondo y la pérdida.
+
+- Es posterior a la entrega del 11/11/2026 y no es una evaluación ciega: prueba y
+  generalización ya se habían examinado. Reporta todos los grados.
+- Solo necesita los 30 recortes de `data/selection/`; no usa PyTorch ni GPU. Lee las
+  funciones de preprocesamiento, máscaras y métricas del notebook principal y comprueba
+  que reproduce sus tablas publicadas.
+- Con M1 y M2, la curva del control pasa por los puntos de A y queda por debajo de los
+  de C. A cambio, absorbe células cortadas por el borde del recorte, que M2 no evalúa
+  (68 de 104). Esa medida no está calculada para A, C ni el Zernike.
+
+Tablas y figuras en [`results/control/`](results/control/). Para repetirlo desde la raíz
+del proyecto (unos minutos en CPU):
+
+```sh
+python -m jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=1800 experiments/EritroFase-Control.ipynb
+```
